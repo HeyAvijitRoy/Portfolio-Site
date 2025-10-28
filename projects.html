@@ -1,79 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Avijit Roy</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects • Avijit Roy</title>
+  <meta name="description" content="Selected work and open-source by Avijit Roy." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/placeholder.png" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Avijit Roy</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Avijit Roy</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="active">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
+  <main class="container section">
 
-  <main class="content-section">
-    <div class="container">
-      <div class="card">
-        <h2>Featured Projects</h2>
-      </div>
+<div class="page-head">
+  <h1>Projects</h1>
+  <input id="projectSearch" class="search" placeholder="Search projects by name or tag…" aria-label="Search projects" />
+</div>
+<div class="filter-bar">
+  <button class="chip active" data-tag="all">All</button>
+  <button class="chip" data-tag="AI">AI</button>
+  <button class="chip" data-tag="Security">Security</button>
+  <button class="chip" data-tag="Realtime">Realtime</button>
+  <button class="chip" data-tag="Mapping">Mapping</button>
+  <button class="chip" data-tag="Tools">Tools</button>
+</div>
+<div id="projectGrid" class="card-grid">
+  <article class="card-item" data-tags="Security,Realtime,Mapping" id="blitztips">
+    <h3>Human Trafficking Intelligence Platform</h3>
+    <p>Admin map with viewport-aware tip drawer, photo modal, delayed read-marking (Hangfire).</p>
+    <ul class="tags"><li>Security</li><li>Realtime</li><li>Mapping</li></ul>
+    <a class="button small" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a>
+  </article>
 
-      <div class="list-item">
-        <h3>AI-based Writing Proficiency Assessment</h3>
-        <p>Developed NLP model and Gradio tool for automated ACTFL-standard scoring.</p>
-        <p class="meta">Python, Hugging Face, Gradio</p>
-        <a href="https://github.com/HeyAvijitRoy" target="_blank" class="btn">View on GitHub</a>
-      </div>
+  <article class="card-item" data-tags="AI" id="ai-writing">
+    <h3>AI Writing Proficiency Evaluator</h3>
+    <p>Local-first pipeline for ACTFL-aligned classification and scoring. Research + prototype.</p>
+    <ul class="tags"><li>AI</li></ul>
+    <a class="button small" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a>
+  </article>
 
-      <div class="list-item">
-        <h3>Human Trafficking Intelligence Platform</h3>
-        <p>.NET Core, C#, Razor, SignalR, real-time dashboards with encrypted PII & audit logging for law enforcement.</p>
-        <p class="meta">.NET Core, C#, SignalR</p>
-        <a href="https://github.com/HeyAvijitRoy" target="_blank" class="btn">View on GitHub</a>
-      </div>
+  <article class="card-item" data-tags="Tools,Security" id="hashnow">
+    <h3>HashNow</h3>
+    <p>MD5/SHA family hashing in browser. Useful for forensic triage and quick verifications.</p>
+    <ul class="tags"><li>Tools</li><li>Security</li></ul>
+    <a class="button small" href="https://github.com/heyavijitroy/HashNow" target="_blank" rel="noopener">GitHub</a>
+  </article>
 
-      <div class="list-item">
-        <h3>Secure Single-Session Authentication System</h3>
-        <p>Designed Django/Python system to enforce concurrency-safe logins, OWASP-compliant session logic, audit trail security.</p>
-        <p class="meta">Django, Python</p>
-        <a href="https://github.com/HeyAvijitRoy/DjangoSecureSingleSessionAuth" target="_blank" class="btn">View on GitHub</a>
-      </div>
+  <article class="card-item" data-tags="Security,Tools" id="single-session">
+    <h3>Secure Single-Session Auth</h3>
+    <p>Django/.NET exploration of concurrency-safe sessions, audit logging, OWASP alignment.</p>
+    <ul class="tags"><li>Security</li><li>Tools</li></ul>
+    <a class="button small" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a>
+  </article>
+</div>
 
-      <div class="list-item">
-        <h3>HashNow: Client-Side Hash Generator</h3>
-        <p>Browser-based cryptographic tool for MD5, SHA-1, SHA-256; privacy-focused, no uploads.</p>
-        <p class="meta">HTML, CSS, JavaScript</p>
-        <a href="https://github.com/HeyAvijitRoy/HashNow" target="_blank" class="btn">View on GitHub</a>
-      </div>
+<section class="section" id="oss">
+  <h2>Open Source</h2>
+  <p class="muted">Recent and popular repos from my GitHub profile.</p>
+  <div id="repoGrid" class="card-grid"></div>
+</section>
 
-      <div class="list-item">
-        <h3>More Projects</h3>
-        <ul>
-          <li>ChatifyNode – Real-Time Group Chat Application (Node.js/Socket.IO)</li>
-          <li>Excel-Outlook Email Search Tool (VB.NET, Office)</li>
-          <li>Shopify Bulk Inventory Update Tool (Python, Pandas)</li>
-        </ul>
-        <a href="https://github.com/HeyAvijitRoy" target="_blank" class="btn">See all on GitHub</a>
-      </div>
-
-    </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Avijit Roy. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Avijit Roy</h4>
+        <p>Educator • Software Engineer • AI Researcher</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="publications.html">Publications (available)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in touch</a></li>
+        </ul>
+      </div>
     </div>
+    <p class="container tiny">© 2025 Avijit Roy. All rights reserved.</p>
   </footer>
 
 </body>

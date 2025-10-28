@@ -1,84 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Avijit Roy - Educator & Researcher</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educator • Software Engineer • AI Researcher • Avijit Roy</title>
+  <meta name="description" content="Avijit Roy: security, AI, teaching, mapping." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/placeholder.png" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Avijit Roy</a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Avijit Roy</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-active="index" class="active">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
+  <main class="container section">
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <!-- IMPORTANT: Replace with your profile picture -->
-        <img src="assets/img/yourportrait.jpg" alt="Avijit Roy" class="profile-pic">
-        <h1>Educator & Researcher</h1>
-        <p>Secure Systems, AI, and Applied Computing</p>
-        <div class="social-links">
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-google-scholar"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1>Hi, I'm Avijit <span class="accent">Roy</span>.</h1>
+      <p class="lead">I build human-centered systems across <strong>security</strong>, <strong>AI</strong>, <strong>teaching</strong>, and <strong>mapping</strong>.</p>
+      <div class="cta">
+        <a class="button primary" href="projects.html">Explore Projects</a>
+        <a class="button ghost" href="contact.html">Contact</a>
       </div>
-    </section>
-
-    <div class="content-section">
-        <div class="container">
-            <section class="card">
-                <h2>About Me</h2>
-                <p>
-                Bridging <strong>data, security, and applied AI</strong> for real-world impact. 
-                Passionate about <strong>student mentoring</strong>, rigorous research, and scalable technology solutions.
-                </p>
-            </section>
-
-            <section class="card">
-                <h2>Education & Certifications</h2>
-                <ul>
-                <li><b>M.S. Digital Forensics & Cybersecurity</b> — John Jay College (CUNY), 2024–2026</li>
-                <li><b>Adv. Cert. Applied Digital Forensic Science (CAD4SCI)</b>, 2024–2025</li>
-                <li><b>B.S. Computer Science & Information Security</b>, John Jay College (CUNY) — <i>Leonard E. Reisman Medal, Dean’s List</i></li>
-                <li><b>A.S. Computer Programming</b>, ASA College — <i>President’s List, Phi Theta Kappa Honors</i></li>
-                <li>Succeeding in DevOps (LinkedIn), Automate Cybersecurity Tasks with Python (Google), More on LinkedIn</li>
-                </ul>
-            </section>
-
-            <section class="card">
-                <h2>Contact</h2>
-                <p>I'm always open to discussing new projects, research, or opportunities. Please feel free to reach out.</p>
-                <a href="contact.html" class="btn">Connect or Collaborate</a>
-            </section>
-        </div>
+      <ul class="quick-stats">
+        <li>Security & Digital Forensics</li>
+        <li>AI/NLP & Evaluation</li>
+        <li>Web & Realtime Apps</li>
+        <li>Teaching & Mentorship</li>
+      </ul>
     </div>
+    <div class="hero-card">
+      <img src="assets/img/placeholder.png" alt="Avijit Roy portrait" loading="lazy" decoding="async"/>
+      <div class="card-badge">Featured</div>
+      <div class="hero-card-body">
+        <p><strong>AI Writing Proficiency Evaluator</strong> — ACTFL-aligned research + prototype tool.</p>
+        <a class="button small" href="projects.html#ai-writing">View</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Focus Areas</h2>
+  <div class="pill-grid">
+    <div class="pill">Secure Systems & Threat Modeling</div>
+    <div class="pill">AI/NLP • Rubrics • Evaluation</div>
+    <div class="pill">Web • Realtime • Mapping UX</div>
+    <div class="pill">Teaching • Curriculum • Mentoring</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Selected Work</h2>
+  <div class="card-grid">
+    <article class="card-item">
+      <h3>Human Trafficking Intelligence Platform</h3>
+      <p>Admin map with viewport-aware tip drawer, photo modal, delayed read-marking (Hangfire).</p>
+      <ul class="tags"><li>Security</li><li>Realtime</li><li>Mapping</li></ul>
+      <a href="projects.html#blitztips" class="button small">Details</a>
+    </article>
+    <article class="card-item">
+      <h3>AI Writing Proficiency Evaluator</h3>
+      <p>ACTFL-aligned classifier & scoring workflow with transparent rubrics.</p>
+      <ul class="tags"><li>AI</li><li>NLP</li></ul>
+      <a href="projects.html#ai-writing" class="button small">Details</a>
+    </article>
+    <article class="card-item">
+      <h3>HashNow</h3>
+      <p>Client-side MD5/SHA tool. No uploads. No tracking. Built for labs & fieldwork.</p>
+      <ul class="tags"><li>Security</li><li>Tools</li></ul>
+      <a href="projects.html#hashnow" class="button small">Details</a>
+    </article>
+  </div>
+</section>
+
+<section class="section highlight">
+  <h2>Teaching</h2>
+  <p>I teach Object-Oriented Programming in C++ and introductory programming fundamentals.</p>
+  <a class="button ghost" href="teaching.html">See Courses</a>
+</section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Avijit Roy. All Rights Reserved.</p>
-      <div class="social-links">
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-google-scholar"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Avijit Roy</h4>
+        <p>Educator • Software Engineer • AI Researcher</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="publications.html">Publications (available)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in touch</a></li>
+        </ul>
       </div>
     </div>
+    <p class="container tiny">© 2025 Avijit Roy. All rights reserved.</p>
   </footer>
 
 </body>

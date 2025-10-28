@@ -1,74 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact | Avijit Roy</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    .contact-form .form-group {
-      margin-bottom: 1.5rem;
-    }
-    .contact-form label {
-      display: block;
-      margin-bottom: .5rem;
-      font-weight: 700;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: .8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Avijit Roy</title>
+  <meta name="description" content="Get in touch with Avijit Roy for collaborations, research, and opportunities." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/placeholder.png" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Avijit Roy</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Avijit Roy</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="active">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
+  <main class="container section">
 
-  <main class="content-section">
-    <div class="container">
-      <section class="card">
-        <h2>Contact & Collaboration</h2>
-        <p>I'm always open to discussing new projects, research, or opportunities. Please feel free to reach out.</p>
-        <form class="contact-form" action="mailto:your.email@domain.com" method="post" enctype="text/plain">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </section>
-    </div>
+<h1>Contact & Collaboration</h1>
+<p>I'm open to collaborations in secure systems, AI in education, and mapping UX.</p>
+<form class="contact-form" method="POST" action="https://formspree.io/f/xayzvbwp">
+  <div class="grid two">
+    <label>Full Name
+      <input type="text" name="name" required />
+    </label>
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+  </div>
+  <label>Subject
+    <input type="text" name="subject" required />
+  </label>
+  <label>Message
+    <textarea name="message" rows="6" required></textarea>
+  </label>
+  <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
+  <button class="button primary" type="submit">Send</button>
+  <p class="tiny muted">This form uses Formspree. Replace the action with your endpoint if needed.</p>
+</form>
+
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Avijit Roy. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Avijit Roy</h4>
+        <p>Educator • Software Engineer • AI Researcher</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="publications.html">Publications (available)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in touch</a></li>
+        </ul>
+      </div>
     </div>
+    <p class="container tiny">© 2025 Avijit Roy. All rights reserved.</p>
   </footer>
 
 </body>

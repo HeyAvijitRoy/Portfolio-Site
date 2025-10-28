@@ -1,66 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Publications | Avijit Roy</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications & Talks • Avijit Roy</title>
+  <meta name="description" content="Publications, talks, and writing by Avijit Roy." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/placeholder.png" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Avijit Roy</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html" class="active">Publications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Avijit Roy</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
+  <main class="container section">
 
-  <main class="content-section">
-    <div class="container">
-      <div class="card">
-        <h2>Publications & Selected Talks</h2>
-      </div>
+<h1>Publications & Selected Talks</h1>
+<article class="pub">
+  <h3>AI-Aligned Writing Proficiency: Rubrics that Generalize</h3>
+  <p class="meta">Preprint (in preparation)</p>
+  <p>Rubric-driven evaluation approach focusing on reliability and transparency.</p>
+  <a class="button small" href="#" aria-disabled="true">Coming Soon</a>
+</article>
+<article class="pub">
+  <h3>Designing Real-Time, Privacy-Preserving Trafficking Dashboards</h3>
+  <p class="meta">Whitepaper</p>
+  <p>Safeguards for secure tip collection and analysis with real-time maps.</p>
+  <a class="button small" href="#" aria-disabled="true">Coming Soon</a>
+</article>
 
-      <div class="list-item">
-        <h3>AI-Based Writing Proficiency Tool</h3>
-        <p class="meta">[Preprint or Presentation]</p>
-        <p>Contributed to research and tool development following ACTFL guidelines for automated writing proficiency assessment.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-
-      <div class="list-item">
-        <h3>Human Trafficking Dashboard Security Design</h3>
-        <p class="meta">[Conference Abstract or Whitepaper]</p>
-        <p>Designed the security and compliance architecture for a research collaboration platform with law enforcement agencies.</p>
-        <a href="#" class="btn">Read More</a>
-      </div>
-
-      <div class="list-item">
-        <h3>Blog Posts & Technical Documentation</h3>
-        <p>Authored various articles on topics ranging from secure coding practices to DevOps automation.</p>
-        <a href="#" class="btn">Visit Blog</a>
-      </div>
-
-      <div class="list-item">
-        <h3>Forthcoming Research</h3>
-        <p>Currently working on research in the areas of adversarial machine learning and privacy-preserving data analysis. Stay tuned for future publications.</p>
-      </div>
-
-    </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Avijit Roy. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Avijit Roy</h4>
+        <p>Educator • Software Engineer • AI Researcher</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="publications.html">Publications (available)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in touch</a></li>
+        </ul>
+      </div>
     </div>
+    <p class="container tiny">© 2025 Avijit Roy. All rights reserved.</p>
   </footer>
 
 </body>
