@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teaching • Avijit Roy</title>
-  <meta name="description" content="CSCI 271/272 and mentoring by Avijit Roy." />
+  <meta name="description" content="Courses and mentoring by Avijit Roy." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
@@ -19,11 +19,9 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Avijit Roy</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="active">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a>
-      </nav>
+      <nav class="nav-links" id="navLinks"><a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="active">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a></nav>
       <div class="nav-actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
         <button class="hamburger" id="hamburger" aria-label="Open Menu">
           <span></span><span></span><span></span>
         </button>
@@ -33,34 +31,44 @@
   <main class="container section">
 
 <h1>Teaching</h1>
-
-<details class="accordion" open>
-  <summary>CSCI 271 — Introduction to Programming</summary>
-  <ul>
-    <li>Fundamentals: problem-solving, control flow, functions, arrays.</li>
-    <li>Weekly practice sets and mini-projects.</li>
-    <li>Assessment: quizzes, midterm, project-based final.</li>
-  </ul>
-  <div class="row">
-    <a class="button small" href="#" aria-disabled="true">Syllabus (PDF)</a>
-    <a class="button small ghost" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">Course GitHub</a>
-  </div>
-  <p class="tiny muted">Future scope: a static course page (office hours, location, resources, announcements).</p>
-</details>
-
-<details class="accordion">
-  <summary>CSCI 272 — Object-Oriented Programming in C++</summary>
-  <ul>
-    <li>Vectors, classes, inheritance, file I/O, exceptions.</li>
-    <li>Weekly labs, GitHub workflows, and code reviews.</li>
-    <li>Assessment: coding assignments, quizzes, practical midterm/final.</li>
-  </ul>
-  <div class="row">
-    <a class="button small" href="#" aria-disabled="true">Syllabus (PDF)</a>
-    <a class="button small ghost" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">Course GitHub</a>
-  </div>
-  <p class="tiny muted">Future scope: a static course page (office hours, location, resources, announcements).</p>
-</details>
+<div class="columns">
+  <section class="stack">
+    <div class="block">
+      <h2>Courses I Teach</h2>
+      <details open class="block">
+        <summary><strong>CSCI 271 — Introduction to Programming</strong></summary>
+        <ul>
+          <li>Fundamentals: problem‑solving, control flow, functions, arrays.</li>
+          <li>Weekly practice sets and mini‑projects.</li>
+          <li>Assessment: quizzes, midterm, project‑based final.</li>
+        </ul>
+        <a class="button small" href="#" aria-disabled="true">Syllabus (PDF)</a>
+      </details>
+      <details class="block">
+        <summary><strong>CSCI 272 — Object‑Oriented Programming in C++</strong></summary>
+        <ul>
+          <li>Vectors, classes, inheritance, file I/O, exceptions.</li>
+          <li>Weekly labs, GitHub workflows, and code reviews.</li>
+          <li>Assessment: coding assignments, quizzes, practical midterm/final.</li>
+        </ul>
+        <a class="button small" href="#" aria-disabled="true">Syllabus (PDF)</a>
+      </details>
+    </div>
+  </section>
+  <section class="stack">
+    <div class="block">
+      <h2>Mentoring</h2>
+      <p class="muted">I mentor small teams on practical projects with clear outcomes. If it helps people and we can ship it in steps, I’m interested.</p>
+      <ul>
+        <li>Security & digital forensics tools</li>
+        <li>AI for learning and evaluation</li>
+        <li>Web, realtime systems, and mapping UX</li>
+      </ul>
+      <p class="muted">Interested in working together? Send a short note via the contact page with your idea, timeline, and what success looks like.</p>
+      <a class="button small" href="contact.html">Contact</a>
+    </div>
+  </section>
+</div>
 
   </main>
 

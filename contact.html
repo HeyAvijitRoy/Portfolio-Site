@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,11 +19,9 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Avijit Roy</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="active">Contact</a>
-      </nav>
+      <nav class="nav-links" id="navLinks"><a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="active">Contact</a></nav>
       <div class="nav-actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
         <button class="hamburger" id="hamburger" aria-label="Open Menu">
           <span></span><span></span><span></span>
         </button>
@@ -32,17 +30,15 @@
   </header>
   <main class="container section">
 
-<h1>Contact & Collaboration</h1>
-<p>I'm open to collaborations in secure systems, AI in education, and mapping UX.</p>
+<h1>Contact</h1>
+<p class="muted">Open to collaborations in secure systems, AI in education, and mapping UX.</p>
 <form class="contact-form" method="POST" action="https://formspree.io/f/xayzvbwp">
-  <div class="grid two">
-    <label>Full Name
-      <input type="text" name="name" required />
-    </label>
-    <label>Email
-      <input type="email" name="email" required />
-    </label>
-  </div>
+  <label>Full Name
+    <input type="text" name="name" required />
+  </label>
+  <label>Email
+    <input type="email" name="email" required />
+  </label>
   <label>Subject
     <input type="text" name="subject" required />
   </label>
@@ -50,8 +46,7 @@
     <textarea name="message" rows="6" required></textarea>
   </label>
   <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
-  <button class="button primary" type="submit">Send</button>
-  <p class="tiny muted">This form uses Formspree. Replace the action with your endpoint if needed.</p>
+  <button class="button" type="submit">Send</button>
 </form>
 
   </main>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,11 +19,9 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Avijit Roy</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="active">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a>
-      </nav>
+      <nav class="nav-links" id="navLinks"><a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="active">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a></nav>
       <div class="nav-actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
         <button class="hamburger" id="hamburger" aria-label="Open Menu">
           <span></span><span></span><span></span>
         </button>
@@ -45,35 +43,25 @@
   <button class="chip" data-tag="Tools">Tools</button>
 </div>
 <div id="projectGrid" class="card-grid">
-  <article class="card-item" data-tags="Security,Realtime,Mapping" id="blitztips">
+  <article class="card" data-tags="Security,Realtime,Mapping" id="blitztips">
     <h3>Human Trafficking Intelligence Platform</h3>
-    <p>Admin map with viewport-aware tip drawer, photo modal, delayed read-marking (Hangfire).</p>
+    <p class="muted">Viewport‑aware tip drawer, photo modal, delayed read‑marking (Hangfire). Privacy‑first media handling.</p>
     <ul class="tags"><li>Security</li><li>Realtime</li><li>Mapping</li></ul>
     <a class="button small" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a>
   </article>
-
-  <article class="card-item" data-tags="AI" id="ai-writing">
+  <article class="card" data-tags="AI" id="ai-writing">
     <h3>AI Writing Proficiency Evaluator</h3>
-    <p>Local-first pipeline for ACTFL-aligned classification and scoring. Research + prototype.</p>
+    <p class="muted">Local‑first pipeline for rubric‑aligned writing classification and scoring.</p>
     <ul class="tags"><li>AI</li></ul>
     <a class="button small" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a>
   </article>
-
-  <article class="card-item" data-tags="Tools,Security" id="hashnow">
+  <article class="card" data-tags="Tools,Security" id="hashnow">
     <h3>HashNow</h3>
-    <p>MD5/SHA family hashing in browser. Useful for forensic triage and quick verifications.</p>
+    <p class="muted">Client‑side MD5/SHA hashing. No uploads. Handy for quick checks.</p>
     <ul class="tags"><li>Tools</li><li>Security</li></ul>
     <a class="button small" href="https://github.com/heyavijitroy/HashNow" target="_blank" rel="noopener">GitHub</a>
   </article>
-
-  <article class="card-item" data-tags="Security,Tools" id="single-session">
-    <h3>Secure Single-Session Auth</h3>
-    <p>Django/.NET exploration of concurrency-safe sessions, audit logging, OWASP alignment.</p>
-    <ul class="tags"><li>Security</li><li>Tools</li></ul>
-    <a class="button small" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a>
-  </article>
 </div>
-
 <section class="section" id="oss">
   <h2>Open Source</h2>
   <p class="muted">Recent and popular repos from my GitHub profile.</p>

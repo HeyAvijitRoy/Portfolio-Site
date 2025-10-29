@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,11 +19,9 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Avijit Roy</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="active">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a>
-      </nav>
+      <nav class="nav-links" id="navLinks"><a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="active">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a></nav>
       <div class="nav-actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
         <button class="hamburger" id="hamburger" aria-label="Open Menu">
           <span></span><span></span><span></span>
         </button>
@@ -33,16 +31,25 @@
   <main class="container section">
 
 <h1>About</h1>
-<p>Educator • Software Engineer • AI Researcher based in New York. I build secure, human-centered software, mentor student projects, and explore applied AI and mapping UX.</p>
-<div class="pill-grid">
-  <div class="pill">Security & Digital Forensics</div>
-  <div class="pill">AI/NLP & Evaluation</div>
-  <div class="pill">Web • Realtime • Mapping</div>
-  <div class="pill">Teaching & Curriculum</div>
-</div>
-<div class="cta-row" style="margin-top:12px">
-  <a class="button" href="assets/AvijitRoy_CV.pdf">Download CV</a>
-  <a class="button ghost" href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a>
+<div class="stack">
+  <div class="block">
+    <p>I’m a software engineer, educator, and researcher based in New York. My work sits at the intersection of security, AI, and useful interfaces. I care about building tools that are simple to use, easy to maintain, and respectful of users.</p>
+    <p>On the teaching side, I keep things practical and honest. I show students how to read code, ask the right questions, and ship small improvements repeatedly. I mentor on projects that have clear outcomes—no fluff.</p>
+    <p>Originally from Bangladesh, I’ve done cross‑country road trips across the U.S., and I love maps—both the data kind and the paper kind.</p>
+    <div class="cta" style="margin-top:8px">
+      <a class="button" href="assets/AvijitRoy_CV.pdf">Download CV</a>
+      <a class="button ghost" href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="block">
+    <h2>Focus areas</h2>
+    <ul>
+      <li>Security & digital forensics</li>
+      <li>AI for education and evaluation</li>
+      <li>Web, realtime systems, and mapping UX</li>
+      <li>Teaching, mentoring, and clear documentation</li>
+    </ul>
+  </div>
 </div>
 
   </main>
