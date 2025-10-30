@@ -1,100 +1,76 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teaching • Avijit Roy</title>
-  <meta name="description" content="Courses and mentoring by Avijit Roy." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="assets/img/placeholder.png" />
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Avijit Roy</a>
-      <nav class="nav-links" id="navLinks"><a href="index.html" data-active="index" class="">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="active">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a></nav>
+      <a class="brand" href="index.html">Avijit <span>Roy</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="projects.html">Projects</a>
+      </nav>
       <div class="nav-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
-        <button class="hamburger" id="hamburger" aria-label="Open Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button id="themeToggle" class="theme-toggle"><span id="themeIcon"></span></button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+
+  <!-- MAIN -->
   <main class="container section">
+    <!-- COURSES -->
+    <h1>Teaching</h1>
+    <details>
+      <summary>CSCI 271 — Introduction to Programming</summary>
+      <span class="inst">John Jay College of Criminal Justice (CUNY)</span>
+      <p>Focuses on problem-solving, control structures, and arrays.</p>
+      <div class="cta">
+        <a class="button small" href="#">Syllabus (PDF)</a>
+        <a class="button small" href="#">Course Details</a>
+      </div>
+    </details>
 
-<h1>Teaching</h1>
-<div class="columns">
-  <section class="stack">
-    <div class="block">
-      <h2>Courses I Teach</h2>
-      <details open class="block">
-        <summary><strong>CSCI 271 — Introduction to Programming</strong></summary>
-        <ul>
-          <li>Fundamentals: problem‑solving, control flow, functions, arrays.</li>
-          <li>Weekly practice sets and mini‑projects.</li>
-          <li>Assessment: quizzes, midterm, project‑based final.</li>
-        </ul>
-        <a class="button small" href="#" aria-disabled="true">Syllabus (PDF)</a>
-      </details>
-      <details class="block">
-        <summary><strong>CSCI 272 — Object‑Oriented Programming in C++</strong></summary>
-        <ul>
-          <li>Vectors, classes, inheritance, file I/O, exceptions.</li>
-          <li>Weekly labs, GitHub workflows, and code reviews.</li>
-          <li>Assessment: coding assignments, quizzes, practical midterm/final.</li>
-        </ul>
-        <a class="button small" href="#" aria-disabled="true">Syllabus (PDF)</a>
-      </details>
-    </div>
-  </section>
-  <section class="stack">
-    <div class="block">
+    <details>
+      <summary>CSCI 272 — Object-Oriented Programming in C++</summary>
+      <span class="inst">John Jay College of Criminal Justice (CUNY)</span>
+      <p>Classes, inheritance, and file handling using modern C++.</p>
+      <div class="cta">
+        <a class="button small" href="#">Syllabus (PDF)</a>
+        <a class="button small" href="#">Course Details</a>
+      </div>
+    </details>
+
+    <!-- MENTORING -->
+    <section class="section-block">
       <h2>Mentoring</h2>
-      <p class="muted">I mentor small teams on practical projects with clear outcomes. If it helps people and we can ship it in steps, I’m interested.</p>
-      <ul>
-        <li>Security & digital forensics tools</li>
-        <li>AI for learning and evaluation</li>
-        <li>Web, realtime systems, and mapping UX</li>
-      </ul>
-      <p class="muted">Interested in working together? Send a short note via the contact page with your idea, timeline, and what success looks like.</p>
-      <a class="button small" href="contact.html">Contact</a>
-    </div>
-  </section>
-</div>
-
+      <p>I mentor applied projects that blend AI, forensics, and software design.</p>
+      <h3>Recent Mentoring Projects</h3>
+      <article class="card">
+        <h3>AI Writing Evaluator</h3>
+        <p>Developed rubric-based writing assessment models for students.</p>
+        <a class="button small" href="https://github.com/heyavijitroy">GitHub</a>
+      </article>
+      <article class="card">
+        <h3>BlitzTips</h3>
+        <p>Realtime mapping dashboard for investigative tip management.</p>
+        <a class="button small" href="https://github.com/heyavijitroy">GitHub</a>
+      </article>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Avijit Roy</h4>
-        <p>Educator • Software Engineer • AI Researcher</p>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="publications.html">Publications (available)</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="contact.html">Get in touch</a></li>
-        </ul>
-      </div>
+    <div class="container foot-flex">
+      <p>© 2025 Avijit Roy</p>
     </div>
-    <p class="container tiny">© 2025 Avijit Roy. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

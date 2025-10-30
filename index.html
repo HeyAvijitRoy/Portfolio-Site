@@ -1,97 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Educator • Software Engineer • AI Researcher • Avijit Roy</title>
-  <meta name="description" content="Avijit Roy: security, AI, teaching, mapping." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Home • Avijit Roy</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="icon" href="assets/img/placeholder.png" />
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Avijit Roy</a>
-      <nav class="nav-links" id="navLinks"><a href="index.html" data-active="index" class="active">Home</a><a href="about.html" data-active="about" class="">About</a><a href="teaching.html" data-active="teaching" class="">Teaching</a><a href="projects.html" data-active="projects" class="">Projects</a><a href="contact.html" data-active="contact" class="">Contact</a></nav>
+      <a class="brand" href="index.html">Avijit <span>Roy</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+      </nav>
       <div class="nav-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
-        <button class="hamburger" id="hamburger" aria-label="Open Menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button id="themeToggle" class="theme-toggle"><span id="themeIcon"></span></button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+
+  <!-- MAIN -->
   <main class="container section">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Avijit <span style="color:var(--brand)">Roy</span></h1>
+        <p class="lead">Educator, engineer, and researcher exploring cybersecurity, AI, and digital forensics.</p>
+        <div class="cta">
+          <a class="button primary" href="projects.html">See Projects</a>
+          <a class="button" href="assets/AvijitRoy_CV.pdf">Download CV</a>
+        </div>
+      </div>
+      <div class="avatar"><img src="assets/img/avatar.png" alt="Avijit Roy portrait"></div>
+    </section>
 
-<section class="hero">
-  <h1>Hi, I’m Avijit.</h1>
-  <p class="lead">I build practical, secure software and teach students how to think like engineers. I like clean systems, clear writing, and shipping things that help people.</p>
-  <div class="cta">
-    <a class="button" href="projects.html">See projects</a>
-    <a class="button ghost" href="assets/AvijitRoy_CV.pdf">Download CV</a>
-  </div>
-</section>
+    <!-- ABOUT -->
+    <section class="section-block">
+      <h2>About Me</h2>
+      <p>I’m a software engineer, educator, and researcher based in New York. My work spans security, AI, and mapping—focused on building useful, secure, and human-centered tools.</p>
+    </section>
 
-<section class="section">
-  <div class="stack">
-    <div class="block">
-      <h2>What I’m focused on</h2>
-      <p class="muted">Security and digital forensics, AI for learning and evaluation, mapping & real‑time apps, and teaching that connects to the real world.</p>
-    </div>
-    <div class="block">
-      <h2>Recent highlights</h2>
-      <div class="card-grid">
+    <!-- FOCUS AREAS -->
+    <section class="section-block">
+      <h2>Focus Areas</h2>
+      <ul>
+        <li>Cybersecurity & Digital Forensics</li>
+        <li>AI for Education and Evaluation</li>
+        <li>Cloud Systems & Realtime Mapping</li>
+        <li>Teaching and Mentorship</li>
+      </ul>
+    </section>
+
+    <!-- RECENT HIGHLIGHTS -->
+    <section class="section-block">
+      <h2>Recent Highlights</h2>
+      <div class="card-list">
         <article class="card">
           <h3>AI Writing Proficiency Evaluator</h3>
-          <p class="muted">A rubric‑aligned approach to classify and score writing with transparent criteria. Built to support language courses.</p>
-          <a class="button small" href="projects.html#ai-writing">Details</a>
+          <p class="muted">Automatically classifies student writing by ACTFL proficiency levels.</p>
+          <a class="button small" href="projects.html#oss">See Details</a>
         </article>
         <article class="card">
           <h3>Human Trafficking Intelligence Platform</h3>
-          <p class="muted">Real‑time admin map with viewport‑aware tip drawer and careful handling of sensitive media.</p>
-          <a class="button small" href="projects.html#blitztips">Details</a>
-        </article>
-        <article class="card">
-          <h3>HashNow</h3>
-          <p class="muted">Client‑side hashing tool (MD5/SHA) for quick verification in labs and fieldwork.</p>
-          <a class="button small" href="projects.html#hashnow">Details</a>
+          <p class="muted">Realtime admin map and delayed read-marking system using Hangfire.</p>
+          <a class="button small" href="projects.html">Learn More</a>
         </article>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- CONTACT -->
+    <section class="section-block">
+      <h2>Contact Me</h2>
+      <p><strong>Email:</strong> email [at] domain &lt;dot&gt; edu</p>
+      <p>
+        <a class="icon-link" href="https://github.com/heyavijitroy">GitHub</a> ·
+        <a class="icon-link" href="https://www.linkedin.com/in/HeyAvijitRoy/">LinkedIn</a> ·
+        <a class="icon-link" href="https://x.com/HeyAvijitRoy">X</a>
+      </p>
+    </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Avijit Roy</h4>
-        <p>Educator • Software Engineer • AI Researcher</p>
-      </div>
-      <div>
-        <h4>Links</h4>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="publications.html">Publications (available)</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="contact.html">Get in touch</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="container tiny">© 2025 Avijit Roy. All rights reserved.</p>
-  </footer>
 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container foot-flex">
+      <p>© 2025 Avijit Roy</p>
+    </div>
+  </footer>
 </body>
 </html>
