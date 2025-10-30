@@ -1,30 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home • Avijit Roy</title>
+
+  <title>Avijit Roy • Educator, Engineer, Researcher</title>
+
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://www.avijitroy.com/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="Avijit Roy — educator, engineer, and researcher in cybersecurity, digital forensics, and applied computing. Projects, teaching, and practical work building secure, human-centered systems." />
+  <meta name="keywords"
+    content="Avijit Roy, cybersecurity, digital forensics, .NET, C#, applied computing, education, research, data systems, New York, CUNY, City University of New York, John Jay College" />
+  <meta name="author" content="Avijit Roy" />
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Avijit Roy • Educator, Engineer, Researcher" />
+  <meta property="og:description"
+    content="Projects, teaching, and practical work at the intersection of cybersecurity, digital forensics, and applied computing." />
+  <meta property="og:url" content="https://www.avijitroy.com/" />
+  <meta property="og:image" content="https://www.avijitroy.com/assets/img/og-image.jpg" />
+  <meta property="og:site_name" content="Avijit Roy" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@HeyAvijitRoy" />
+  <meta name="twitter:creator" content="@HeyAvijitRoy" />
+  <meta name="twitter:title" content="Avijit Roy • Educator, Engineer, Researcher" />
+  <meta name="twitter:description"
+    content="Projects, teaching, and practical work building secure, human-centered systems." />
+  <meta name="twitter:image" content="https://www.avijitroy.com/assets/img/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#0a66c2">
+  <meta name="theme-color" content="#0a66c2">
+  <link rel="preload" as="image" href="/assets/img/og-image.jpg" imagesrcset="/assets/img/og-image.jpg 1x">
+  <link rel="preload" as="image" href="/assets/img/avatar.png" imagesrcset="/assets/img/avatar.png 1x">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Font Awesome (icons for socials if needed) -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Scripts -->
   <script src="assets/js/main.js" defer></script>
+
+  <!-- JSON-LD (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Avijit Roy",
+    "url": "https://www.avijitroy.com/",
+    "image": "https://www.avijitroy.com/assets/img/avatar.png",
+    "jobTitle": "Data Analyst and Lecturer",
+    "worksFor": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "City University of New York (CUNY)"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "John Jay College of Criminal Justice"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/HeyAvijitRoy/",
+      "https://github.com/HeyAvijitRoy",
+      "https://x.com/HeyAvijitRoy",
+      "https://heyavijitroy.medium.com/",
+      "https://orcid.org/0009-0007-8036-0952"
+    ]
+  }
+  </script>
+
 </head>
+
 <body>
-  <!-- ===========================
-       HEADER
-       =========================== -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Avijit <span>Roy</span></a>
       <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="teaching.html">Teaching</a>
         <a href="projects.html">Projects</a>
       </nav>
@@ -32,46 +103,79 @@
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
           <span id="themeIcon"></span>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+        <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ===========================
-       MAIN
-       =========================== -->
+  <!-- Main -->
   <main class="container section">
     <!-- HERO -->
     <section class="hero">
       <div>
         <h1>Avijit <span>Roy</span></h1>
-        <p class="lead">Educator, engineer, and researcher exploring cybersecurity, AI, and digital forensics. I build pragmatic tools and teach with a focus on real users and measurable outcomes.</p>
+        <p class="lead">Educator, engineer, and researcher advancing cybersecurity, AI, and digital forensics through
+          applied learning and ethical innovation. I design secure, data-driven systems and mentor students to think
+          critically, build responsibly, and bridge theory with real-world impact.</p>
         <div class="cta">
           <a class="button primary" href="projects.html">See Projects</a>
-          <a class="button" href="assets/AvijitRoy_CV.pdf">Download CV</a>
+          <a class="button" href="assets/AvijitRoy_CV.pdf" aria-label="Download Avijit Roy CV (PDF)"
+            rel="noopener">Download CV</a>
         </div>
       </div>
       <div class="avatar">
-        <img src="assets/img/avatar.png" alt="Avijit Roy portrait" />
+        <!-- <img src="assets/img/avatar.png" alt="Avijit Roy portrait" loading="lazy" decoding="async"/> -->
+        <img src="assets/img/avatar.png" alt="Avijit Roy portrait" width="320" height="320" loading="lazy"
+          decoding="async" />
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="section-block">
       <h2>About Me</h2>
-      <p>I’m a software engineer, educator, and researcher based in New York. My work spans security, AI, and mapping—focused on building useful, secure, and human-centered tools. I like small iterations, real users, and shipping fast.</p>
+      <p>
+        I’m an educator, engineer, and researcher based in New York. My work bridges cybersecurity, digital forensics,
+        and data analytics, focusing on creating secure, human-centered systems and teaching how technology impacts real
+        people.
+      </p>
+      <p>
+        I currently serve as a Data Analyst at the City University of New York (CUNY) Central Office and Lecturer in
+        Computer Science at John Jay College, where I guide students through programming, software design, and ethical
+        computing practices.
+      </p>
+      <p>
+        Beyond the classroom and code, I’m an avid traveler and photographer who’s driven across the U.S. exploring
+        national parks — experiences that remind me how curiosity and perspective fuel both innovation and teaching.
+      </p>
+      <p>
+        At my core, I believe technology should remain ethical, purposeful, and human, blending logic with empathy in
+        everything I build or teach.
+      </p>
     </section>
 
     <!-- FOCUS AREAS -->
     <section class="section-block">
       <h2>Focus Areas</h2>
+      <p class="muted">Where my teaching and engineering work meet in practice.</p>
       <ul>
-        <li>Cybersecurity & Digital Forensics</li>
-        <li>AI for Education and Evaluation</li>
-        <li>Cloud Systems & Realtime Mapping</li>
-        <li>Teaching and Mentorship</li>
+        <li>Cybersecurity & Digital Forensics — investigating systems, securing data, and protecting digital evidence.
+        </li>
+        <li>Applied Computing & Data Systems — developing scalable tools in .NET, SQL, and cloud environments.</li>
+        <li>AI & Educational Technology — building practical models for learning assessment and research automation.
+        </li>
+        <li>Teaching, Mentorship & Ethical Technology — guiding students and professionals to create technology with
+          impact and integrity.</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section-block">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MS</strong> — Digital Forensics & Cybersecurity, John Jay College (CUNY)</li>
+        <li><strong>BS</strong> — Computer Science & Information Security, John Jay College (CUNY)</li>
       </ul>
     </section>
 
@@ -97,24 +201,16 @@
       </div>
     </section>
 
-    <!-- EDUCATION (brought back) -->
-    <section class="section-block">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MS</strong>, Digital Forensics & Cybersecurity — John Jay College (CUNY)</li>
-        <li><strong>BS</strong>, Computer Science & Information Security — John Jay College (CUNY)</li>
-        <li><strong>AAS</strong>, Computer Programming & IT — ASA College</li>
-      </ul>
-    </section>
-
     <!-- CONTACT -->
     <section class="section-block">
       <h2>Contact Me</h2>
-      <p><strong>Email:</strong> email [at] domain &lt;dot&gt; edu</p>
-      <p>
-        <a class="icon-link" href="https://github.com/heyavijitroy" target="_blank" rel="noopener">GitHub</a> ·
-        <a class="icon-link" href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a class="icon-link" href="https://x.com/HeyAvijitRoy" target="_blank" rel="noopener">X</a>
+      <p>I enjoy connecting with people who share interests in technology, education, and storytelling through data or
+        travel. Whether it’s a project idea or just a friendly note, I’d be glad to hear from you.</p>
+      <p><strong>Email:</strong> mail [at] avijitroy &lt;dot&gt; com</p>
+      <p class="contact-note">You can also find me on
+        <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener">LinkedIn</a>,
+        <a href="https://heyavijitroy.medium.com/" target="_blank" rel="noopener">Medium</a>, or
+        <a href="https://www.instagram.com/pirsquarek/" target="_blank" rel="noopener">Instagram</a>.
       </p>
     </section>
   </main>
@@ -124,11 +220,25 @@
     <div class="container foot-flex">
       <p>© 2025 Avijit Roy</p>
       <div class="socials">
-        <a href="https://github.com/heyavijitroy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://x.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="LinkedIn"
+          title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://orcid.org/0009-0007-8036-0952" target="_blank" rel="noopener" aria-label="ORCiD"
+          title="ORCiD"><i class="fa-brands fa-orcid"></i></a>
+        <a href="https://heyavijitroy.medium.com/" target="_blank" rel="noopener" aria-label="Medium" title="Medium"><i
+            class="fa-brands fa-medium"></i></a>
+        <a href="https://x.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="X (Twitter)"
+          title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="Facebook"
+          title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/pirsquarek/" target="_blank" rel="noopener" aria-label="Instagram"
+          title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.flickr.com/photos/kabyo/" target="_blank" rel="noopener" aria-label="Flickr"
+          title="Flickr"><i class="fa-brands fa-flickr"></i></a>
       </div>
     </div>
   </footer>
 </body>
+
 </html>

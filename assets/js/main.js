@@ -9,7 +9,35 @@
   // Mobile nav
   const hamburger = document.getElementById("hamburger");
   const nav = document.getElementById("navLinks");
-  hamburger?.addEventListener("click", () => nav?.classList.toggle("show"));
+  hamburger?.addEventListener("click", () => {
+  const isOpen = nav?.classList.toggle("show");
+  if (isOpen) {
+    const firstLink = nav?.querySelector('a');
+    firstLink && firstLink.focus();
+    firstLink.setAttribute("tabindex", "-1");
+  }
+  hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  hamburger.setAttribute("aria-label", isOpen ? "Close Menu" : "Open Menu");
+  });
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav?.classList.contains("show")) {
+      nav.classList.remove("show");
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Open Menu");
+      hamburger.focus();
+    }
+  });
+
+  // Close after clicking a link (mobile UX)
+  nav?.addEventListener("click", (e) => {
+    const target = e.target;
+    if (target && target.closest("a")) {
+      nav.classList.remove("show");
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Open Menu");
+    }
+  });
 
   // Theme toggle
   const root = document.documentElement;
@@ -20,11 +48,18 @@
   root.setAttribute("data-theme", theme);
   updateThemeIcon(theme);
 
+  const themeStatus = document.createElement("span");
+  themeStatus.setAttribute("id", "themeStatus");
+  themeStatus.setAttribute("aria-live", "polite");
+  themeStatus.classList.add("sr-only");
+  document.body.appendChild(themeStatus);
+
   document.getElementById("themeToggle")?.addEventListener("click", () => {
     const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
     updateThemeIcon(next);
+    themeStatus.textContent = next === "dark" ? "Dark mode enabled" : "Light mode enabled";
   });
 
   function updateThemeIcon(mode) {
@@ -70,7 +105,7 @@
   search?.addEventListener("input", applyFilter);
   clearBtn?.addEventListener("click", () => {
     search.value = "";
-    search.focus();
+    setTimeout(() => search.focus(), 0);
     applyFilter();
   });
   chips.forEach((c) =>

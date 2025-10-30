@@ -1,13 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Teaching • Avijit Roy</title>
 
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://www.avijitroy.com/teaching.html" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Avijit Roy's teaching philosophy, courses, and mentoring projects in computer science, cybersecurity, and applied computing." />
+  <meta name="keywords" content="Avijit Roy, teaching, education, computer science, cybersecurity, C++, applied computing, mentoring, courses" />
+  <meta name="author" content="Avijit Roy" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Teaching • Avijit Roy" />
+  <meta property="og:description" content="Teaching philosophy, courses taught, and mentoring projects." />
+  <meta property="og:url" content="https://www.avijitroy.com/teaching.html" />
+  <meta property="og:image" content="https://www.avijitroy.com/assets/img/og-image.jpg" />
+  <meta property="og:site_name" content="Avijit Roy" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@HeyAvijitRoy" />
+  <meta name="twitter:creator" content="@HeyAvijitRoy" />
+  <meta name="twitter:title" content="Teaching • Avijit Roy" />
+  <meta name="twitter:description" content="Teaching philosophy, courses taught, and mentoring projects." />
+  <meta name="twitter:image" content="https://www.avijitroy.com/assets/img/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#0a66c2">
+  <meta name="theme-color" content="#0a66c2">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Scripts -->
   <script src="assets/js/main.js" defer></script>
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="site-header">
@@ -15,14 +58,14 @@
       <a class="brand" href="index.html">Avijit <span>Roy</span></a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="teaching.html" class="active">Teaching</a>
+        <a href="teaching.html" class="active" aria-current="page">Teaching</a>
         <a href="projects.html">Projects</a>
       </nav>
       <div class="nav-actions">
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
           <span id="themeIcon"></span>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+        <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -32,9 +75,10 @@
   <!-- MAIN -->
   <main class="container section">
     <h1>Teaching</h1>
+      <p class="muted">Courses I teach and projects I mentor, grounded in practical, secure, and human-centered computing.</p>
 
     <!-- COURSES -->
-    <section class="block">
+    <section class="section-block">
       <h2>Courses I Teach</h2>
 
       <details>
@@ -67,26 +111,32 @@
     </section>
 
     <!-- MENTORING -->
-    <section class="block">
+    <section class="section-block">
       <h2>Mentoring</h2>
       <p class="muted">I mentor pragmatic projects with clear outcomes and real users.</p>
 
       <h3>Recent mentoring projects</h3>
-      <div class="card-list">
-        <article class="card">
-          <h3>AI Writing Evaluator</h3>
-          <p class="muted">Rubric-aligned writing classification for language courses.</p>
-          <a class="button small" href="projects.html#ai-writing">View</a>
-        </article>
-        <article class="card">
-          <h3>BlitzTips</h3>
-          <p class="muted">Admin workflows, real-time map, delayed read marking.</p>
-          <a class="button small" href="projects.html#hti-platform">View</a>
-        </article>
-        <article class="card">
-          <h3>HashNow</h3>
-          <p class="muted">Client-side hashing tool for quick field verification.</p>
-          <a class="button small" href="projects.html#hashnow">View</a>
+      <div id="projectGrid">
+        <!-- HTI Platform -->
+        <article class="card" id="hti-platform"
+          data-tags="security realtime mapping opensource dotnet c# sql azure signalr hangfire">
+          <h3>Human Trafficking Intelligence Platform
+            <a class="repo-link" href="https://github.com/heyavijitroy/BlitzTips" target="_blank" rel="noopener"
+              aria-label="Open project on GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </h3>
+          <p class="muted">Viewport-aware admin map, photo modal, and delayed read-marking using Hangfire. Privacy-minded
+            media handling.</p>
+          <!-- <div class="cta">
+            <ul class="tags">
+              <li class="clickable" data-tag="security">Security</li>
+              <li class="clickable" data-tag="realtime">Realtime</li>
+              <li class="clickable" data-tag="mapping">Mapping</li>
+              <li class="clickable" data-tag="dotnet">.NET</li>
+              <li class="clickable" data-tag="azure">Azure</li>
+            </ul>
+          </div> -->
         </article>
       </div>
     </section>
@@ -97,9 +147,22 @@
     <div class="container foot-flex">
       <p>© 2025 Avijit Roy</p>
       <div class="socials">
-        <a href="https://github.com/heyavijitroy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://x.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://github.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="LinkedIn"
+          title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://orcid.org/0009-0007-8036-0952" target="_blank" rel="noopener" aria-label="ORCiD"
+          title="ORCiD"><i class="fa-brands fa-orcid"></i></a>
+        <a href="https://heyavijitroy.medium.com/" target="_blank" rel="noopener" aria-label="Medium" title="Medium"><i
+            class="fa-brands fa-medium"></i></a>
+        <a href="https://x.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="X (Twitter)"
+          title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.facebook.com/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="Facebook"
+          title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/pirsquarek/" target="_blank" rel="noopener" aria-label="Instagram"
+          title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.flickr.com/photos/kabyo/" target="_blank" rel="noopener" aria-label="Flickr"
+          title="Flickr"><i class="fa-brands fa-flickr"></i></a>
       </div>
     </div>
   </footer>
