@@ -48,11 +48,15 @@ html[data-theme="dark"] {
 /* Visually hidden (for screen reader announcements) */
 .sr-only {
   position: absolute !important;
-  width: 1px; height: 1px;
-  margin: -1px; padding: 0; border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  overflow: hidden; white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* ---------- Base ---------- */
@@ -122,6 +126,7 @@ h3 {
 p {
   margin: 0 0 var(--space-3);
 }
+
 /* Muted Colors */
 .muted {
   color: var(--muted);
@@ -189,8 +194,14 @@ html[data-theme="dark"] .muted {
   padding: 6px;
   border: 1px solid transparent;
 }
-.brand-github i { font-size: 14px }
-.brand-github:hover { background: var(--chip-hover); }
+
+.brand-github i {
+  font-size: 14px
+}
+
+.brand-github:hover {
+  background: var(--chip-hover);
+}
 
 .nav-links {
   display: flex;
@@ -294,6 +305,7 @@ html[data-theme="dark"] .muted {
   line-height: 1;
   display: block;
 }
+
 .button:focus-visible {
   outline: 2px solid color-mix(in oklab, var(--brand) 60%, transparent);
   outline-offset: 3px;
@@ -476,6 +488,7 @@ html[data-theme="dark"] .muted {
   color: var(--accent-color);
   text-decoration: none;
 }
+
 .contact-note a:hover,
 .contact-note a:focus-visible {
   text-decoration: underline;
@@ -483,8 +496,14 @@ html[data-theme="dark"] .muted {
 }
 
 /* Make inline tags look clickable and consistent */
-.tags li.clickable { cursor: pointer; }
-.tags li.clickable:hover { box-shadow: var(--shadow); background: var(--chip-hover); }
+.tags li.clickable {
+  cursor: pointer;
+}
+
+.tags li.clickable:hover {
+  box-shadow: var(--shadow);
+  background: var(--chip-hover);
+}
 
 /* project title + repo link */
 .card h3 {
@@ -493,6 +512,7 @@ html[data-theme="dark"] .muted {
   gap: 10px;
   justify-content: space-between;
 }
+
 .repo-link {
   color: var(--text);
   display: inline-flex;
@@ -503,8 +523,14 @@ html[data-theme="dark"] .muted {
   border-radius: var(--radius-2);
   border: 1px solid transparent;
 }
-.repo-link i { font-size: 16px }
-.repo-link:hover { background: var(--chip-hover); }
+
+.repo-link i {
+  font-size: 16px
+}
+
+.repo-link:hover {
+  background: var(--chip-hover);
+}
 
 /* ---------- Teaching ---------- */
 details {
@@ -562,6 +588,7 @@ details[open]>summary {
   gap: 12px;
   align-items: center;
 }
+
 .socials a {
   color: var(--text);
   padding: 6px;
@@ -585,8 +612,17 @@ details[open]>summary {
     text-align: center;
     gap: 8px;
   }
-  .foot-flex > p { width: 100%; order: 1 }
-  .socials { width: 100%; justify-content: center; order: 2 }
+
+  .foot-flex>p {
+    width: 100%;
+    order: 1
+  }
+
+  .socials {
+    width: 100%;
+    justify-content: center;
+    order: 2
+  }
 }
 
 /* ---------- Mobile Nav ---------- */
@@ -603,7 +639,8 @@ details[open]>summary {
     flex-direction: column;
     gap: var(--space-2);
     min-width: 160px;
-    z-index: 50; /* keep menu above header */
+    z-index: 50;
+    /* keep menu above header */
   }
 
   .nav-links.show {
@@ -616,8 +653,10 @@ details[open]>summary {
 
   .nav-links a {
     display: block;
-    width: 100%;                 /* full clickable width */
-    min-height: 44px;            /* comfortable touch target */
+    width: 100%;
+    /* full clickable width */
+    min-height: 44px;
+    /* comfortable touch target */
     padding: 12px 14px;
     border-radius: 8px;
     color: var(--text);
@@ -634,7 +673,7 @@ details[open]>summary {
     color: var(--brand);
   }
 
-  .nav-links a + a {
+  .nav-links a+a {
     margin-top: 4px;
   }
 }
@@ -702,6 +741,7 @@ details>summary {
   justify-content: space-between;
   gap: var(--space-2);
 }
+
 details>summary:hover,
 details>summary:focus-visible {
   background: color-mix(in oklab, var(--chip-hover) 90%, #fff);
@@ -713,9 +753,51 @@ details>summary:focus-visible {
     transition: none !important;
     animation: none !important;
   }
+
   .button:hover {
     transform: none !important;
     box-shadow: none !important;
+  }
+}
+
+/* Avatar flexibility */
+/* Desktop (>=1025px) */
+@media (min-width: 1025px) {
+  .hero {
+    grid-template-columns: 1fr 250px;
+    /* match avatar width */
+  }
+
+  .avatar {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Tablet (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 200px;
+  }
+
+  .avatar {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* Mobile (<768px) — already stacks vertically */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .avatar {
+    justify-self: center;
+    margin-top: var(--space-3);
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -730,7 +812,12 @@ details>summary:focus-visible {
 } */
 
 
-#assessments, #policies, #weekly-plan, #tools, #github, #books {
+#assessments,
+#policies,
+#weekly-plan,
+#tools,
+#github,
+#books {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
@@ -744,10 +831,15 @@ details>summary:focus-visible {
 }
 
 /* CSCI-272 page refinements */
-.section-block .card ul { margin-top: .25rem; }
-.section-block .card ul li + li { margin-top: .25rem; }
+.section-block .card ul {
+  margin-top: .25rem;
+}
 
-hr{
+.section-block .card ul li+li {
+  margin-top: .25rem;
+}
+
+hr {
   border: none;
   border-top: 1px solid var(--border);
   margin: var(--space-4) 0;
