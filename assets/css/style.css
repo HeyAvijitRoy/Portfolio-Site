@@ -718,3 +718,39 @@ details>summary:focus-visible {
     box-shadow: none !important;
   }
 }
+
+/* =====================================================
+   CSCI 272 Page
+   ===================================================== */
+
+/* .csci-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+} */
+
+
+#assessments {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+#weekly-plan{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+#tools{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
