@@ -29,6 +29,17 @@
     }
   });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Disable links that have aria-disabled="true"
+  const disabledLinks = document.querySelectorAll('a[aria-disabled="true"]');
+  disabledLinks.forEach(link => {
+    link.removeAttribute('href');
+    link.style.cursor = 'not-allowed'; // Optional: visual cue
+    link.setAttribute('tabindex', '-1'); // Remove from tab order
+  });
+});
+
+
   // Close after clicking a link (mobile UX)
   nav?.addEventListener("click", (e) => {
     const target = e.target;
@@ -145,3 +156,5 @@
   // initial wire
   wireInlineTags();
 })();
+
+
