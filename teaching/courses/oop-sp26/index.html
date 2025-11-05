@@ -1,0 +1,479 @@
+<!-- =====================================================
+   CSCI 272 Course Page (Student Portal)
+   - Single-column, brand-consistent
+   - Overview buttons link to section IDs below
+   - Dev-C++ + GitHub + VS Code + Policies + Websites + Books
+   ===================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Introduction to Programming • CSCI 271 | Avijit Roy</title>
+
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://www.avijitroy.com/teaching/courses/oop-sp26/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="Explore the course portal for CSCI 272: Object-Oriented Programming in C++. Access the weekly plan, syllabus, and resources for mastering classes, inheritance, and file I/O." />
+  <meta name="keywords"
+    content="CSCI 272, C++, object-oriented programming, classes, inheritance, polymorphism, operator overloading, file I/O" />
+  <meta name="author" content="Avijit Roy" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Object-Oriented Programming (C++) • CSCI 272" />
+  <meta property="og:description"
+    content="Explore the course portal for CSCI 272: Object-Oriented Programming in C++. Access the weekly plan, syllabus, and resources for mastering classes, inheritance, and file I/O." />
+  <meta property="og:url" content="https://www.avijitroy.com/teaching/courses/oop-sp26/" />
+  <meta property="og:image" content="https://www.avijitroy.com/assets/img/og-image.jpg" />
+  <meta property="og:site_name" content="Avijit Roy" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@HeyAvijitRoy" />
+  <meta name="twitter:creator" content="@HeyAvijitRoy" />
+  <meta name="twitter:title" content="Object-Oriented Programming (C++) • CSCI 272" />
+  <meta name="twitter:description"
+    content="Explore the course portal for CSCI 272: Object-Oriented Programming in C++. Access the weekly plan, syllabus, and resources for mastering classes, inheritance, and file I/O." />
+  <meta name="twitter:image" content="https://www.avijitroy.com/assets/img/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="../../../assets/favicons/favicon.ico" sizes="any">
+  <link rel="icon" href="../../../assets/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../../assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="../../../assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="../../../assets/favicons/safari-pinned-tab.svg" color="#0a66c2">
+  <meta name="theme-color" content="#0a66c2">
+
+  <!-- Styles & Scripts (reuse existing paths in your project) -->
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="../../../assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../../../index.html">Avijit <span>Roy</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="../../../">Home</a>
+        <a href="../../../teaching/">Teaching</a>
+        <a href="../../../projects/">Projects</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <span id="themeIcon"></span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container section">
+    <h1 class="page-title">Introduction to Programming • CSCI 271</h1>
+    <p class="muted">Course portal for students: weekly plan, assessments, expectations, tools, and quick links.</p>
+
+    <!-- Overview -->
+    <div class="cta" style="margin-top:.75rem;">
+      <a class="button" href="#weekly-plan">Weekly Plan</a>
+      <a class="button" href="#assessments">Assessments</a>
+      <a class="button" href="#policies">Policies</a>
+      <a class="button" href="#tools">Tools</a>
+      <a class="button" href="#github">GitHub</a>
+      <a class="button" href="#websites">Websites</a>
+      <a class="button" href="#books">Books</a>
+      <a class="button" href="#faqs">FAQs</a>
+      <a class="button" href="#contact">Contact</a>
+    </div>
+    <section id="overview" class="section-block">
+      <article class="card">
+        <h2>Overview</h2>
+        <p>
+          This course builds practical C++ skills through object-oriented design: classes, composition, operator
+          overloading, inheritance, and polymorphism — plus robust I/O with streams, stringstreams, and files.
+          You’ll write clean, modular code and be able to explain your decisions.
+        </p>
+        <p class="muted">
+          Instructor: Avijit Roy • John Jay College of Criminal Justice (CUNY)
+        </p>
+        <div class="cta" style="margin-top:.75rem;">
+          <a class="button primary" href="Syllabus-OOP-SP26.pdf" target="_blank" rel="noopener">Syllabus (PDF)</a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Learning Outcomes -->
+    <section id="outcomes" class="section-block">
+      <article class="card">
+        <h2>Learning Outcomes</h2>
+        <ul>
+          <li>Design and implement classes with clean interfaces.</li>
+          <li>Use vectors, strings, templates, and exceptions appropriately.</li>
+          <li>Work confidently with streams, stringstreams, and file I/O.</li>
+          <li>Apply inheritance and polymorphism to real problems.</li>
+          <li>Explain and defend design decisions and code behavior.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Weekly Plan -->
+    <section id="weekly-plan" class="section-block">
+      <h2>Weekly Plan (Snapshot)</h2>
+      <p class="muted">A condensed roadmap. Exact pacing may adjust slightly — check in class for updates.</p>
+
+      <div class="timeline">
+        <article class="card">
+          <h3>Weeks 1–3 • Foundations</h3>
+          <ul>
+            <li>Review: functions, arrays, pointers → add vectors & templates.</li>
+            <li>Strings: build, compare, concatenate, convert; practical parsing tasks.</li>
+          </ul>
+          <!-- </article> -->
+          <hr>
+
+          <!-- <article class="card"> -->
+          <h3>Weeks 4–6 • Classes & Streams</h3>
+          <ul>
+            <li>Intro to classes: public/private, member functions, header/implementation split.</li>
+            <li>Streams & recovery from bad input; stringstreams for parsing/building text.</li>
+          </ul>
+          <!-- </article> -->
+          <hr>
+
+          <!-- <article class="card"> -->
+          <h3>Week 7 • Midterm</h3>
+          <ul>
+            <li>Written exam + individual/group OOP project (Weeks 1–6 scope).</li>
+          </ul>
+          <!-- </article> -->
+          <hr>
+
+          <!-- <article class="card"> -->
+          <h3>Weeks 8–10 • Files & Operator Overloading</h3>
+          <ul>
+            <li>Text/CSV file I/O; modular design with headers/implementations.</li>
+            <li>Overload operators (unary/binary) with correct semantics.</li>
+          </ul>
+          <!-- </article> -->
+          <hr>
+
+          <!-- <article class="card"> -->
+          <h3>Weeks 11–12 • Inheritance & Polymorphism</h3>
+          <ul>
+            <li>Base/derived classes; protected; virtual functions & abstract classes.</li>
+          </ul>
+          <!-- </article> -->
+          <hr>
+
+          <!-- <article class="card"> -->
+          <h3>Weeks 13–14 • Templates & Exceptions</h3>
+          <ul>
+            <li>Class templates for reusable designs; try/catch/throw and custom exceptions.</li>
+          </ul>
+          <!-- </article> -->
+          <hr>
+
+          <!-- <article class="card"> -->
+          <h3>Week 15 • Final</h3>
+          <ul>
+            <li>Written exam + Team capstone: plan, implement, present a complete OOP C++ application.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Assessments -->
+    <section id="assessments" class="section-block">
+      <h2>Assessments</h2>
+
+      <article class="card">
+        <h3>Participation & Quizzes</h3>
+        <p class="muted">Short checks to reinforce weekly topics; start on time. No make-ups for late arrival unless
+          documented emergencies.</p>
+        <ul>
+          <li>Weekly knowledge checks as class participation & attendance</li>
+          <li>In-class discussion & code walk-throughs</li>
+          <li>Two announced quizzes + brief pop quizzes</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Assignments</h3>
+        <p class="muted">Frequent, focused practice. Expect clean headers, comments, and testable examples. Submit on
+          time.</p>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Midterm</h3>
+        <ul>
+          <li>Written exam on concepts & code analysis.</li>
+          <li>Individual take-home OOP project (Weeks 1–6).</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Final — Exam + Team Capstone</h3>
+        <ul>
+          <li>Written exam on concepts & code analysis.</li>
+          <li>Plan (UML encouraged), implement, and present a complete OOP app.</li>
+          <li>Clear division of work; everyone explains their code.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Policies (Responsibilities & Policies) -->
+    <section id="policies" class="section-block">
+      <h2>Responsibilities &amp; Policies</h2>
+
+      <article class="card">
+        <h3>Student Responsibilities</h3>
+        <ul>
+          <li>Arrive on time; participate in discussions and code walk-throughs.</li>
+          <li>Bring code that compiles and runs; be ready to explain your design choices.</li>
+          <li>Back up your work and verify submissions (build, run, and test locally).</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+        <!-- <article class="card"> -->
+        <h3>Academic Integrity</h3>
+        <p>All submitted work must be your own. Sharing solutions, copying code without attribution, or submitting
+          generated work as your own violates course and college policy and may result in a zero and further action.</p>
+        <ul>
+          <li>Credit any external help (peers, forums, snippets) in your README.</li>
+          <li>Be prepared to orally explain any code you submit.</li>
+        </ul>
+        <p class="muted">Please review the college's <a
+            href="https://www.jjay.cuny.edu/academics/academic-resources-services/registrar/academic-standards-requirements/academic-integrity/"
+            target="_blank" rel="noopener">policies</a> on Plagiarism and Cheating</p>
+        <!-- </article> -->
+        <hr>
+        <!-- <article class="card"> -->
+        <h3>Accessibility Services</h3>
+        <p>If you have a documented accommodation, please contact the instructor early so we can implement approved
+          adjustments promptly.</p>
+        <p class="muted">Students seeking accommodations should coordinate through the John Jay <a
+            href="https://jjay.smartcatalogiq.com/en/2024-2025/undergraduate-bulletin/copy-of-student-affairs/accessibility-services/"
+            target="_blank" rel="noopener">Office of Accessibility Services (OAS)</a>.</p>
+        <!-- </article> -->
+        <hr>
+        <!-- <article class="card"> -->
+        <h3>Use of AI Tools (ChatGPT, Copilot, etc.)</h3>
+        <ul>
+          <li>Use AI to learn and explore ideas — not to replace your work.</li>
+          <li><strong>Disclose</strong> any AI assistance in your README or submitted codes (what you asked, what you
+            used, what you learned).</li>
+          <li>You must fully understand and be able to defend any code you submit.</li>
+          <li>Uncredited or misrepresented AI-generated work may receive a zero.</li>
+        </ul>
+        <!-- </article> -->
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="section-block">
+      <h2>Tools</h2>
+
+      <article class="card">
+        <h3>Primary IDE</h3>
+        <ul>
+          <li><a href="https://www.embarcadero.com/free-tools/dev-cpp" target="_blank" rel="noopener">Dev-C++
+              (Windows)</a> — use the latest stable build.</li>
+          <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a> — optional
+            editor (set up a C++ toolchain).</li>
+        </ul>
+        <p class="muted">If you already have a different C++ toolchain configured, you may continue using it — but
+          demos/screenshots in class assume Dev-C++ on Windows.</p>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Quick References</h3>
+        <ul>
+          <li><a href="https://en.cppreference.com/w/" target="_blank" rel="noopener">cppreference.com</a>
+            (language/library lookups)</li>
+          <li><a href="https://isocpp.org/faq" target="_blank" rel="noopener">ISO C++ FAQ</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="section-block">
+      <h2>GitHub Usage</h2>
+      <p>
+        GitHub will be our shared workspace and code archive. It helps you track every change,
+        back up projects safely, and practice professional version control workflows.
+        You’ll also use it to build your coding portfolio — and later, submit assignments
+        when instructed. Practice and share only your learning repos (like
+        <strong>CSCI-272-&lt;semester&gt;</strong>), not graded assignments, to avoid revealing
+        answers to others.
+      </p>
+
+      <article class="card">
+        <h3>Get Started</h3>
+        <ul>
+          <li>Create an account on <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>.</li>
+          <li>Follow: <a
+              href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"
+              target="_blank" rel="noopener">Create your first repository (GitHub Docs)</a></li>
+          <li>Install Git (if needed) and configure your name/email.</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Course Repo Pattern</h3>
+        <ul>
+          <li>Create a personal practice repo named <strong>CSCI-272-&lt;semester&gt;</strong> (e.g.,
+            <em>CSCI-272-Fall-2025</em>).
+          </li>
+          <li>Use this repo to share practice code, notes, and experiments.</li>
+          <li><strong>Do not</strong> post full assignment solutions before grading is completed; you may be asked to
+            submit privately.</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Assignments & Submission</h3>
+        <ul>
+          <li>When instructed, submit via GitHub (private repo) by sharing access to the instructor; otherwise submit on
+            Brightspace.</li>
+          <li>Keep <strong>.h</strong> and <strong>.cpp</strong> files separate; include clear comments.</li>
+          <li>Commit regularly with meaningful messages (e.g., “add input validation for withdrawals”).</li>
+          <li>Do not commit binaries or IDE build folders.</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>README Expectations</h3>
+        <ul>
+          <li>Short problem summary and how to build/run.</li>
+          <li>Reflection: what you learned, tricky parts, known issues.</li>
+          <li>Sample I/O or screenshots when helpful.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Books -->
+    <section id="books" class="section-block">
+      <h2>Books &amp; References</h2>
+
+      <article class="card">
+        <h3>Required / Main Text</h3>
+        <ul>
+          <li><em>C++ How to Program</em> (10th Edition), Deitel &amp; Deitel — ISBN-13: 978-0134448237</li>
+        </ul>
+        <!-- </article> -->
+        <hr>
+
+        <!-- <article class="card"> -->
+        <h3>Optional References</h3>
+        <ul>
+          <li><em>Programming: Principles and Practice Using C++</em> (2nd Ed.), Bjarne Stroustrup — ISBN-13:
+            978-0321992789</li>
+          <li><em>The C++ Programming Language</em> (4th Ed.), Bjarne Stroustrup — ISBN-13: 978-0321563842</li>
+          <li><em>Effective Modern C++</em>, Scott Meyers — ISBN-13: 978-1491903995</li>
+        </ul>
+        <p class="muted">Any recent printing is acceptable. Library/ebook access is fine for reading and study.</p>
+      </article>
+    </section>
+
+    <!-- Important Websites -->
+    <section id="websites" class="section-block">
+      <h2>Important Websites</h2>
+
+      <article class="card">
+        <ul>
+          <li><a href="https://brightspace.cuny.edu/" target="_blank" rel="noopener">Brightspace</a> — course
+            announcements, submissions, grades.</li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> — repositories for practice and
+            (when instructed) submissions.</li>
+          <li><a href="https://www.embarcadero.com/free-tools/dev-cpp" target="_blank" rel="noopener">Dev-C++</a> — IDE
+            (Windows).</li>
+          <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a> — optional editor.
+          </li>
+          <li><a href="https://en.cppreference.com/w/" target="_blank" rel="noopener">cppreference.com</a> — C++
+            language &amp; library reference.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="section-block">
+      <h2>Quick FAQs</h2>
+
+      <details>
+        <summary><span>How do I submit assignments?</span></summary>
+        <div class="details-body">
+          <p>Follow instructions on Brightspace for each assignment. When asked to use GitHub, keep the repo private and
+            share access for grading.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>What happens if my code compiles but fails some tests?</span></summary>
+        <div class="details-body">
+          <p>We focus on correctness, clarity, and adherence to requirements. Partial credit may be limited if logic is
+            incorrect or unexplained.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span>Can I use AI tools?</span></summary>
+        <div class="details-body">
+          <p>Use AI to learn concepts, not to replace your work. Cite any use in your README. You must be able to
+            explain your code.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-block">
+      <article class="card">
+        <h2>Contact &amp; Office Hours</h2>
+        <p>You can reach me at <strong>ARoy [AT] jjay [DOT] cuny [DOT] edu</strong></p>
+        <p>Office: NB 6.63.29 • Office hours by appointment.</p>
+        <p class="muted">Scheduling is flexible — email to coordinate a time.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container foot-flex">
+      <p>© 2025 Avijit Roy</p>
+      <div class="socials">
+        <a href="https://github.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="LinkedIn"
+          title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://orcid.org/0009-0007-8036-0952" target="_blank" rel="noopener" aria-label="ORCiD"
+          title="ORCiD"><i class="fa-brands fa-orcid"></i></a>
+        <a href="https://heyavijitroy.medium.com/" target="_blank" rel="noopener" aria-label="Medium" title="Medium"><i
+            class="fa-brands fa-medium"></i></a>
+        <a href="https://www.instagram.com/pirsquarek/" target="_blank" rel="noopener" aria-label="Instagram"
+          title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.flickr.com/photos/kabyo/" target="_blank" rel="noopener" aria-label="Flickr"
+          title="Flickr"><i class="fa-brands fa-flickr"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
