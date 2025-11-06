@@ -811,7 +811,7 @@ details>summary:focus-visible {
 }
 
 /* =====================================================
-   CSCI 272 Page
+   Course Page
    ===================================================== */
 
 /* .csci-grid {
@@ -860,4 +860,65 @@ hr {
   font-weight: normal;
   margin-left: 0.5em;
   color: var(--muted);
+}
+
+.instructor-info {
+  margin-top: 1rem; 
+  margin-bottom: 0;
+}
+
+.syllabus {
+  margin-top: 0.75rem;
+}
+/* ========================================
+  College Logo
+   ========================================*/
+.overview-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.overview-logo{
+  flex-shrink: 0;
+}
+
+.overview-logo img {
+  height: 60px;
+  width: auto;
+  content: url("../../assets/img/JJC_Logo_WHT.png");
+  /* Default to white logo (dark mode) */
+}
+
+/* Change logo for light mode */
+[data-theme="light"] .overview-logo img {
+  content: url("../../assets/img/JJC_Logo.png");
+  /* Use dark logo for light mode */
+}
+
+.overview-logo img {
+  height: 60px;
+  /* Default height for desktop */
+  width: auto;
+}
+
+/* On screens smaller than 768px, stack the items */
+@media (max-width: 768px) {
+  .overview-container {
+    flex-direction: column;
+  }
+
+  .overview-logo {
+    /* margin-top: 1rem; */
+    /* Center the logo when stacked on mobile */
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+
+  .overview-logo img {
+    height: 50px;
+    /* Smaller height for mobile */
+  }
 }
