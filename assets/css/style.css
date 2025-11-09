@@ -839,6 +839,10 @@ details>summary:focus-visible {
   margin-top: var(--space-3);
 }
 
+.timeline .card h3 {
+  margin-bottom: var(--space-1);
+}
+
 /* CSCI-272 page refinements */
 .section-block .card ul {
   margin-top: .25rem;
