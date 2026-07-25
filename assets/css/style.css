@@ -2182,7 +2182,7 @@ html[data-theme="dark"] body.main-site {
 
 /* Tags and project filters */
 .main-site .tags {
-  gap: 7px 14px;
+  gap: 8px 16px;
   margin-top: 18px;
 }
 
@@ -2193,7 +2193,8 @@ html[data-theme="dark"] body.main-site {
   background: transparent;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 .main-site .tags li::before {
@@ -2205,6 +2206,10 @@ html[data-theme="dark"] body.main-site {
   background: transparent;
   color: var(--brand);
   text-decoration: underline;
+}
+
+.main-site .tags li.clickable {
+  padding-block: 3px;
 }
 
 .main-site .filter-bar {
@@ -2221,20 +2226,21 @@ html[data-theme="dark"] body.main-site {
   margin-right: 6px;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .main-site .chip {
-  padding: 4px 1px;
+  padding: 6px 1px;
   border: 0;
   border-bottom: 1px solid transparent;
   border-radius: 0;
   background: transparent;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.71rem;
+  font-size: 0.86rem;
+  line-height: 1.4;
 }
 
 .main-site .chip:hover {
@@ -2461,6 +2467,14 @@ html[data-theme="dark"] body.main-site {
 
   .main-site.page-home .hero-content h1 {
     font-size: clamp(3.4rem, 18vw, 5rem) !important;
+  }
+
+  .main-site.page-home .avatar-wrapper {
+    justify-self: center;
+  }
+
+  .main-site.page-home .glance-bar {
+    text-align: center;
   }
 
   .main-site .avatar,
