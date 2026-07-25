@@ -2277,6 +2277,10 @@ html[data-theme="dark"] body.main-site {
 }
 
 /* Experience as a professional record */
+body.main-site.page-experience {
+  font-size: 17px;
+}
+
 .main-site.page-experience .experience-list {
   gap: 18px;
   margin-top: 44px;
@@ -2298,7 +2302,7 @@ html[data-theme="dark"] body.main-site {
   top: 1.95rem;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   opacity: 1;
@@ -2321,7 +2325,7 @@ html[data-theme="dark"] body.main-site {
   background: transparent;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.69rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.04em;
 }
@@ -2332,7 +2336,7 @@ html[data-theme="dark"] body.main-site {
 
 .main-site.page-experience .experience-list > .card > p.muted:first-of-type {
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 /* Footer and utility */
