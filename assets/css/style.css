@@ -525,8 +525,7 @@ hr {
 }
 
 /* ---------- Premium Tables ---------- */
-.nice-table,
-.responsive-table {
+.nice-table {
   width: 100%;
   border-collapse: collapse;
   margin: var(--space-4) 0;
@@ -538,22 +537,18 @@ hr {
   border: 1px solid var(--border);
 }
 
-.nice-table thead,
-.responsive-table thead {
+.nice-table thead {
   background: var(--focus-bg);
   border-bottom: 2px solid color-mix(in oklab, var(--brand) 20%, var(--border));
 }
 
 .nice-table th,
-.responsive-table th,
-.nice-table td,
-.responsive-table td {
+.nice-table td {
   padding: 14px var(--space-3);
   border-bottom: 1px solid var(--border);
 }
 
-.nice-table th,
-.responsive-table th {
+.nice-table th {
   font-weight: 600;
   color: var(--brand);
   text-transform: uppercase;
@@ -561,18 +556,15 @@ hr {
   letter-spacing: 0.5px;
 }
 
-.nice-table tbody tr,
-.responsive-table tbody tr {
+.nice-table tbody tr {
   transition: background-color 0.2s ease;
 }
 
-.nice-table tbody tr:hover,
-.responsive-table tbody tr:hover {
+.nice-table tbody tr:hover {
   background-color: var(--chip-hover);
 }
 
-.nice-table tbody tr:last-child td,
-.responsive-table tbody tr:last-child td {
+.nice-table tbody tr:last-child td {
   border-bottom: none;
 }
 
@@ -812,8 +804,7 @@ html[data-theme="dark"] .overview-logo img {
     padding: var(--space-5) 0;
   }
 
-  .nice-table,
-  .responsive-table {
+  .nice-table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -939,54 +930,6 @@ html[data-theme="dark"] .overview-logo img {
   margin: 0;
 }
 
-.affiliation-strip {
-  margin-top: 1.5rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-2);
-  background: var(--card);
-}
-
-.affiliation-label {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--brand);
-  margin-bottom: 0.6rem;
-}
-
-.affiliation-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  line-height: 1.7;
-  color: var(--muted-text, var(--muted));
-}
-
-.affiliation-link {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid color-mix(in oklab, var(--brand) 35%, transparent);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.affiliation-link:hover {
-  color: var(--brand);
-  border-bottom-color: var(--brand);
-}
-
-.affiliation-items span:not(:last-child)::after {
-  content: "•";
-  margin-left: 0.75rem;
-  opacity: 0.5;
-}
-
-.affiliation-items span {
-  white-space: nowrap;
-}
-
 .overview-card {
   padding: 1.5rem;
 }
@@ -1037,20 +980,6 @@ html[data-theme="dark"] .overview-logo img {
 
   .identity-card {
     min-height: auto;
-  }
-
-  .affiliation-items {
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .affiliation-items span:not(:last-child)::after {
-    content: "";
-    margin-left: 0;
-  }
-
-  .affiliation-items span {
-    white-space: normal;
   }
 
   .overview-card {
@@ -1171,12 +1100,6 @@ html[data-theme="dark"] .overview-logo img {
   font-size: 0.95rem;
 }
 
-.meta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 /* Assessments Cards */
 .assessment-card {
   display: flex;
@@ -1241,22 +1164,6 @@ html[data-theme="dark"] .overview-logo img {
   border-color: var(--brand);
   transform: translateX(4px);
   box-shadow: var(--shadow);
-}
-
-.course-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.course-sem {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  color: var(--brand);
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .tags {
@@ -1563,7 +1470,7 @@ html[data-theme="dark"] .overview-logo img {
 
 /* =====================================================
    Main Site — Academic / Engineering Editorial System
-   Scoped to the five primary portfolio pages.
+   Shared by the primary portfolio and integrated long-form pages.
    ===================================================== */
 
 body.main-site {
@@ -1646,10 +1553,11 @@ html[data-theme="dark"] body.main-site {
 
 .main-site h2::after {
   content: "";
-  height: 1px;
-  flex: 1 1 auto;
+  height: 2px;
+  flex: 0 0 clamp(56px, 7vw, 88px);
   margin-top: 0.22em;
-  background: var(--border);
+  background: var(--brand);
+  opacity: 0.58;
 }
 
 .main-site h3 {
@@ -1848,7 +1756,7 @@ html[data-theme="dark"] body.main-site {
   grid-template-columns: minmax(0, 1fr) 290px;
   gap: clamp(56px, 8vw, 110px);
   min-height: 510px;
-  padding: 52px 0 64px;
+  padding: 32px 0 64px;
 }
 
 .main-site.page-home .hero-content h1 {
@@ -2022,8 +1930,7 @@ html[data-theme="dark"] body.main-site {
   border-right: 0;
 }
 
-.main-site .glance-label,
-.main-site .affiliation-label {
+.main-site .glance-label {
   margin-bottom: 8px;
   color: var(--brand);
   font-family: "IBM Plex Mono", monospace;
@@ -2051,7 +1958,6 @@ html[data-theme="dark"] body.main-site {
 .main-site .card,
 .main-site .editorial-card,
 .main-site .identity-card,
-.main-site .affiliation-strip,
 .main-site details {
   border-radius: 0;
   box-shadow: none;
@@ -2111,6 +2017,15 @@ html[data-theme="dark"] body.main-site {
   font-size: 0.67rem;
   font-weight: 500;
   letter-spacing: 0.08em;
+}
+
+.main-site.page-research .badge {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.main-site.page-research #honors .card-list {
+  gap: 0;
 }
 
 .main-site .identity-snapshot {
@@ -2188,22 +2103,19 @@ html[data-theme="dark"] body.main-site {
 }
 
 /* Tables and disclosure rows */
-.main-site .nice-table,
-.main-site .responsive-table {
+.main-site .nice-table {
   border-width: 1px 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
 }
 
-.main-site .nice-table thead,
-.main-site .responsive-table thead {
+.main-site .nice-table thead {
   background: transparent;
   border-bottom: 1px solid var(--text);
 }
 
-.main-site .nice-table th,
-.main-site .responsive-table th {
+.main-site .nice-table th {
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.7rem;
@@ -2237,6 +2149,106 @@ html[data-theme="dark"] body.main-site {
 
 .main-site .details-body {
   padding: 20px 0 28px;
+}
+
+/* Teaching index: strong editorial sections without returning to boxed cards. */
+.main-site.page-teaching .section-block {
+  margin-top: 88px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.main-site.page-teaching .section-block > h2 {
+  margin-bottom: 28px;
+}
+
+.main-site.page-teaching .identity-card h3,
+.main-site.page-teaching .badge {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.main-site.page-teaching #courses > .teaching-institution {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.08rem;
+}
+
+.main-site.page-teaching #courses > .teaching-institution + p {
+  margin-bottom: 26px;
+}
+
+.main-site.page-teaching #courses details {
+  margin-bottom: 0;
+}
+
+.main-site.page-teaching #courses details:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.main-site.page-teaching #courses summary {
+  padding: 20px 0;
+}
+
+.main-site.page-teaching .course-summary-copy {
+  min-width: 0;
+  padding-right: 24px;
+}
+
+.main-site.page-teaching .course-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  align-items: baseline;
+}
+
+.main-site.page-teaching .course-code {
+  flex: 0 0 auto;
+  color: var(--brand);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.main-site.page-teaching .course-name {
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.27rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.main-site.page-teaching .course-term-list {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.main-site.page-teaching #courses summary:hover .course-name,
+.main-site.page-teaching #courses details[open] .course-name {
+  color: var(--brand);
+}
+
+.main-site.page-teaching .course-card {
+  margin-bottom: 0;
+  padding: 25px 0 28px;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+}
+
+.main-site.page-teaching .course-card:hover {
+  border-color: var(--brand);
+  box-shadow: none;
+  transform: none;
 }
 
 /* Tags and project filters */
@@ -2398,6 +2410,198 @@ body.main-site.page-experience {
   font-size: 1rem;
 }
 
+/* Book landing page: editorial retail presentation with the cover as evidence. */
+body.main-site.page-book {
+  font-size: 17px;
+}
+
+.main-site.page-book .breadcrumb {
+  margin-bottom: 42px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.main-site.page-book .breadcrumb li:not(:last-child)::after {
+  content: "/";
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 400;
+  opacity: 0.55;
+}
+
+.main-site.page-book .book-hero {
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: clamp(64px, 8vw, 112px);
+  align-items: center;
+  padding: 28px 0 72px;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-site.page-book .book-labels {
+  display: flex;
+  gap: 10px 0;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.main-site.page-book .book-labels .badge {
+  margin: 0;
+  font-size: 0.76rem;
+}
+
+.main-site.page-book .book-labels .badge + .badge::before {
+  content: "·";
+  margin-right: 12px;
+  margin-left: 12px;
+  color: var(--border);
+}
+
+.main-site.page-book .book-labels .amazon-market {
+  color: #7a470b;
+}
+
+html[data-theme="dark"] .main-site.page-book .book-labels .amazon-market {
+  color: #e2ad68;
+}
+
+.main-site.page-book .book-hero h1 {
+  max-width: 850px;
+  margin: 0 0 28px !important;
+  font-size: clamp(3rem, 5.2vw, 4.65rem) !important;
+  line-height: 1.02;
+}
+
+.main-site.page-book .book-hero .lead {
+  max-width: 760px;
+  margin-bottom: 22px;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.main-site.page-book .book-byline {
+  margin-bottom: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.main-site.page-book .book-hero-actions {
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.main-site.page-book .button.amazon {
+  border-color: #d98200;
+  background: #f29a16;
+  color: #17120a;
+}
+
+.main-site.page-book .button.amazon:hover {
+  border-color: #b76d00;
+  background: #dc8507;
+  color: #17120a;
+}
+
+.main-site.page-book .book-hero-cover {
+  position: relative;
+  justify-self: end;
+  width: 280px;
+}
+
+.main-site.page-book .book-hero-cover::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 1px solid var(--brand);
+  opacity: 0.55;
+}
+
+.main-site.page-book .book-cover-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.main-site.page-book .book-intro {
+  max-width: 960px;
+  margin-top: 64px;
+}
+
+.main-site.page-book .book-intro .card {
+  padding-bottom: 10px;
+  border-top: 2px solid var(--text);
+}
+
+.main-site.page-book .overview-grid {
+  gap: 0 48px;
+}
+
+.main-site.page-book .overview-item {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.main-site.page-book .overview-item:hover {
+  background: transparent;
+  transform: none;
+}
+
+.main-site.page-book .overview-icon {
+  width: 20px;
+  color: var(--brand);
+  font-size: 0.92rem;
+}
+
+.main-site.page-book .overview-text {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.main-site.page-book .book-author {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.main-site.page-book .book-author-photo {
+  width: 96px;
+  height: 112px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.main-site.page-book .book-author-copy .button {
+  margin-top: 2px;
+}
+
+.main-site.page-book .book-purchase {
+  margin-top: 64px;
+}
+
+.main-site.page-book .book-purchase .card {
+  align-items: center;
+  padding: 40px 20px;
+  border-top: 2px solid var(--text);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.main-site.page-book .book-purchase .card h3 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.main-site.page-book .book-purchase .button {
+  align-self: center;
+  margin-top: 8px;
+}
+
 /* Footer and utility */
 .main-site .site-footer {
   margin-top: 80px;
@@ -2495,6 +2699,18 @@ body.main-site.page-experience {
 
   .main-site .index-rail dt {
     margin-bottom: 5px;
+  }
+
+  .main-site.page-book .book-hero {
+    grid-template-columns: 1fr;
+    gap: 54px;
+    align-items: start;
+    text-align: left;
+  }
+
+  .main-site.page-book .book-hero-cover {
+    justify-self: center;
+    width: 250px;
   }
 
   .main-site.page-home .hero,
@@ -2611,6 +2827,33 @@ body.main-site.page-experience {
     margin-bottom: 0;
   }
 
+  .main-site.page-book .breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .main-site.page-book .book-hero {
+    gap: 44px;
+    padding: 16px 0 58px;
+  }
+
+  .main-site.page-book .book-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 3.65rem) !important;
+  }
+
+  .main-site.page-book .book-hero-cover {
+    width: 220px;
+  }
+
+  .main-site.page-book .book-author {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .main-site.page-book .book-author-photo {
+    width: 88px;
+    height: 102px;
+  }
+
   .main-site .avatar,
   .main-site .avatar-backdrop {
     width: 230px;
@@ -2626,6 +2869,24 @@ body.main-site.page-experience {
   .main-site .section-block {
     margin-top: 58px;
     margin-bottom: 44px;
+  }
+
+  .main-site.page-teaching .section-block {
+    margin-top: 64px;
+    padding-top: 22px;
+  }
+
+  .main-site.page-teaching .course-title {
+    display: block;
+  }
+
+  .main-site.page-teaching .course-code {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .main-site.page-teaching .course-name {
+    font-size: 1.18rem;
   }
 
   .main-site h2 {
@@ -2807,8 +3068,9 @@ html[data-theme="dark"] .course-site .course-institution {
   min-height: 26px;
   padding: 0 24px;
   border-right: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.92rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .course-site .meta-item:first-child {
@@ -2823,7 +3085,7 @@ html[data-theme="dark"] .course-site .course-institution {
 .course-site .meta-item strong {
   color: var(--brand);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -2831,7 +3093,7 @@ html[data-theme="dark"] .course-site .course-institution {
 
 .course-site .meta-item > i {
   color: var(--brand);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
 }
 
 .course-site .meta-item-schedule {
@@ -2847,7 +3109,7 @@ html[data-theme="dark"] .course-site .course-institution {
   min-width: 310px;
   flex-direction: column;
   gap: 2px;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.45;
 }
 
@@ -3014,6 +3276,228 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
 .course-site .timeline-item .badge {
   margin-top: 5px;
   margin-right: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.course-site .weekly-markers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.course-site .weekly-markers .badge {
+  margin: 0;
+}
+
+.course-site .timeline-item .weekly-homework {
+  margin-top: 3px;
+  padding-left: 12px;
+  border-left: 2px solid #9a700d;
+}
+
+.course-site .weekly-overview {
+  margin: 28px 0 8px;
+  padding-top: 20px;
+  border-top: 2px solid var(--brand);
+  border-bottom: 1px solid var(--border);
+}
+
+.course-site .weekly-overview-kicker {
+  margin: 0 0 5px;
+  color: var(--brand);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.course-site .weekly-overview h3 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+.course-site .weekly-schedule-notices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.course-site .weekly-notice {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 15px;
+  border-left: 3px solid;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.course-site .weekly-notice strong {
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.course-site .weekly-notice span {
+  color: var(--muted);
+}
+
+.course-site .weekly-notice.schedule-no-class {
+  border-left-color: #8c2f3d;
+  background: rgba(140, 47, 61, 0.07);
+}
+
+.course-site .weekly-notice.schedule-no-class strong {
+  color: #8c2f3d;
+}
+
+.course-site .weekly-notice.schedule-changed {
+  border-left-color: #7a5700;
+  background: rgba(122, 87, 0, 0.08);
+}
+
+.course-site .weekly-notice.schedule-changed strong {
+  color: #6f4f00;
+}
+
+.course-site .weekly-assessment-dates {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.course-site .weekly-assessment-date {
+  min-width: 0;
+  padding: 14px 16px 16px;
+  border-top: 3px solid;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.course-site .weekly-assessment-date:last-child {
+  border-right: 0;
+}
+
+.course-site .weekly-assessment-date dt {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.course-site .weekly-assessment-date dd {
+  margin: 5px 0 0;
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.course-site .weekly-assessment-date.schedule-quiz {
+  border-top-color: #075985;
+  background: rgba(3, 105, 161, 0.05);
+}
+
+.course-site .weekly-assessment-date.schedule-exam {
+  border-top-color: #6b216b;
+  background: rgba(107, 33, 107, 0.05);
+}
+
+.course-site .schedule-assignment,
+.course-site .schedule-project {
+  background: rgba(22, 101, 52, 0.1);
+  color: #166534;
+}
+
+.course-site .schedule-quiz {
+  background: rgba(3, 105, 161, 0.1);
+  color: #075985;
+}
+
+.course-site .schedule-exam {
+  background: rgba(107, 33, 107, 0.1);
+  color: #6b216b;
+}
+
+.course-site .schedule-homework,
+.course-site .schedule-changed {
+  background: rgba(122, 87, 0, 0.1);
+  color: #6f4f00;
+}
+
+.course-site .schedule-no-class {
+  background: rgba(140, 47, 61, 0.1);
+  color: #8c2f3d;
+}
+
+html[data-theme="dark"] .course-site .schedule-assignment,
+html[data-theme="dark"] .course-site .schedule-project {
+  background: rgba(134, 239, 172, 0.12);
+  color: #86efac;
+}
+
+html[data-theme="dark"] .course-site .schedule-quiz {
+  background: rgba(125, 211, 252, 0.12);
+  color: #7dd3fc;
+}
+
+html[data-theme="dark"] .course-site .schedule-exam {
+  background: rgba(233, 168, 236, 0.12);
+  color: #e9a8ec;
+}
+
+html[data-theme="dark"] .course-site .schedule-homework,
+html[data-theme="dark"] .course-site .schedule-changed {
+  background: rgba(245, 200, 108, 0.12);
+  color: #f5c86c;
+}
+
+html[data-theme="dark"] .course-site .schedule-no-class {
+  background: rgba(251, 146, 160, 0.12);
+  color: #fb92a0;
+}
+
+html[data-theme="dark"] .course-site .weekly-notice {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .course-site .weekly-notice span {
+  color: var(--muted);
+}
+
+html[data-theme="dark"] .course-site .weekly-notice.schedule-no-class strong {
+  color: #fb92a0;
+}
+
+html[data-theme="dark"] .course-site .weekly-notice.schedule-changed strong {
+  color: #f5c86c;
+}
+
+html[data-theme="dark"] .course-site .timeline-item .weekly-homework {
+  border-left-color: #f5c86c;
+}
+
+html[data-theme="dark"] .course-site .weekly-assessment-date {
+  color: var(--text);
+}
+
+html[data-theme="dark"] .course-site .weekly-assessment-date.schedule-quiz {
+  border-top-color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.06);
+}
+
+html[data-theme="dark"] .course-site .weekly-assessment-date.schedule-exam {
+  border-top-color: #e9a8ec;
+  background: rgba(233, 168, 236, 0.06);
 }
 
 .course-site .timeline-item .cta {
@@ -3089,15 +3573,12 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
   border-top: 1px solid var(--border);
 }
 
-.course-site .nice-table,
-.course-site .responsive-table {
+.course-site .nice-table {
   margin-top: 20px;
 }
 
 .course-site .nice-table td,
-.course-site .nice-table th,
-.course-site .responsive-table td,
-.course-site .responsive-table th {
+.course-site .nice-table th {
   padding-top: 13px;
   padding-bottom: 13px;
   vertical-align: top;
@@ -3203,6 +3684,18 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
   .course-site .section-block {
     margin-top: 56px;
     margin-bottom: 42px;
+  }
+
+  .course-site .weekly-schedule-notices {
+    grid-template-columns: 1fr;
+  }
+
+  .course-site .weekly-assessment-dates {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .course-site .weekly-assessment-date:nth-child(even) {
+    border-right: 0;
   }
 
   .course-site .outcomes-grid,
