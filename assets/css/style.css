@@ -1704,6 +1704,65 @@ html[data-theme="dark"] body.main-site {
   background: currentColor;
 }
 
+/* Text-led page introductions use a folio rail instead of decorative imagery. */
+.main-site .index-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
+  gap: clamp(64px, 8vw, 112px);
+  align-items: start;
+  margin-bottom: 42px;
+}
+
+.main-site .index-hero-copy .lead-editorial {
+  margin-bottom: 0;
+}
+
+.main-site .index-rail {
+  margin-top: 5px;
+  padding-top: 17px;
+  border-top: 1px solid var(--text);
+}
+
+.main-site .index-rail-heading {
+  margin: 0 0 20px;
+  color: var(--brand);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.main-site .index-rail dl {
+  margin: 0;
+}
+
+.main-site .index-rail dl > div {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 14px;
+  padding: 11px 0;
+  border-top: 1px solid var(--border);
+}
+
+.main-site .index-rail dt {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.main-site .index-rail dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
 /* Header */
 .main-site .site-header {
   background: var(--nav-bg);
@@ -2403,6 +2462,41 @@ body.main-site.page-experience {
     border-radius: 0;
   }
 
+  .main-site .index-hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .main-site .index-rail {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    margin-top: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main-site .index-rail-heading {
+    margin: 0;
+  }
+
+  .main-site .index-rail dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .main-site .index-rail dl > div {
+    display: block;
+    padding: 0;
+    border-top: 0;
+  }
+
+  .main-site .index-rail dt {
+    margin-bottom: 5px;
+  }
+
   .main-site.page-home .hero,
   .main-site.page-research .hero {
     grid-template-columns: 1fr;
@@ -2479,6 +2573,42 @@ body.main-site.page-experience {
 
   .main-site.page-home .glance-bar {
     text-align: center;
+  }
+
+  .main-site .index-hero {
+    gap: 28px;
+    margin-bottom: 34px;
+  }
+
+  .main-site .index-rail {
+    display: block;
+    padding: 16px 0;
+  }
+
+  .main-site .index-rail-heading {
+    margin-bottom: 13px;
+  }
+
+  .main-site .index-rail dl {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .main-site .index-rail dl > div {
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 12px;
+    padding: 7px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .main-site .index-rail dl > div:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .main-site .index-rail dt {
+    margin-bottom: 0;
   }
 
   .main-site .avatar,
