@@ -1739,7 +1739,7 @@ html[data-theme="dark"] body.main-site {
   border-radius: 0;
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.9rem;
+  font-size: 0.97rem;
   font-weight: 500;
   letter-spacing: 0.01em;
 }
@@ -2381,6 +2381,7 @@ html[data-theme="dark"] body.main-site {
 
   .main-site .nav-links a {
     padding: 12px 0;
+    font-size: 1rem;
     text-align: left;
   }
 
@@ -2552,6 +2553,10 @@ html[data-theme="dark"] body.main-site {
    Integrated Course Syllabi
    Extends the main academic / engineering visual system.
    ===================================================== */
+
+body.course-site {
+  font-size: 17px;
+}
 
 .course-site .section {
   padding-top: 46px;
@@ -2790,6 +2795,11 @@ html[data-theme="dark"] .course-site .course-meta-logo img {
   gap: 32px;
 }
 
+/* Course records are content-led, not equal-height promo cards. */
+.course-site .card p {
+  flex-grow: 0;
+}
+
 .course-site .assessment-card {
   gap: 10px;
   border-top: 2px solid var(--text);
@@ -2869,6 +2879,22 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
 
 html[data-theme="dark"] .course-site .badge-accent {
   color: #e39b88 !important;
+}
+
+.course-site .policy-late-work {
+  border-top-color: #9a6a2f;
+}
+
+.course-site .policy-late-work h3 {
+  color: #7a470b;
+}
+
+html[data-theme="dark"] .course-site .policy-late-work {
+  border-top-color: #c58a43;
+}
+
+html[data-theme="dark"] .course-site .policy-late-work h3 {
+  color: #e2ad68;
 }
 
 /* Normalize the legacy Fall 2025 weekly list to the same record layout. */
