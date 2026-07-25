@@ -45,36 +45,6 @@
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Amazon-branded buy button -->
-  <style>
-    .button.amazon {
-      background: #FF9900;
-      border-color: #FF9900;
-      color: #0F1111;
-    }
-    .button.amazon:hover {
-      background: #E88A00;
-      border-color: #E88A00;
-      color: #0F1111;
-    }
-    .book-hero {
-      grid-template-columns: 1fr 240px;
-    }
-    .book-hero-cover {
-      justify-self: end;
-    }
-    @media (max-width: 768px) {
-      .book-hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .book-hero-cover {
-        justify-self: center;
-        margin-top: var(--space-4);
-      }
-    }
-  </style>
-
   <script src="../../assets/js/main.js" defer></script>
 
   <!-- JSON-LD -->
@@ -227,7 +197,7 @@
 </script>
 </head>
 
-<body>
+<body class="main-site page-book">
   <a class="skip-link" href="#mainContent" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
   <!-- HEADER -->
   <header class="site-header">
@@ -261,18 +231,20 @@
       <!-- HERO -->
       <section class="hero book-hero">
         <div class="hero-content">
-          <span class="badge">Kindle Edition</span>
-          <span class="badge" style="background: rgba(16,185,129,0.1); color: #10b981;">Amazon</span>
-          <h1 id="pageTitle" style="font-size: 2.5rem; margin-top: 16px; margin-bottom: 16px; line-height: 1.2;">
+          <div class="book-labels">
+            <span class="badge">Kindle Edition</span>
+            <span class="badge amazon-market">Amazon</span>
+          </div>
+          <h1 id="pageTitle">
             Cybersecurity Fundamentals: A Practical Guide for Everyone
           </h1>
-          <p class="lead" style="max-width: 600px;">
+          <p class="lead">
             You do not need to be a tech expert to stay safe online. You just need this book. Written for the person
             who uses the internet every day but has never had anyone explain, in plain English, what the real risks
             are and exactly what to do about them.
           </p>
-          <p class="muted">By Avijit Roy &middot; Cybersecurity Researcher, Educator &amp; AI Engineer</p>
-          <div class="cta" style="margin-top: 24px;">
+          <p class="muted book-byline">By Avijit Roy &middot; Cybersecurity Researcher, Educator &amp; AI Engineer</p>
+          <div class="cta book-hero-actions">
             <a class="button amazon" href="https://www.amazon.com/dp/B0H461R83M" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-amazon"></i> Buy on Amazon
             </a>
@@ -285,13 +257,13 @@
         <div class="book-hero-cover">
           <img src="assets/cover.jpg"
             alt="Cover of Cybersecurity Fundamentals: A Practical Guide for Everyone, by Avijit Roy"
-            style="width: 220px; max-width: 100%; border-radius: var(--radius-1); box-shadow: var(--shadow);"
+            class="book-cover-image"
             width="220" height="330" loading="lazy" decoding="async">
         </div>
       </section>
 
       <!-- WHY THIS BOOK -->
-      <section class="section-block">
+      <section class="section-block book-intro">
         <article class="card editorial-block blue">
           <p class="muted">
             Every day, ordinary people lose their savings, their identities, and their peace of mind to
@@ -371,17 +343,16 @@
       <section id="author" class="section-block">
         <h2>About the Author</h2>
         <article class="card">
-          <div style="display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap;">
-            <img src="../../assets/img/avatar.jpg" alt="Avijit Roy"
-              style="width: 84px; height: 84px; border-radius: var(--radius-3); object-fit: cover; flex-shrink: 0;">
-            <div>
+          <div class="book-author">
+            <img src="../../assets/img/avatar.jpg" alt="Avijit Roy" class="book-author-photo">
+            <div class="book-author-copy">
               <p class="muted">
                 Avijit Roy is a cybersecurity researcher, AI engineer, and educator based in New York. His work spans
                 privacy-aware AI systems, digital forensics, and secure software engineering, and he teaches computer
                 science at John Jay College of Criminal Justice (CUNY). Knowledge is your most powerful protection
                 &mdash; it starts here.
               </p>
-              <a class="button small" href="../../" style="margin-top: 8px;">More About Avijit Roy</a>
+              <a class="button small" href="../../">More About Avijit Roy</a>
             </div>
           </div>
         </article>
@@ -446,11 +417,11 @@
       </section>
 
       <!-- BUY CTA -->
-      <section class="section-block" style="margin-top: 48px;">
-        <article class="card editorial-block" style="text-align: center; align-items: center;">
+      <section class="section-block book-purchase">
+        <article class="card editorial-block">
           <h3>Knowledge Is Your Most Powerful Protection</h3>
           <p class="muted">Available now on Amazon Kindle.</p>
-          <a class="button amazon" href="https://www.amazon.com/dp/B0H461R83M" target="_blank" rel="noopener noreferrer" style="margin-top: 8px; align-self: center;">
+          <a class="button amazon" href="https://www.amazon.com/dp/B0H461R83M" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-amazon"></i> Buy on Amazon
           </a>
         </article>
