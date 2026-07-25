@@ -81,11 +81,25 @@
         "@id": "https://avijitroy.com/teaching/#courses",
         "name": "Courses Taught",
         "itemListOrder": "https://schema.org/ItemListOrderAscending",
-        "numberOfItems": 6,
+        "numberOfItems": 7,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
+            "url": "https://avijitroy.com/teaching/courses/oop-fa26/",
+            "item": {
+              "@type": "Course",
+              "name": "Object-Oriented Programming in C++ (CSCI 272) - Fall 2026",
+              "description": "Object-oriented programming course covering classes, objects, inheritance, polymorphism, file handling, and applied C++ problem solving.",
+              "provider": {
+                "@type": "CollegeOrUniversity",
+                "name": "John Jay College of Criminal Justice"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
             "url": "https://avijitroy.com/teaching/courses/oop-sp26/",
             "item": {
               "@type": "Course",
@@ -99,7 +113,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 2,
+            "position": 3,
             "url": "https://avijitroy.com/teaching/courses/oop-fa25/",
             "item": {
               "@type": "Course",
@@ -113,7 +127,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 3,
+            "position": 4,
             "url": "https://avijitroy.com/teaching/courses/itp-sp26/",
             "item": {
               "@type": "Course",
@@ -127,7 +141,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 4,
+            "position": 5,
             "item": {
               "@type": "Course",
               "name": "Database & Data Mining (CSCI 362) - Fall 2026",
@@ -140,7 +154,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 5,
+            "position": 6,
             "item": {
               "@type": "Course",
               "name": "Computer Algorithms (CSCI 377) - Fall 2026",
@@ -153,7 +167,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 6,
+            "position": 7,
             "item": {
               "@type": "Course",
               "name": "Cyber Forensics & Malware Analysis (DFR711) - Fall 2026",
@@ -261,7 +275,7 @@
 </script>
 </head>
 
-<body>
+<body class="main-site page-teaching">
   <a class="skip-link" href="#mainContent" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
   <!-- HEADER -->
   <header class="site-header">
@@ -285,14 +299,37 @@
   <!-- MAIN -->
   <main id="mainContent" class="section" role="main" aria-labelledby="pageTitle">
     <div class="container">
-      <h1 id="pageTitle" style="font-size: 2.5rem; margin-bottom: 24px;">Teaching & Mentorship</h1>
+      <header class="index-hero">
+        <div class="index-hero-copy">
+          <p class="page-kicker">Teaching practice</p>
+          <h1 id="pageTitle">Teaching & Mentorship</h1>
 
-      <p class="lead-editorial">
-        I teach computer science as a practical discipline: students should understand the logic, write working code,
-        debug with confidence, and connect classroom concepts to real systems. My teaching sits at the intersection of
-        programming, data, cybersecurity, and applied AI, with an emphasis on clear thinking, ethical computing, and
-        project-based learning.
-      </p>
+          <p class="lead-editorial">
+            I teach computer science as a practical discipline: students should understand the logic, write working code,
+            debug with confidence, and connect classroom concepts to real systems. My teaching sits at the intersection of
+            programming, data, cybersecurity, and applied AI, with an emphasis on clear thinking, ethical computing, and
+            project-based learning.
+          </p>
+        </div>
+
+        <aside class="index-rail" aria-label="Teaching overview">
+          <p class="index-rail-heading">At a glance</p>
+          <dl>
+            <div>
+              <dt>Focus</dt>
+              <dd>Applied computer science</dd>
+            </div>
+            <div>
+              <dt>Practice</dt>
+              <dd>Courses, mentorship, and open resources</dd>
+            </div>
+            <div>
+              <dt>Context</dt>
+              <dd>John Jay College · CUNY</dd>
+            </div>
+          </dl>
+        </aside>
+      </header>
 
       <!-- Navigation CTA Strip -->
       <div class="cta" style="margin-top: 0; margin-bottom: 2rem; width: 100%;">
@@ -363,7 +400,7 @@
         <h2>Courses I Teach</h2>
 
         <!-- SUBSECTION: John Jay College - Undergraduate -->
-        <h3 id="john-jay-courses" style="margin-bottom: 8px;">John Jay College of Criminal Justice (CUNY) &mdash; Undergraduate</h3>
+        <h3 id="john-jay-courses" class="teaching-institution">John Jay College of Criminal Justice (CUNY) &mdash; Undergraduate</h3>
         <p class="muted" style="margin-bottom: 24px;">
           Courses taught or scheduled at John Jay College of Criminal Justice (CUNY).
         </p>
@@ -371,9 +408,12 @@
         <!-- COURSE BLOCK: CSCI 271 -->
         <details>
           <summary>
-            <div>
-              CSCI 271 - Introduction to Computing and Programming
-              <span style="display: block; font-size: 0.85rem; color: var(--brand); font-family: 'Inter', system-ui, sans-serif; font-weight: 600; text-transform: uppercase;">Spring 2026</span>
+            <div class="course-summary-copy">
+              <span class="course-title">
+                <span class="course-code">CSCI 271</span>
+                <span class="course-name">Introduction to Computing and Programming</span>
+              </span>
+              <span class="course-term-list">Spring 2026</span>
             </div>
           </summary>
           <div class="details-body">
@@ -387,16 +427,21 @@
               <li>Algorithms</li>
               <li>Problem Solving</li>
             </ul>
-            <a href="courses/itp-sp26/" class="button small" style="margin-top: 10px;">View Full Syllabus</a>
+            <div class="cta" style="margin-top: 10px;">
+              <a href="courses/itp-sp26/" class="button small">View Full Syllabus</a>
+            </div>
           </div>
         </details>
 
         <!-- COURSE BLOCK: CSCI 272 -->
         <details>
           <summary>
-            <div>
-              CSCI 272 - Object-Oriented Programming in C++
-              <span style="display: block; font-size: 0.85rem; color: var(--brand); font-family: 'Inter', system-ui, sans-serif; font-weight: 600; text-transform: uppercase;">Fall 2025, Spring 2026, Fall 2026</span>
+            <div class="course-summary-copy">
+              <span class="course-title">
+                <span class="course-code">CSCI 272</span>
+                <span class="course-name">Object-Oriented Programming in C++</span>
+              </span>
+              <span class="course-term-list">Fall 2025, Spring 2026, Fall 2026</span>
             </div>
           </summary>
           <div class="details-body">
@@ -412,6 +457,7 @@
               <li>Git/GitHub</li>
             </ul>
             <div class="cta" style="margin-top: 10px;">
+              <a href="courses/oop-fa26/" class="button small">Fall 2026 Syllabus</a>
               <a href="courses/oop-sp26/" class="button small">Spring 2026 Syllabus</a>
               <a href="courses/oop-fa25/" class="button small">Fall 2025 Syllabus</a>
             </div>
@@ -421,9 +467,12 @@
         <!-- COURSE BLOCK: CSCI 362 -->
         <details>
           <summary>
-            <div>
-              CSCI 362 - Database & Data Mining
-              <span style="display: block; font-size: 0.85rem; color: var(--brand); font-family: 'Inter', system-ui, sans-serif; font-weight: 600; text-transform: uppercase;">Fall 2026</span>
+            <div class="course-summary-copy">
+              <span class="course-title">
+                <span class="course-code">CSCI 362</span>
+                <span class="course-name">Database &amp; Data Mining</span>
+              </span>
+              <span class="course-term-list">Fall 2026</span>
             </div>
           </summary>
           <div class="details-body">
@@ -444,9 +493,12 @@
         <!-- COURSE BLOCK: CSCI 377 -->
         <details>
           <summary>
-            <div>
-              CSCI 377 - Computer Algorithms
-              <span style="display: block; font-size: 0.85rem; color: var(--brand); font-family: 'Inter', system-ui, sans-serif; font-weight: 600; text-transform: uppercase;">Fall 2026</span>
+            <div class="course-summary-copy">
+              <span class="course-title">
+                <span class="course-code">CSCI 377</span>
+                <span class="course-name">Computer Algorithms</span>
+              </span>
+              <span class="course-term-list">Fall 2026</span>
             </div>
           </summary>
           <div class="details-body">
@@ -507,7 +559,7 @@
       </section>
 
       <!-- OPEN LEARNING RESOURCES -->
-      <section id="open-learning-resources" class="section-block" style="margin-top: 48px;">
+      <section id="open-learning-resources" class="section-block">
         <h2>Open Learning Resources</h2>
         <p class="muted" style="margin-bottom: 24px;">
           Free, step-by-step materials students can use before class, during practice, or when setting up a first
@@ -588,7 +640,7 @@
       </section>
 
       <!-- STUDENT TOOLS -->
-      <section id="student-tools" class="section-block" style="margin-top: 48px;">
+      <section id="student-tools" class="section-block">
         <h2>Free Tools for Students</h2>
         <!-- RESOURCE CARD: Developer and AI Essentials -->
         <div class="course-card">
@@ -605,7 +657,7 @@
       </section>
 
       <!-- BOOKS -->
-      <section id="books" class="section-block" style="margin-top: 48px;">
+      <section id="books" class="section-block">
         <h2>Books</h2>
         <p class="muted" style="margin-bottom: 24px;">
           Long-form guides for general readers and students alike.
@@ -654,7 +706,7 @@
       </section>
 
       <!-- CURRICULUM DEVELOPMENT -->
-      <section id="curriculum-development" class="section-block" style="margin-top: 48px;">
+      <section id="curriculum-development" class="section-block">
         <h2>Curriculum Development</h2>
         <div class="card-list">
           <!-- CURRICULUM CARD: CSCI 380 Agentic AI Systems -->
@@ -694,7 +746,7 @@
       </section>
 
       <!-- TEACHING INTERESTS -->
-      <section id="teaching-interests" class="section-block" style="margin-top: 48px;">
+      <section id="teaching-interests" class="section-block">
         <h2>Teaching Interests</h2>
         <p class="muted" style="margin-bottom: 24px;">
           Areas I am prepared to teach or develop at the undergraduate or graduate level, depending on departmental need.
@@ -740,7 +792,7 @@
       </section>
 
       <!-- MENTORING -->
-      <section id="mentoring" class="section-block" style="margin-top: 48px;">
+      <section id="mentoring" class="section-block">
         <h2>Mentoring & Student Development</h2>
         <p class="muted" style="margin-bottom: 24px;">
           I mentor students through practical computing projects with clear technical goals, reproducible workflows, and
