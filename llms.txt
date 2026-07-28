@@ -87,7 +87,7 @@ US Provisional Patent Application 63/986,762, filed February 2026. PhishGuard is
 
 ### Measuring the Tokenization Premium
 
-"Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper accepted as a poster at the LM4UC Workshop at IJCAI 2026. The project audits tokenization inefficiencies across English, Bengali, Hindi, Arabic, Tamil, and Yoruba.
+"Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper accepted for both an oral presentation and a poster presentation at the LM4UC Workshop at IJCAI 2026. The project audits tokenization inefficiencies across English, Bengali, Hindi, Arabic, Tamil, and Yoruba.
 
 ### Structural Silence
 
