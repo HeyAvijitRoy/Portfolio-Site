@@ -99,7 +99,7 @@ Propasafe-Hybrid is a hybrid propaganda detection framework combining transforme
 
 ### Privacy-Preserving MIS
 
-"Privacy-Preserving MIS Using Blockchain, Federated Learning and Zero-Trust Models" received the Best Paper Award at ICICC 2026. The work proposes secure distributed data collaboration through blockchain validation, federated learning, and zero-trust principles.
+"Privacy-Preserving MIS Using Blockchain, Federated Learning and Zero-Trust Models" received the Best Paper Award at ICICC 2026 and was published online by Springer on August 2, 2026, in *Innovative Computing and Communications*, Lecture Notes in Networks and Systems, pp. 210-223. DOI: https://doi.org/10.1007/978-3-032-30008-9_16. Print ISBN: 978-3-032-30007-2. Online ISBN: 978-3-032-30008-9. The work proposes secure distributed data collaboration through blockchain validation, federated learning, and zero-trust principles.
 
 ### AI-Driven and Cyber-Secure Embedded Inverter Control
 

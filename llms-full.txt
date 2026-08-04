@@ -150,7 +150,23 @@ This research proposes a privacy-preserving management information system archit
 
 Authors: Avijit Roy, Emran Hossain, Hemayet Uddin Himel, Hasan Imam, Ruhul Amin Md Rashed, Harleen Kaur.
 
-The paper received the Best Paper Award at the 9th International Conference on Innovative Computing and Communication (ICICC 2026), Shaheed Sukhdev College of Business Studies, New Delhi, India, February 6-7, 2026, and is to appear in Springer Lecture Notes in Networks and Systems (LNNS).
+The paper received the Best Paper Award at the 9th International Conference on Innovative Computing and Communication (ICICC 2026), Shaheed Sukhdev College of Business Studies, New Delhi, India, February 6-7, 2026.
+
+Publication details:
+
+- Publication type: Conference paper
+- Published in: *Innovative Computing and Communications*, Lecture Notes in Networks and Systems
+- First published online: August 2, 2026
+- Pages: 210-223
+- Publisher: Springer, Cham
+- DOI: https://doi.org/10.1007/978-3-032-30008-9_16
+- Springer Nature Link: https://link.springer.com/chapter/10.1007/978-3-032-30008-9_16
+- Citation tool: https://link.springer.com/chapter/10.1007/978-3-032-30008-9_16#citeas
+- Print ISBN: 978-3-032-30007-2
+- Online ISBN: 978-3-032-30008-9
+- eBook package - Engineering: https://link.springer.com/search?facet-content-type=%22Book%22&package=11647&facet-start-year=2026&facet-end-year=2026
+- eBook package - Engineering (R0): https://link.springer.com/search?facet-content-type=%22Book%22&package=43712&facet-start-year=2026&facet-end-year=2026
+- eBook package - Springer Nature Proceedings excluding Computer Science: https://link.springer.com/search?facet-content-type=%22Book%22&package=85345&facet-start-year=2026&facet-end-year=2026
 
 ### AI-Driven and Cyber-Secure Embedded Inverter Control for Energy Optimization in Electric Vehicles
 
