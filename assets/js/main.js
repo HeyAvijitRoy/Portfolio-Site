@@ -168,6 +168,84 @@
   // initial wire
   wireInlineTags();
 
+  // Editorial motion and long-form reading feedback
+  function initReadingExperience() {
+    const body = document.body;
+    if (!body?.classList.contains("main-site")) return;
+
+    const progress = document.createElement("div");
+    progress.className = "reading-progress";
+    progress.setAttribute("aria-hidden", "true");
+    body.appendChild(progress);
+
+    const header = document.querySelector(".site-header");
+    let scrollTicking = false;
+
+    function updateScrollState() {
+      const root = document.documentElement;
+      const scrollable = Math.max(root.scrollHeight - window.innerHeight, 1);
+      const fraction = Math.min(Math.max(window.scrollY / scrollable, 0), 1);
+      progress.style.transform = `scaleX(${fraction})`;
+      header?.classList.toggle("is-scrolled", window.scrollY > 12);
+      scrollTicking = false;
+    }
+
+    window.addEventListener("scroll", () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(updateScrollState);
+    }, { passive: true });
+
+    window.addEventListener("resize", updateScrollState, { passive: true });
+    updateScrollState();
+
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    const revealSelectors = [
+      ".hero-content",
+      ".avatar-wrapper",
+      ".index-hero-copy",
+      ".index-rail",
+      ".identity-snapshot",
+      ".section-block > h2",
+      ".section-block > .muted:first-of-type",
+      ".section-block > .editorial-card",
+      ".grid-2x2 > *",
+      ".editorial-list > *",
+      ".page-research #publications .card-list > .card",
+      ".experience-list > .card"
+    ];
+
+    const targets = Array.from(new Set(document.querySelectorAll(revealSelectors.join(","))));
+    targets.forEach((target) => {
+      const siblings = Array.from(target.parentElement?.children || []);
+      const siblingIndex = Math.max(siblings.indexOf(target), 0);
+      target.dataset.reveal = "";
+      target.style.setProperty("--reveal-delay", `${Math.min(siblingIndex % 4, 3) * 55}ms`);
+    });
+
+    document.documentElement.classList.add("motion-enabled");
+
+    if (!("IntersectionObserver" in window)) {
+      targets.forEach((target) => target.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: "0px 0px -8% 0px"
+    });
+
+    targets.forEach((target) => observer.observe(target));
+  }
+
   // Dynamic "Back to Top" Button
   function initBackToTop() {
     const btn = document.createElement("button");
@@ -197,6 +275,7 @@
   }
 
   // Initialize
+  initReadingExperience();
   initBackToTop();
 
 })();
