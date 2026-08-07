@@ -34,12 +34,18 @@
 
   // Theme toggle logic (OS preference aware)
   const root = document.documentElement;
-  const savedTheme = localStorage.getItem("theme");
+  let savedTheme = null;
+  try {
+    savedTheme = localStorage.getItem("theme");
+  } catch (error) {
+    // Storage can be unavailable in restricted browsing contexts.
+  }
   const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   
-  // Choose theme: saved setting > OS preference > light default
-  const theme = savedTheme || (prefersDark ? "dark" : "light");
+  // The pre-paint initializer wins, with storage and OS preference as fallbacks.
+  const theme = root.getAttribute("data-theme") || savedTheme || (prefersDark ? "dark" : "light");
   root.setAttribute("data-theme", theme);
+  root.style.colorScheme = theme;
   
   // Initial dom ready logic
   document.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +65,12 @@
         const nextTheme = currentTheme === "dark" ? "light" : "dark";
         
         root.setAttribute("data-theme", nextTheme);
-        localStorage.setItem("theme", nextTheme);
+        root.style.colorScheme = nextTheme;
+        try {
+          localStorage.setItem("theme", nextTheme);
+        } catch (error) {
+          // Keep the active theme even when storage is unavailable.
+        }
         updateThemeIcon(nextTheme);
         themeStatus.textContent = nextTheme === "dark" ? "Dark mode enabled" : "Light mode enabled";
       });
