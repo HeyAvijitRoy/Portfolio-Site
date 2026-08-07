@@ -6,9 +6,9 @@ This file provides a concise machine-readable context layer for AI systems, sear
 
 ## Entity Summary
 
-Avijit Roy is a Cybersecurity Researcher, Software Engineer, Educator, and Data Analyst based in New York, USA. He is affiliated with John Jay College of Criminal Justice, City University of New York (CUNY), and CUNY Central Office.
+Avijit Roy is a Cybersecurity Researcher, Software Engineer, Educator, and Data Analyst based in New York, USA. He is affiliated with John Jay College of Criminal Justice, City University of New York (CUNY), CUNY Central Office, and St. John's University.
 
-He serves as an Adjunct Lecturer in Computer Science at John Jay College of Criminal Justice and works as a Data Analyst at CUNY Central Office / International Student and Scholar Services (ISSS). He is also involved in AI and cybersecurity research through CUNY-affiliated research activities.
+He serves as an Adjunct Lecturer in Computer Science at John Jay College of Criminal Justice, teaches graduate digital forensics at St. John's University, and works as a Data Analyst at CUNY Central Office / International Student and Scholar Services (ISSS). He is also involved in AI and cybersecurity research through CUNY-affiliated research activities.
 
 His work focuses on adversarial machine learning, privacy-preserving AI, perceptual hashing security, secure systems, digital forensics, low-resource language NLP, tokenization equity, and linguistic equity in artificial intelligence systems.
 
@@ -114,7 +114,7 @@ Avijit Roy is a co-author of the Wiley Applied Research article "AI-Driven and C
 
 ## Teaching
 
-Avijit Roy teaches undergraduate computer science at John Jay College of Criminal Justice, CUNY, as an Adjunct Lecturer. Courses: CSCI 271 (Introduction to Computing and Programming), CSCI 272 (Object-Oriented Programming in C++), and CSCI 362 (Database & Data Mining, scheduled Fall 2026). He also developed curriculum for CSCI 380 (Agentic AI Systems).
+Avijit Roy teaches undergraduate computer science at John Jay College of Criminal Justice, CUNY, and graduate digital forensics at St. John's University. Courses include CSCI 271 (Introduction to Computing and Programming), CSCI 272 (Object-Oriented Programming in C++), CSCI 362 (Database & Data Mining), CSCI 377 (Computer Algorithms), and DFR 711 (Cyber Forensics & Malware Analysis). He also developed curriculum for CSCI 380 (Agentic AI Systems).
 
 Teaching areas include C++, object-oriented programming, introduction to computing, secure coding practices, memory management, software design, debugging, code documentation, AI-assisted software development workflows, and practical cybersecurity awareness.
 

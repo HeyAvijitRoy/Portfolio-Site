@@ -171,7 +171,7 @@
             "position": 7,
             "item": {
               "@type": "Course",
-              "name": "Cyber Forensics & Malware Analysis (DFR711) - Fall 2026",
+              "name": "Cyber Forensics & Malware Analysis (DFR 711) - Fall 2026",
               "description": "Graduate course covering advanced digital forensics, malware analysis, incident response, reverse engineering, mobile device forensics, and threat hunting across Windows, OSX, and Linux platforms.",
               "provider": {
                 "@type": "CollegeOrUniversity",
@@ -325,7 +325,10 @@
             </div>
             <div>
               <dt>Context</dt>
-              <dd>John Jay College · CUNY</dd>
+              <dd>
+                <span class="teaching-context-line">John Jay College · CUNY</span>
+                <span class="teaching-context-line">St. John's University</span>
+              </dd>
             </div>
           </dl>
         </aside>
@@ -399,11 +402,14 @@
       <section id="courses" class="section-block">
         <h2>Courses I Teach</h2>
 
-        <!-- SUBSECTION: John Jay College - Undergraduate -->
-        <h3 id="john-jay-courses" class="teaching-institution">John Jay College of Criminal Justice (CUNY) &mdash; Undergraduate</h3>
-        <p class="muted" style="margin-bottom: 24px;">
-          Courses taught or scheduled at John Jay College of Criminal Justice (CUNY).
-        </p>
+        <section class="teaching-institution-group" aria-labelledby="john-jay-courses">
+          <header class="teaching-institution-header">
+            <h3 id="john-jay-courses" class="teaching-institution">John Jay College of Criminal Justice</h3>
+            <p class="teaching-institution-meta">Undergraduate · CUNY</p>
+            <p class="teaching-institution-description muted">
+              Courses taught or scheduled at John Jay College of Criminal Justice.
+            </p>
+          </header>
 
         <!-- COURSE BLOCK: CSCI 271 -->
         <details>
@@ -441,7 +447,7 @@
                 <span class="course-code">CSCI 272</span>
                 <span class="course-name">Object-Oriented Programming in C++</span>
               </span>
-              <span class="course-term-list">Fall 2025, Spring 2026, Fall 2026</span>
+              <span class="course-term-list">Fall 2026, Spring 2026, Fall 2025</span>
             </div>
           </summary>
           <div class="details-body">
@@ -517,19 +523,26 @@
           </div>
         </details>
 
-        <!-- SUBSECTION: St. John's University - Graduate -->
-        <!-- <h3 id="sju-courses" style="margin-top: 40px; margin-bottom: 8px;">St. John's University &mdash; Graduate</h3>
-        <p class="muted" style="margin-bottom: 24px;">
-          Courses taught or scheduled at St. John's University, Collins College of Professional Studies, Division of
-          Computer Science, Mathematics, and Science.
-        </p> -->
+        </section>
+
+        <section class="teaching-institution-group" aria-labelledby="sju-courses">
+          <header class="teaching-institution-header">
+            <h3 id="sju-courses" class="teaching-institution">St. John's University</h3>
+            <p class="teaching-institution-meta">Graduate · Collins College of Professional Studies</p>
+            <p class="teaching-institution-description muted">
+              Courses taught or scheduled through the Division of Computer Science, Mathematics, and Science.
+            </p>
+          </header>
 
         <!-- COURSE BLOCK: DFR 711 -->
-        <!-- <details>
+        <details>
           <summary>
-            <div>
-              DFR711 - Cyber Forensics & Malware Analysis
-              <span style="display: block; font-size: 0.85rem; color: var(--brand); font-family: 'Inter', system-ui, sans-serif; font-weight: 600; text-transform: uppercase;">Fall 2026</span>
+            <div class="course-summary-copy">
+              <span class="course-title">
+                <span class="course-code">DFR 711</span>
+                <span class="course-name">Cyber Forensics &amp; Malware Analysis</span>
+              </span>
+              <span class="course-term-list">Fall 2026</span>
             </div>
           </summary>
           <div class="details-body">
@@ -555,7 +568,8 @@
               <li>Threat Hunting</li>
             </ul>
           </div>
-        </details> -->
+        </details>
+        </section>
       </section>
 
       <!-- OPEN LEARNING RESOURCES -->

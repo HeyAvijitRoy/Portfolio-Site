@@ -2300,22 +2300,135 @@ html[data-theme="dark"] body.main-site {
   line-height: 1.5;
 }
 
-.main-site.page-teaching #courses > .teaching-institution {
-  margin: 0 0 8px;
-  color: var(--text);
-  font-size: 1.08rem;
+.main-site.page-teaching .teaching-context-line {
+  display: block;
 }
 
-.main-site.page-teaching #courses > .teaching-institution + p {
-  margin-bottom: 26px;
+.main-site.page-teaching .teaching-context-line + .teaching-context-line {
+  margin-top: 3px;
+}
+
+.main-site.page-teaching .teaching-institution-group {
+  margin: 40px -18px 0;
+  padding: 26px 18px 20px;
+  border-radius: 2px;
+  background: transparent;
+  transition: background-color 180ms ease;
+}
+
+.main-site.page-teaching #courses > .teaching-institution-group:first-of-type {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.main-site.page-teaching .teaching-institution-header {
+  margin-bottom: 24px;
+  padding: 0;
+  background: transparent;
+}
+
+.main-site.page-teaching .teaching-institution-group:focus-within {
+  background: rgba(31, 94, 140, 0.025);
+}
+
+html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:focus-within {
+  background: rgba(127, 192, 237, 0.055);
+}
+
+@media (hover: hover) {
+  .main-site.page-teaching .teaching-institution-group:hover {
+    background: rgba(31, 94, 140, 0.025);
+  }
+
+  html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:hover {
+    background: rgba(127, 192, 237, 0.055);
+  }
+}
+
+.main-site.page-teaching .teaching-institution {
+  margin: 0 0 5px;
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.52rem;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+}
+
+.main-site.page-teaching .teaching-institution-meta {
+  margin: 0;
+  color: var(--brand);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.main-site.page-teaching .teaching-institution-description {
+  max-width: 760px;
+  margin: 11px 0 0;
 }
 
 .main-site.page-teaching #courses details {
   margin-bottom: 0;
 }
 
-.main-site.page-teaching #courses details:last-of-type {
+.main-site.page-teaching .teaching-institution-group details:last-of-type {
   border-bottom: 1px solid var(--border);
+}
+
+.main-site.page-home .home-teaching-card > h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.main-site.page-home .home-teaching-list {
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.main-site.page-home .home-teaching-group {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1.6fr);
+  gap: 24px;
+  align-items: baseline;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-site.page-home .home-teaching-group h4 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.main-site.page-home .home-teaching-group p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.main-site.page-home .home-teaching-term {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--brand);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.main-site.page-home .home-teaching-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: 18px;
 }
 
 .main-site.page-teaching #courses summary {
@@ -3036,6 +3149,19 @@ html[data-theme="dark"] .main-site.page-book .book-labels .amazon-market {
   .main-site.page-teaching .section-block {
     margin-top: 64px;
     padding-top: 22px;
+  }
+
+  .main-site.page-teaching .teaching-institution-group {
+    margin-right: -10px;
+    margin-left: -10px;
+    padding-right: 10px;
+    padding-bottom: 18px;
+    padding-left: 10px;
+  }
+
+  .main-site.page-home .home-teaching-group {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .main-site.page-teaching .course-title {
