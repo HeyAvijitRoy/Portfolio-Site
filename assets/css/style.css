@@ -2067,6 +2067,21 @@ html[data-theme="dark"] body.main-site {
   line-height: 1.45;
 }
 
+.main-site .affiliation-links a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.main-site .affiliation-links a:hover,
+.main-site .affiliation-links a:focus-visible {
+  color: var(--brand);
+  text-decoration-color: currentColor;
+}
+
 .main-site .section-block {
   margin-top: 78px;
   margin-bottom: 60px;
