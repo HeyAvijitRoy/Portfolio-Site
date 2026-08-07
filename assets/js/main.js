@@ -214,7 +214,13 @@
       ".grid-2x2 > *",
       ".editorial-list > *",
       ".page-research #publications .card-list > .card",
-      ".experience-list > .card"
+      ".page-projects #projectGrid > .card",
+      ".page-teaching .course-card",
+      ".experience-list > .card",
+      ".page-book .book-hero-cover",
+      ".page-book .overview-item",
+      ".page-book #author > .card",
+      ".page-book #faq > details"
     ];
 
     const targets = Array.from(new Set(document.querySelectorAll(revealSelectors.join(","))));

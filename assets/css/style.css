@@ -1498,21 +1498,21 @@ body.main-site {
 }
 
 html[data-theme="dark"] body.main-site {
-  --bg: #111714;
-  --text: #e9e6dd;
-  --muted: #a7afa9;
-  --border: #39443f;
-  --card: #171e1a;
+  --bg: #12161b;
+  --text: #e7ebef;
+  --muted: #aab3bd;
+  --border: #35404a;
+  --card: #171c22;
   --brand: #7fc0ed;
   --brand-700: #a7d5f4;
-  --chip: #1d2621;
-  --chip-hover: #26332d;
-  --nav-bg: rgba(17, 23, 20, 0.97);
+  --chip: #1b222a;
+  --chip-hover: #232d37;
+  --nav-bg: rgba(18, 22, 27, 0.97);
   --focus-bg: rgba(127, 192, 237, 0.1);
-  --btn-text: #0d1713;
-  --surface-raised: #19211d;
-  --surface-hover: #1e2823;
-  --border-strong: #536159;
+  --btn-text: #0d151c;
+  --surface-raised: #191f26;
+  --surface-hover: #202832;
+  --border-strong: #4f5e6b;
   --shadow-soft: 0 1px 1px rgba(0, 0, 0, 0.16), 0 14px 34px rgba(0, 0, 0, 0.2);
   --shadow-lift: 0 3px 10px rgba(0, 0, 0, 0.24), 0 22px 48px rgba(0, 0, 0, 0.28);
 }
@@ -1639,7 +1639,7 @@ html[data-theme="dark"] body.main-site {
   color: var(--brand);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.78rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -1661,7 +1661,7 @@ html[data-theme="dark"] body.main-site {
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.07em;
   line-height: 1.5;
   text-transform: uppercase;
@@ -2045,9 +2045,9 @@ html[data-theme="dark"] body.main-site {
   margin-bottom: 8px;
   color: var(--brand);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
 }
 
 .main-site .glance-value {
@@ -2124,15 +2124,20 @@ html[data-theme="dark"] body.main-site {
   border-radius: 0;
   background: transparent;
   color: var(--brand);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.67rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .main-site.page-research .badge {
-  font-size: 0.8rem;
-  line-height: 1.5;
+  display: block;
+  margin-bottom: 12px;
+  color: var(--brand);
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
 .main-site.page-research #honors .card-list {
@@ -2182,11 +2187,12 @@ html[data-theme="dark"] body.main-site {
 }
 
 .main-site .identity-card h3 {
-  color: var(--brand);
-  font-family: "IBM Plex Mono", monospace !important;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.09em;
+  color: var(--text);
+  font-family: "IBM Plex Sans", system-ui, sans-serif !important;
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .main-site .identity-card p {
@@ -2273,9 +2279,13 @@ html[data-theme="dark"] body.main-site {
   margin-bottom: 28px;
 }
 
-.main-site.page-teaching .identity-card h3,
+.main-site.page-teaching .identity-card h3 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
 .main-site.page-teaching .badge {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   line-height: 1.5;
 }
 
@@ -2445,7 +2455,7 @@ html[data-theme="dark"] body.main-site {
 
 .main-site.page-projects #projectGrid .card {
   min-height: 0;
-  padding-top: 22px;
+  padding: 22px 20px 28px;
   border-top: 2px solid var(--text);
 }
 
@@ -2475,7 +2485,7 @@ body.main-site.page-experience {
 }
 
 .main-site.page-experience .experience-list .card {
-  padding: 28px 0 34px;
+  padding: 28px 20px 34px;
   border-top: 1px solid var(--text);
 }
 
@@ -2485,7 +2495,7 @@ body.main-site.page-experience {
   color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.06em;
   opacity: 1;
 }
@@ -2570,11 +2580,11 @@ body.main-site.page-book {
 }
 
 .main-site.page-book .book-labels .amazon-market {
-  color: #7a470b;
+  color: var(--brand);
 }
 
 html[data-theme="dark"] .main-site.page-book .book-labels .amazon-market {
-  color: #e2ad68;
+  color: var(--brand);
 }
 
 .main-site.page-book .book-hero h1 {
@@ -3180,6 +3190,69 @@ html.motion-enabled .main-site [data-reveal].is-visible {
   transform: translateY(1px) scale(0.985);
 }
 
+.main-site.page-projects #projectGrid .card,
+.main-site.page-teaching .course-card,
+.main-site.page-experience .experience-list .card {
+  transition:
+    transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-site.page-book .book-hero-cover,
+.main-site.page-book .book-cover-image,
+.main-site.page-book .overview-item,
+.main-site.page-book .overview-icon,
+.main-site.page-book #faq details,
+.main-site.page-book #faq summary > div {
+  transition:
+    transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 180ms ease;
+}
+
+.main-site.page-book .book-cover-image {
+  box-shadow: var(--shadow-soft);
+}
+
+.main-site.page-book .overview-card,
+.main-site.page-book #author > .card {
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-site.page-book .overview-item {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.main-site.page-book #faq details {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.main-site.page-book #faq details:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.main-site.page-projects #projectGrid .card:focus-within,
+.main-site.page-teaching .course-card:focus-within,
+.main-site.page-book #author > .card:focus-within,
+.main-site.page-book #faq details:focus-within {
+  border-color: var(--brand);
+  background-color: var(--focus-bg);
+}
+
 .main-site.page-research #publications .publication-feature {
   overflow: clip;
   border-color: var(--border-strong);
@@ -3285,6 +3358,54 @@ html.motion-enabled .main-site [data-reveal].is-visible {
     border-color: var(--brand);
     box-shadow: 0 12px 28px rgba(23, 32, 29, 0.15), 0 28px 58px rgba(23, 32, 29, 0.1);
     transform: translateY(-4px) rotate(0deg);
+  }
+
+  .main-site.page-projects #projectGrid .card:hover {
+    border-top-color: var(--brand);
+    background: var(--surface-hover);
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-3px);
+  }
+
+  .main-site.page-teaching .course-card:hover,
+  .main-site.page-experience .experience-list .card:hover {
+    border-color: var(--brand);
+    background: linear-gradient(90deg, var(--focus-bg), transparent 72%);
+    transform: translateX(3px);
+  }
+
+  .main-site.page-book .book-hero-cover:hover {
+    transform: translateY(-5px) rotate(0.35deg);
+  }
+
+  .main-site.page-book .book-hero-cover:hover .book-cover-image {
+    border-color: var(--brand);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .main-site.page-book .overview-item:hover {
+    background: var(--focus-bg);
+    transform: translateX(4px);
+  }
+
+  .main-site.page-book .overview-item:hover .overview-icon {
+    transform: translateX(2px) scale(1.08);
+  }
+
+  .main-site.page-book #author > .card:hover {
+    border-color: var(--brand);
+    background: var(--surface-hover);
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-3px);
+  }
+
+  .main-site.page-book #faq details:hover {
+    border-color: var(--brand);
+    background: var(--focus-bg);
+  }
+
+  .main-site.page-book #faq details:hover summary > div {
+    transform: translateX(3px);
   }
 }
 
