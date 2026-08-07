@@ -233,7 +233,7 @@ An applied NLP research system for evaluating student writing using machine lear
 
 ### Legacy Multi-Agency Intelligence Platform Modernization
 
-As part of a capstone project, Avijit Roy inherited a nonfunctional .NET 5 and React multi-agency intelligence platform and completed its end-to-end technical recovery. He migrated the backend to .NET 9, updated obsolete dependencies and integrations, rebuilt failing components, restored real-time geospatial investigation workflows, strengthened security and maintainability, and deployed the modernized application to Microsoft Azure. This work represents legacy-system modernization and contribution to an existing platform, not authorship of the original core system.
+As part of a capstone project, Avijit Roy inherited a nonfunctional .NET 5 and React multi-agency intelligence platform and completed an end-to-end legacy system modernization. He migrated the backend to .NET 9, updated obsolete dependencies and integrations, rebuilt failing components, restored real-time geospatial investigation workflows, strengthened security and maintainability, and deployed the modernized application to Microsoft Azure. This work represents a contribution to an existing platform, not authorship of the original core system.
 
 ## Teaching and Academic Mentorship
 

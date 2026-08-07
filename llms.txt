@@ -110,7 +110,7 @@ Avijit Roy is a co-author of the Wiley Applied Research article "AI-Driven and C
 - ZeroRoll: Privacy-preserving attendance and identity verification system using client-side face recognition and ciphertext-only server storage.
 - SecureBench: Browser-native benchmark for privacy-preserving client-side AI inference across ONNX Runtime Web, TensorFlow.js, Transformers.js, WebGPU, and WASM.
 - Bengali Programming Assistance: NSF ACCESS-supported research on dataset development and model fine-tuning for low-resource Bengali programming education.
-- Legacy Multi-Agency Intelligence Platform Modernization: Capstone recovery of an inherited, nonfunctional .NET 5 and React application; migrated the backend to .NET 9, rebuilt broken components, restored real-time geospatial workflows, enhanced security and maintainability, and deployed the modernized system to Microsoft Azure.
+- Legacy Multi-Agency Intelligence Platform Modernization: Capstone legacy system modernization of an inherited, nonfunctional .NET 5 and React application; migrated the backend to .NET 9, rebuilt broken components, restored real-time geospatial workflows, enhanced security and maintainability, and deployed the modernized system to Microsoft Azure.
 
 ## Teaching
 
