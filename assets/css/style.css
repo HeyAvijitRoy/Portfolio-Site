@@ -2687,8 +2687,8 @@ body.main-site.page-experience {
 
 .main-site.page-experience .experience-list {
   gap: 18px;
-  margin-top: 44px;
-  padding-left: 7.5rem;
+  margin-top: 20px;
+  padding-left: 0;
 }
 
 .main-site.page-experience .experience-list::before,
@@ -2696,25 +2696,14 @@ body.main-site.page-experience {
   display: none;
 }
 
-.main-site.page-experience .experience-list .card {
+.main-site.page-experience .experience-list .card,
+.main-site.page-experience .experience-record-section > .card {
   padding: 28px 20px 34px;
   border-top: 1px solid var(--text);
 }
 
 .main-site.page-experience .experience-list .card::after {
-  left: -7.5rem;
-  top: 1.95rem;
-  color: var(--muted);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  opacity: 1;
-}
-
-.main-site.page-experience .experience-list .card:hover::after {
-  color: var(--brand);
-  transform: none;
+  display: none;
 }
 
 .main-site.page-experience .experience-list h3 {
@@ -2741,6 +2730,62 @@ body.main-site.page-experience {
 .main-site.page-experience .experience-list > .card > p.muted:first-of-type {
   color: var(--text);
   font-size: 1rem;
+}
+
+.main-site.page-experience .experience-record-section {
+  margin-top: 68px;
+}
+
+.main-site.page-experience .experience-record-section > h2 {
+  margin-bottom: 20px;
+}
+
+.main-site.page-experience .experience-appointments {
+  display: grid;
+  gap: 0;
+}
+
+.main-site.page-experience .experience-appointment {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-site.page-experience .experience-appointment:first-of-type {
+  padding-top: 4px;
+}
+
+.main-site.page-experience .experience-appointment:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.main-site.page-experience .experience-appointment h4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin: 0 0 8px;
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+.main-site.page-experience .experience-appointment h4 .sem {
+  flex: 0 0 auto;
+  padding-top: 3px;
+}
+
+.main-site.page-experience .experience-appointment-meta {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.main-site.page-experience .experience-appointment .repo-link {
+  display: inline-block;
+  margin-top: 2px;
 }
 
 /* Book landing page: editorial retail presentation with the cover as evidence. */
@@ -3305,6 +3350,15 @@ html[data-theme="dark"] .main-site.page-book .book-labels .amazon-market {
     flex-direction: column;
   }
 
+  .main-site.page-experience .experience-appointment h4 {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .main-site.page-experience .experience-appointment h4 .sem {
+    padding-top: 0;
+  }
+
   .main-site .foot-flex {
     align-items: flex-start;
     text-align: left;
@@ -3409,7 +3463,8 @@ html.motion-enabled .main-site [data-reveal].is-visible {
 
 .main-site.page-projects #projectGrid .card,
 .main-site.page-teaching .course-card,
-.main-site.page-experience .experience-list .card {
+.main-site.page-experience .experience-list .card,
+.main-site.page-experience .experience-record-section > .card {
   transition:
     transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
     border-color 220ms ease,
@@ -3585,7 +3640,8 @@ html.motion-enabled .main-site [data-reveal].is-visible {
   }
 
   .main-site.page-teaching .course-card:hover,
-  .main-site.page-experience .experience-list .card:hover {
+  .main-site.page-experience .experience-list .card:hover,
+  .main-site.page-experience .experience-record-section > .card:hover {
     border-color: var(--brand);
     background: linear-gradient(90deg, var(--focus-bg), transparent 72%);
     transform: translateX(3px);
