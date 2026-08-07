@@ -2309,40 +2309,27 @@ html[data-theme="dark"] body.main-site {
 }
 
 .main-site.page-teaching .teaching-institution-group {
-  margin: 40px -18px 0;
-  padding: 26px 18px 20px;
-  border-radius: 2px;
-  background: transparent;
-  transition: background-color 180ms ease;
+  display: grid;
+  grid-template-columns: minmax(210px, 0.72fr) minmax(0, 1.65fr);
+  gap: clamp(36px, 5vw, 70px);
+  align-items: start;
 }
 
-.main-site.page-teaching #courses > .teaching-institution-group:first-of-type {
-  margin-top: 0;
-  padding-top: 20px;
+.main-site.page-teaching .teaching-institution-group + .teaching-institution-group {
+  margin-top: 54px;
+  padding-top: 38px;
+  border-top: 1px solid var(--border);
 }
 
 .main-site.page-teaching .teaching-institution-header {
-  margin-bottom: 24px;
-  padding: 0;
-  background: transparent;
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  margin: 0;
 }
 
-.main-site.page-teaching .teaching-institution-group:focus-within {
-  background: rgba(31, 94, 140, 0.025);
-}
-
-html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:focus-within {
-  background: rgba(127, 192, 237, 0.055);
-}
-
-@media (hover: hover) {
-  .main-site.page-teaching .teaching-institution-group:hover {
-    background: rgba(31, 94, 140, 0.025);
-  }
-
-  html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:hover {
-    background: rgba(127, 192, 237, 0.055);
-  }
+.main-site.page-teaching .teaching-course-list {
+  min-width: 0;
 }
 
 .main-site.page-teaching .teaching-institution {
@@ -2375,8 +2362,20 @@ html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:foc
   margin-bottom: 0;
 }
 
-.main-site.page-teaching .teaching-institution-group details:last-of-type {
-  border-bottom: 1px solid var(--border);
+@media (max-width: 900px) {
+  .main-site.page-teaching .teaching-institution-group {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .main-site.page-teaching .teaching-institution-header {
+    position: static;
+  }
+
+  .main-site.page-teaching .teaching-institution-group + .teaching-institution-group {
+    margin-top: 44px;
+    padding-top: 30px;
+  }
 }
 
 .main-site.page-home .home-teaching-card > h3 {
@@ -2432,7 +2431,45 @@ html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:foc
 }
 
 .main-site.page-teaching #courses summary {
-  padding: 20px 0;
+  margin: 0 -12px;
+  padding: 20px 12px;
+  border-radius: 2px;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.main-site.page-teaching #courses summary:focus-visible {
+  background: rgba(31, 94, 140, 0.03);
+}
+
+html[data-theme="dark"] .main-site.page-teaching #courses summary:focus-visible {
+  background: rgba(127, 192, 237, 0.055);
+}
+
+.main-site.page-teaching #courses summary:focus-visible::after {
+  transform: translateX(2px);
+}
+
+.main-site.page-teaching #courses details[open] summary:focus-visible::after {
+  transform: translateX(2px) rotate(180deg);
+}
+
+@media (hover: hover) {
+  .main-site.page-teaching #courses summary:hover {
+    background: rgba(31, 94, 140, 0.03);
+  }
+
+  html[data-theme="dark"] .main-site.page-teaching #courses summary:hover {
+    background: rgba(127, 192, 237, 0.055);
+  }
+
+  .main-site.page-teaching #courses summary:hover::after {
+    transform: translateX(2px);
+  }
+
+  .main-site.page-teaching #courses details[open] summary:hover::after {
+    transform: translateX(2px) rotate(180deg);
+  }
 }
 
 .main-site.page-teaching .course-summary-copy {
@@ -2488,6 +2525,42 @@ html[data-theme="dark"] .main-site.page-teaching .teaching-institution-group:foc
   border-top: 1px solid var(--border);
   border-radius: 0;
   background: transparent;
+}
+
+.main-site.page-teaching #student-tools .course-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.main-site.page-teaching #student-tools .course-card::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0 -18px;
+  border-radius: 2px;
+  background: transparent;
+  content: "";
+  pointer-events: none;
+  transition: background-color 220ms ease;
+}
+
+.main-site.page-teaching #student-tools .course-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.main-site.page-teaching #student-tools .course-card:hover,
+.main-site.page-teaching #student-tools .course-card:focus-within {
+  background: transparent;
+}
+
+.main-site.page-teaching #student-tools .course-card:focus-within::before {
+  background: var(--focus-bg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .main-site.page-teaching #student-tools .course-card:hover::before {
+    background: linear-gradient(90deg, var(--focus-bg), transparent 72%);
+  }
 }
 
 .main-site.page-teaching .course-card:hover {
@@ -3149,14 +3222,6 @@ html[data-theme="dark"] .main-site.page-book .book-labels .amazon-market {
   .main-site.page-teaching .section-block {
     margin-top: 64px;
     padding-top: 22px;
-  }
-
-  .main-site.page-teaching .teaching-institution-group {
-    margin-right: -10px;
-    margin-left: -10px;
-    padding-right: 10px;
-    padding-bottom: 18px;
-    padding-left: 10px;
   }
 
   .main-site.page-home .home-teaching-group {

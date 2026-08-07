@@ -243,8 +243,8 @@ Courses include:
 
 - CSCI 271: Introduction to Computing and Programming (Spring 2026)
 - CSCI 272: Object-Oriented Programming in C++ (Fall 2025, Spring 2026, Fall 2026)
-- CSCI 362: Database & Data Mining (scheduled, Fall 2026)
-- CSCI 377: Computer Algorithms (scheduled, Fall 2026)
+- CSCI 362: Database & Data Mining (Fall 2026)
+- CSCI 377: Computer Algorithms (Fall 2026)
 - DFR 711: Cyber Forensics & Malware Analysis, St. John's University (scheduled, Fall 2026)
 
 Teaching areas include:
