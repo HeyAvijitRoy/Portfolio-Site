@@ -4,133 +4,133 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://avijitroy.com/</loc>
-		<lastmod>2026-08-04</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/research/</loc>
-		<lastmod>2026-08-04</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/research/structural-silence-poster/</loc>
-		<lastmod>2026-06-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/projects/</loc>
-		<lastmod>2026-06-27</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/experience/</loc>
-		<lastmod>2026-06-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/</loc>
-		<lastmod>2026-07-06</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/student-tools/</loc>
-		<lastmod>2026-06-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/courses/oop-fa26/</loc>
-		<lastmod>2026-07-25</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.70</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/courses/oop-sp26/</loc>
-		<lastmod>2026-05-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.70</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/courses/oop-fa25/</loc>
-		<lastmod>2026-05-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.70</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/courses/itp-sp26/</loc>
-		<lastmod>2026-05-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.70</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/books/cybersecurity-fundamentals/</loc>
-		<lastmod>2026-07-25</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/responsible-ai-prompting-guide.html</loc>
-		<lastmod>2026-07-01</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/cpp-vscode-win.html</loc>
-		<lastmod>2026-07-01</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.60</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/cpp-vscode-mac.html</loc>
-		<lastmod>2026-07-01</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>yearly</changefreq>
 		<priority>0.60</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/git/</loc>
-		<lastmod>2026-07-01</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/git-version-control/</loc>
-		<lastmod>2026-07-01</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/exam-timer/</loc>
-		<lastmod>2026-05-24</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/limo/</loc>
-		<lastmod>2026-06-27</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/HashNow/</loc>
-		<lastmod>2026-06-27</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/JomiMapo/</loc>
-		<lastmod>2026-06-27</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/ny-dmv-bengali-guide/</loc>
-		<lastmod>2026-06-27</lastmod>
+		<lastmod>2026-08-06</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
