@@ -231,9 +231,9 @@ This work connects language accessibility, computer science education, multiling
 
 An applied NLP research system for evaluating student writing using machine learning models aligned with ACTFL proficiency guidelines, focused on automated writing assessment, explainable scoring workflows, and practical support for language-learning evaluation in educational settings.
 
-### Human Trafficking Intelligence Platform: BlitzTips
+### Legacy Multi-Agency Intelligence Platform Modernization
 
-BlitzTips is a secure, multi-agency intelligence platform for collecting and analyzing human trafficking reports, integrating geospatial visualization, secure data storage, and investigative dashboards to support law enforcement and research efforts. It is built with .NET Core and React.
+As part of a capstone project, Avijit Roy inherited a nonfunctional .NET 5 and React multi-agency intelligence platform and completed its end-to-end technical recovery. He migrated the backend to .NET 9, updated obsolete dependencies and integrations, rebuilt failing components, restored real-time geospatial investigation workflows, strengthened security and maintainability, and deployed the modernized application to Microsoft Azure. This work represents legacy-system modernization and contribution to an existing platform, not authorship of the original core system.
 
 ## Teaching and Academic Mentorship
 
