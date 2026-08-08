@@ -615,6 +615,45 @@
     </div>
   </main>
 
+  <dialog class="business-card-dialog" id="businessCardDialog" aria-labelledby="businessCardTitle"
+    aria-describedby="businessCardDescription">
+    <div class="business-card-dialog-panel">
+      <button class="business-card-dialog-close" type="button" data-business-card-close
+        aria-label="Close contact download" title="Close">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+
+      <div class="business-card-dialog-icon" aria-hidden="true">
+        <i class="fa-regular fa-address-card"></i>
+      </div>
+      <p class="page-kicker">Business card</p>
+      <h2 id="businessCardTitle">Save Avijit Roy to your contacts</h2>
+      <p class="muted" id="businessCardDescription">
+        Download a contact card with my professional email, website, LinkedIn, and GitHub profiles.
+      </p>
+
+      <dl class="business-card-contact-preview">
+        <div>
+          <dt>Name</dt>
+          <dd>Avijit Roy</dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd>hey@avijitroy.com</dd>
+        </div>
+      </dl>
+
+      <div class="business-card-dialog-actions">
+        <a class="button primary" href="assets/Avijit-Roy.vcf" download="Avijit-Roy.vcf"
+          data-business-card-download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          Download Contact
+        </a>
+        <button class="button" type="button" data-business-card-close>Not now</button>
+      </div>
+    </div>
+  </dialog>
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container foot-flex">

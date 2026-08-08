@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Roy;Avijit;;;
+FN:Avijit Roy
+TITLE:Cybersecurity Researcher\, AI Engineer & Educator
+EMAIL;TYPE=INTERNET,WORK:hey@avijitroy.com
+URL:https://avijitroy.com/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/HeyAvijitRoy/
+X-SOCIALPROFILE;TYPE=github:https://github.com/HeyAvijitRoy
+NOTE:Cybersecurity researcher\, AI engineer\, educator\, and data analyst based in New York.
+END:VCARD

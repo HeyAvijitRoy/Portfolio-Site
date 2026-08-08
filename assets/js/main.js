@@ -377,9 +377,47 @@
     updateActiveSection();
   }
 
+  function initBusinessCardDownload() {
+    const dialog = document.getElementById("businessCardDialog");
+    if (!dialog) return;
+
+    const source = new URLSearchParams(window.location.search).get("s");
+    if (source !== "bc") return;
+
+    const closeDialog = () => {
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+    };
+
+    dialog.querySelectorAll("[data-business-card-close]").forEach((button) => {
+      button.addEventListener("click", closeDialog);
+    });
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) closeDialog();
+    });
+
+    dialog.querySelector("[data-business-card-download]")?.addEventListener("click", () => {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "business_card_download", { source: "bc_query" });
+      }
+      closeDialog();
+    });
+
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+  }
+
   // Initialize
   initReadingExperience();
   initBackToTop();
   initResearchSectionNav();
+  initBusinessCardDownload();
 
 })();

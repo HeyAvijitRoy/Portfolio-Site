@@ -2095,6 +2095,121 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
   color: var(--btn-text);
 }
 
+/* Query-triggered business card download */
+.main-site .business-card-dialog {
+  width: min(calc(100% - 32px), 500px);
+  max-height: calc(100svh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-3);
+  background: var(--surface-raised);
+  color: var(--text);
+  box-shadow: var(--shadow-lift);
+}
+
+.main-site .business-card-dialog:not([open]) {
+  display: none;
+}
+
+.main-site .business-card-dialog::backdrop {
+  background: rgba(9, 15, 20, 0.72);
+  backdrop-filter: blur(3px);
+}
+
+.main-site .business-card-dialog-panel {
+  position: relative;
+  padding: clamp(24px, 5vw, 38px);
+}
+
+.main-site .business-card-dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.main-site .business-card-dialog-close:hover {
+  border-color: var(--border);
+  background: var(--focus-bg);
+  color: var(--text);
+}
+
+.main-site .business-card-dialog-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 24px;
+  place-items: center;
+  border: 1px solid var(--border-strong);
+  color: var(--brand);
+  font-size: 1.15rem;
+}
+
+.main-site .business-card-dialog .page-kicker {
+  margin-bottom: 8px;
+}
+
+.main-site .business-card-dialog h2 {
+  max-width: 16ch;
+  margin: 0 48px 12px 0;
+  font-size: clamp(1.55rem, 5vw, 2rem);
+  line-height: 1.15;
+}
+
+.main-site .business-card-dialog h2 + .muted {
+  margin: 0;
+}
+
+.main-site .business-card-contact-preview {
+  margin: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.main-site .business-card-contact-preview > div {
+  display: grid;
+  grid-template-columns: minmax(72px, 0.3fr) 1fr;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-site .business-card-contact-preview dt {
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.main-site .business-card-contact-preview dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-weight: 500;
+}
+
+.main-site .business-card-dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-site .business-card-dialog-actions .button {
+  justify-content: center;
+  text-decoration: none;
+}
+
 .main-site .cta .button.small {
   min-height: 42px;
   padding: 9px 13px;
