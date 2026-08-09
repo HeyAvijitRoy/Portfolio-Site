@@ -2151,20 +2151,7 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
 }
 
 .main-site .business-card-identity {
-  display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
   padding-right: 38px;
-}
-
-.main-site .business-card-identity img {
-  width: 96px;
-  height: 112px;
-  border: 1px solid var(--border-strong);
-  border-radius: 2px;
-  object-fit: cover;
-  object-position: 50% 24%;
 }
 
 .main-site .business-card-identity .page-kicker {
@@ -2244,14 +2231,7 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
 
 @media (max-width: 440px) {
   .main-site .business-card-identity {
-    grid-template-columns: 74px minmax(0, 1fr);
-    gap: 16px;
     padding-right: 24px;
-  }
-
-  .main-site .business-card-identity img {
-    width: 74px;
-    height: 88px;
   }
 
   .main-site .business-card-role span {
