@@ -767,12 +767,14 @@
         </div>
       </nav>
 
-      <details class="research-section-menu">
-        <summary>
+      <div class="research-section-menu">
+        <button class="research-section-menu-toggle" type="button" aria-expanded="false"
+          aria-controls="research-section-menu-links">
           <span class="research-section-menu-label">Jump to section</span>
           <span class="research-section-menu-current">Overview</span>
-        </summary>
-        <nav class="research-section-menu-links" aria-label="Research page sections on mobile">
+        </button>
+        <nav class="research-section-menu-links" id="research-section-menu-links"
+          aria-label="Research page sections on mobile" hidden>
           <a href="#overview">Overview</a>
           <a href="#publications">Publications</a>
           <a href="#thesis">Master's Thesis</a>
@@ -784,7 +786,7 @@
           <a href="#archival">Archival</a>
           <a href="#honors">Honors &amp; Awards</a>
         </nav>
-      </details>
+      </div>
 
       <!-- Identity Snapshot -->
       <section class="identity-snapshot" aria-label="Identity Snapshot">

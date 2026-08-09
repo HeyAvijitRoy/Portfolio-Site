@@ -296,6 +296,8 @@
     if (!sectionNav) return;
 
     const mobileMenu = document.querySelector(".research-section-menu");
+    const mobileMenuToggle = mobileMenu?.querySelector(".research-section-menu-toggle");
+    const mobileMenuLinks = mobileMenu?.querySelector(".research-section-menu-links");
     const currentLabel = mobileMenu?.querySelector(".research-section-menu-current");
     const desktopLinks = Array.from(sectionNav.querySelectorAll('a[href^="#"]'));
     const allLinks = Array.from(document.querySelectorAll(
@@ -313,6 +315,12 @@
     const linksScroller = sectionNav.querySelector(".research-section-nav-links");
     let activeId = "";
     let ticking = false;
+
+    function setMobileMenuOpen(isOpen) {
+      if (!mobileMenuToggle || !mobileMenuLinks) return;
+      mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuLinks.hidden = !isOpen;
+    }
 
     function setActive(id) {
       if (!id || id === activeId) return;
@@ -353,18 +361,25 @@
       link.addEventListener("click", () => {
         const id = link.getAttribute("href")?.slice(1);
         if (id) setActive(id);
-        if (mobileMenu?.contains(link)) mobileMenu.open = false;
+        if (mobileMenu?.contains(link)) setMobileMenuOpen(false);
       });
     });
 
+    mobileMenuToggle?.addEventListener("click", () => {
+      const isOpen = mobileMenuToggle.getAttribute("aria-expanded") === "true";
+      setMobileMenuOpen(!isOpen);
+    });
+
     document.addEventListener("click", (event) => {
-      if (mobileMenu?.open && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+      const isOpen = mobileMenuToggle?.getAttribute("aria-expanded") === "true";
+      if (isOpen && !mobileMenu?.contains(event.target)) setMobileMenuOpen(false);
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key !== "Escape" || !mobileMenu?.open) return;
-      mobileMenu.open = false;
-      mobileMenu.querySelector("summary")?.focus();
+      const isOpen = mobileMenuToggle?.getAttribute("aria-expanded") === "true";
+      if (event.key !== "Escape" || !isOpen) return;
+      setMobileMenuOpen(false);
+      mobileMenuToggle?.focus();
     });
 
     window.addEventListener("scroll", () => {

@@ -1972,7 +1972,7 @@ html[data-theme="dark"] .main-site.page-research .research-section-nav {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
-html[data-theme="dark"] .main-site.page-research .research-section-menu summary,
+html[data-theme="dark"] .main-site.page-research .research-section-menu-toggle,
 html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
 }
@@ -3936,29 +3936,32 @@ html.motion-enabled .main-site [data-reveal].is-visible {
     background: transparent;
   }
 
-  .main-site.page-research .research-section-menu summary {
+  .main-site.page-research .research-section-menu-toggle {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     gap: 10px;
+    width: 100%;
     min-height: 50px;
+    margin: 0;
     padding: 10px 12px;
     border-top: 1px solid var(--border);
+    border-right: 0;
     border-bottom: 1px solid var(--border);
+    border-left: 0;
     background: color-mix(in srgb, var(--bg) 95%, transparent);
     box-shadow: 0 8px 20px rgba(23, 32, 29, 0.06);
     color: var(--text);
+    font: inherit;
+    text-align: left;
     cursor: pointer;
-    list-style: none;
+    -webkit-appearance: none;
+    appearance: none;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
   }
 
-  .main-site.page-research .research-section-menu summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .main-site.page-research .research-section-menu summary::after {
+  .main-site.page-research .research-section-menu-toggle::after {
     content: "+";
     width: 24px;
     color: var(--brand);
@@ -3968,7 +3971,7 @@ html.motion-enabled .main-site [data-reveal].is-visible {
     text-align: right;
   }
 
-  .main-site.page-research .research-section-menu[open] summary::after {
+  .main-site.page-research .research-section-menu-toggle[aria-expanded="true"]::after {
     content: "−";
   }
 
@@ -4005,6 +4008,10 @@ html.motion-enabled .main-site [data-reveal].is-visible {
     border-top: 0;
     background: var(--bg);
     box-shadow: 0 16px 34px rgba(23, 32, 29, 0.14);
+  }
+
+  .main-site.page-research .research-section-menu-links[hidden] {
+    display: none;
   }
 
   .main-site.page-research .research-section-menu-links a {
