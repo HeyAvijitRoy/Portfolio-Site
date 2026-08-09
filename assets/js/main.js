@@ -378,6 +378,16 @@
   }
 
   function initBusinessCardDownload() {
+    document.querySelectorAll("[data-vcard-download]").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "business_card_download", {
+            source: link.dataset.downloadSource || "site"
+          });
+        }
+      });
+    });
+
     const dialog = document.getElementById("businessCardDialog");
     if (!dialog) return;
 
@@ -400,12 +410,7 @@
       if (event.target === dialog) closeDialog();
     });
 
-    dialog.querySelector("[data-business-card-download]")?.addEventListener("click", () => {
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "business_card_download", { source: "bc_query" });
-      }
-      closeDialog();
-    });
+    dialog.querySelector("[data-vcard-download]")?.addEventListener("click", closeDialog);
 
     if (typeof dialog.showModal === "function") {
       dialog.showModal();
