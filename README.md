@@ -1,6 +1,6 @@
 # heyavijitroy.github.io
 
-Source repository for **[avijitroy.com](https://avijitroy.com)** — the personal portfolio of **Avijit Roy**, cybersecurity researcher, AI engineer, adjunct lecturer, and data analyst based in New York.
+Source repository for **[avijitroy.com](https://avijitroy.com)** — the personal portfolio of **Avijit Roy**, cybersecurity researcher, AI engineer, substitute lecturer, adjunct assistant professor, and data analyst based in New York.
 
 The site covers his research in privacy-preserving AI and digital forensics, engineering projects across cybersecurity and applied computing, teaching work at John Jay College of Criminal Justice (CUNY), and professional experience. Built with static HTML, CSS, and JavaScript. Deployed via GitHub Pages.
 

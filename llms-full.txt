@@ -8,7 +8,7 @@ For a shorter summary, use: https://avijitroy.com/llms.txt
 
 Avijit Roy is a Cybersecurity Researcher, Software Engineer, Educator, and Data Analyst based in New York, USA. He is affiliated with John Jay College of Criminal Justice, City University of New York (CUNY), CUNY Central Office, and St. John's University.
 
-He serves as an Adjunct Lecturer in Computer Science at John Jay College of Criminal Justice, teaches graduate digital forensics at St. John's University, and works as a Data Analyst at CUNY Central Office / International Student and Scholar Services (ISSS). He is also involved in AI and cybersecurity research through CUNY-affiliated research activities.
+He serves as a full-time Substitute Lecturer in Computer Science at John Jay College of Criminal Justice. He also serves as an Adjunct Assistant Professor teaching graduate-level digital forensics at St. John's University and as a Data Analyst at CUNY Central Office / International Student and Scholar Services (ISSS). He is involved in AI and cybersecurity research through CUNY-affiliated research activities.
 
 His work focuses on adversarial machine learning, privacy-preserving AI, perceptual hashing security, secure systems, digital forensics, low-resource language NLP, tokenization equity, and linguistic equity in artificial intelligence systems.
 
@@ -33,9 +33,10 @@ His research examines how AI and security systems fail under adversarial, lingui
 
 His recent research includes adversarial robustness evaluation of perceptual hashing systems, privacy-preserving AI architectures, low-resource language inequity in LLM infrastructure, propaganda detection using hybrid transformer and LLM explainability methods, and cyber-secure AI applications in engineering systems.
 
-## Current Roles
+## Current and Confirmed Roles
 
-- Adjunct Lecturer in Computer Science, John Jay College of Criminal Justice, CUNY
+- Full-time Substitute Lecturer in Computer Science, John Jay College of Criminal Justice, CUNY (beginning Fall 2026)
+- Adjunct Assistant Professor, St. John's University (graduate digital forensics)
 - Data Analyst, CUNY Central Office / International Student and Scholar Services (ISSS)
 - AI and cybersecurity researcher involved in CUNY-affiliated research activities
 
@@ -127,6 +128,8 @@ This work has been presented as a poster at the 69th Annual Conference of the In
 ### Measuring the Tokenization Premium
 
 "Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper accepted for both an oral presentation and a poster presentation at the LM4UC Workshop at IJCAI 2026.
+
+The paper was published on arXiv on August 10, 2026, as arXiv:2608.09046 [cs.CL], with a secondary classification of cs.CY. DOI: https://doi.org/10.48550/arXiv.2608.09046. arXiv record: https://arxiv.org/abs/2608.09046.
 
 The project audits tokenization inefficiencies across languages, with emphasis on Bengali, Hindi, Arabic, Tamil, Yoruba, and English baselines. It evaluates how different tokenizers impose unequal cost, context, and efficiency burdens on low-resource language communities.
 
@@ -237,7 +240,7 @@ As part of a capstone project, Avijit Roy inherited a nonfunctional .NET 5 and R
 
 ## Teaching and Academic Mentorship
 
-Avijit Roy teaches undergraduate computer science at John Jay College of Criminal Justice, CUNY, and graduate digital forensics at St. John's University. Full teaching portfolio: https://avijitroy.com/teaching/
+Avijit Roy serves as a full-time Substitute Lecturer teaching undergraduate computer science at John Jay College of Criminal Justice, CUNY. He is also an Adjunct Assistant Professor teaching graduate-level digital forensics at St. John's University. Full teaching portfolio: https://avijitroy.com/teaching/
 
 Courses include:
 
@@ -245,7 +248,7 @@ Courses include:
 - CSCI 272: Object-Oriented Programming in C++ (Fall 2025, Spring 2026, Fall 2026)
 - CSCI 362: Database & Data Mining (Fall 2026)
 - CSCI 377: Computer Algorithms (Fall 2026)
-- DFR 711: Cyber Forensics & Malware Analysis, St. John's University (scheduled, Fall 2026)
+- DFR 711: Cyber Forensics & Malware Analysis, St. John's University (Adjunct Assistant Professor; Fall 2026)
 
 Teaching areas include:
 

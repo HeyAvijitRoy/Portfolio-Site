@@ -288,11 +288,38 @@ a:hover { color: var(--accent-deep); }
   font: 400 clamp(1.08rem, 2vw, 1.2rem)/1.7 var(--reading);
 }
 .cover-byline {
+  max-width: 46rem;
   margin-bottom: 2.7rem;
   color: var(--ink);
-  font: .92rem/1.8 var(--ui);
+  font: .92rem/1.55 var(--ui);
 }
-.cover-byline strong { color: var(--ink-strong); font-size: 1.05rem; }
+.cover-credit { margin: 0 0 1rem; }
+.cover-credit strong {
+  color: var(--ink-strong);
+  font-size: 1.05rem;
+}
+.cover-affiliations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.cover-affiliation {
+  padding: .15rem 0 .15rem 1rem;
+  border-left: 2px solid var(--accent);
+}
+.cover-role,
+.cover-unit,
+.cover-institution { display: block; }
+.cover-role {
+  color: var(--ink-strong);
+  font-weight: 700;
+}
+.cover-unit { color: var(--ink); }
+.cover-institution {
+  margin-top: .25rem;
+  color: var(--muted);
+  font-size: .84rem;
+}
 .book-facts {
   display: flex;
   flex-wrap: wrap;
@@ -485,6 +512,7 @@ tr:last-child td { border-bottom: 0; }
   .reader { padding-left: 1.15rem; padding-right: 1.15rem; }
   .cover { padding-top: 4.5rem; min-height: auto; }
   .cover h1 { font-size: 2.55rem; }
+  .cover-affiliations { grid-template-columns: 1fr; gap: .9rem; }
   .book-content { font-size: 1rem; }
   .tool-button .button-label { display: none; }
 }
@@ -888,7 +916,21 @@ def build_html(toc_html: str, content_html: str, theme: str) -> str:
         <img class="cover-art" src="{COVER_IMAGE_PATH}" width="1100" height="1422" alt="Cover of {title}, by {AUTHOR}." fetchpriority="high" />
         <h1 id="saving-your-work-like-a-pro">Saving Your Work <span>Like a Pro</span></h1>
         <p class="cover-description" id="git-github-for-c-students">Git &amp; GitHub for C++ Students: a complete, analogy-driven guide to version control, collaboration, and recovery.</p>
-        <p class="cover-byline">Written by <strong>{AUTHOR}</strong><br />Adjunct Lecturer, Computer Science<br />{INSTITUTION}</p>
+        <div class="cover-byline">
+          <p class="cover-credit">Written by <strong>{AUTHOR}</strong></p>
+          <div class="cover-affiliations" aria-label="Academic appointments">
+            <div class="cover-affiliation">
+              <span class="cover-role">Substitute Lecturer</span>
+              <span class="cover-unit">Computer Science</span>
+              <span class="cover-institution">{INSTITUTION}</span>
+            </div>
+            <div class="cover-affiliation">
+              <span class="cover-role">Adjunct Assistant Professor</span>
+              <span class="cover-unit">Collins College of Professional Studies</span>
+              <span class="cover-institution">St. John's University</span>
+            </div>
+          </div>
+        </div>
         <ul class="book-facts" aria-label="Publication details">
           <li><strong>17</strong><span>Chapters</span></li>
           <li><strong>3</strong><span>Appendices</span></li>

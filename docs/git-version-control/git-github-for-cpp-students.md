@@ -28,8 +28,9 @@ nav_order: 1
 
 ---
 
-*By Avijit Roy*  
-*Adjunct Lecturer, Computer Science — John Jay College of Criminal Justice, CUNY*  
+*By Avijit Roy*<br>
+*Substitute Lecturer, Computer Science — John Jay College of Criminal Justice, CUNY*<br>
+*Adjunct Assistant Professor — Collins College of Professional Studies, St. John's University*<br>
 *CSCI 271 / CSCI 272*
 
 ---

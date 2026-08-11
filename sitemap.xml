@@ -4,13 +4,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://avijitroy.com/</loc>
-		<lastmod>2026-08-07</lastmod>
+		<lastmod>2026-08-11</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/research/</loc>
-		<lastmod>2026-08-07</lastmod>
+		<lastmod>2026-08-11</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
@@ -34,7 +34,7 @@
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/</loc>
-		<lastmod>2026-08-07</lastmod>
+		<lastmod>2026-08-11</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
@@ -76,7 +76,7 @@
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/responsible-ai-prompting-guide.html</loc>
-		<lastmod>2026-08-06</lastmod>
+		<lastmod>2026-08-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
@@ -100,7 +100,7 @@
 	</url>
 	<url>
 		<loc>https://avijitroy.com/docs/git-version-control/</loc>
-		<lastmod>2026-08-06</lastmod>
+		<lastmod>2026-08-11</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
