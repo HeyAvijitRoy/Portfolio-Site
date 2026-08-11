@@ -2,12 +2,12 @@ BEGIN:VCARD
 VERSION:3.0
 N:Roy;Avijit;;;
 FN:Avijit Roy
-TITLE:Cybersecurity Researcher\, AI Engineer & Educator
+TITLE:Cybersecurity & AI Researcher, Educator & Author
 TEL;TYPE=CELL,WORK:+1-917-720-6020
 EMAIL;TYPE=INTERNET,WORK:hey@avijitroy.com
 URL;TYPE=WORK:https://avijitroy.com/
 URL;TYPE="Amazon Author":https://amazon.com/author/heyavijitroy
 X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/HeyAvijitRoy/
 X-SOCIALPROFILE;TYPE=github:https://github.com/HeyAvijitRoy
-NOTE:Cybersecurity researcher\, AI engineer\, educator\, and data analyst based in New York. Open to research collaborations and interesting projects.
+NOTE:Cybersecurity and AI researcher, educator, author, and data analyst based in New York. Faculty at John Jay College of Criminal Justice and St. John's University. Open to research collaborations and interesting projects.
 END:VCARD
