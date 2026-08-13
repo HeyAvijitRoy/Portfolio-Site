@@ -88,11 +88,11 @@ US Provisional Patent Application 63/986,762, filed February 2026. PhishGuard is
 
 ### Measuring the Tokenization Premium
 
-"Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper accepted for both an oral presentation and a poster presentation at the LM4UC Workshop at IJCAI 2026. It was published on arXiv on August 10, 2026, as arXiv:2608.09046 [cs.CL], with a secondary classification of cs.CY. DOI: https://doi.org/10.48550/arXiv.2608.09046. The project audits tokenization inefficiencies across English, Bengali, Hindi, Arabic, Tamil, and Yoruba.
+"Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper accepted for both an oral presentation and a poster presentation at the LM4UC Workshop at IJCAI 2026, Bremen, Germany, August 16, 2026. It was published on arXiv on August 10, 2026, as arXiv:2608.09046 [cs.CL], with a secondary classification of cs.CY. DOI: https://doi.org/10.48550/arXiv.2608.09046. Poster DOI: https://doi.org/10.13140/RG.2.2.25750.31049. The project audits tokenization inefficiencies across English, Bengali, Hindi, Arabic, Tamil, and Yoruba using the Tokenization Equity Audit (TEA) benchmark. Interactive poster: https://avijitroy.com/research/tea-benchmark/. Benchmark code and corpus: https://github.com/HeyAvijitRoy/tea-benchmark.
 
 ### Structural Silence
 
-Structural Silence examines linguistic inequities in AI systems, especially for Bengali and other underrepresented languages. It studies tokenization penalties, inference cost inequity, reduced context efficiency, and infrastructure-level bias in LLM systems.
+Structural Silence examines linguistic inequities in AI systems, especially for Bengali and other underrepresented languages. It studies tokenization penalties, inference cost inequity, reduced context efficiency, and infrastructure-level bias in LLM systems. Presented as a poster at the 69th Annual Conference of the International Linguistic Association (ILA 2026). Interactive poster: https://avijitroy.com/research/structural-silence-poster/.
 
 ### Propasafe-Hybrid
 

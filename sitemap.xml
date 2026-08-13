@@ -10,13 +10,19 @@
 	</url>
 	<url>
 		<loc>https://avijitroy.com/research/</loc>
-		<lastmod>2026-08-11</lastmod>
+		<lastmod>2026-08-13</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>https://avijitroy.com/research/structural-silence-poster/</loc>
 		<lastmod>2026-08-06</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://avijitroy.com/research/tea-benchmark/</loc>
+		<lastmod>2026-08-13</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.80</priority>
 	</url>
