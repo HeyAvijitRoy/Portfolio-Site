@@ -1,0 +1,948 @@
+<!-- Page: TEA — Measuring the Tokenization Premium | Path: research/tea-benchmark/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Measuring the Tokenization Premium — TEA Benchmark | LM4UC @ IJCAI 2026 Poster | Avijit Roy</title>
+
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://avijitroy.com/research/tea-benchmark/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="TEA (Tokenization Equity Audit) measures how much more it costs to tokenize Bengali, Hindi, Arabic, Tamil, and Yoruba technical tutoring content versus English across GPT-4o, Qwen2.5-7B, and Mistral-7B. Interactive poster for the Language Models for Underserved Communities (LM4UC) workshop, IJCAI 2026.">
+  <meta name="keywords"
+    content="tokenization equity, LLM tokenizer fairness, token fertility ratio, Bengali NLP, multilingual AI cost, GPT-4o tokenizer, Qwen2.5, Mistral-7B, low-resource language AI, effective context window, IJCAI 2026, LM4UC workshop">
+  <meta name="author" content="Avijit Roy">
+
+  <!-- Citation Meta Tags for Google Scholar & Academic Indexing -->
+  <meta name="citation_title"
+    content="Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities">
+  <meta name="citation_author" content="Roy, Avijit">
+  <meta name="citation_author" content="Roy, Proma">
+  <meta name="citation_author" content="Patel, Hrishitva">
+  <meta name="citation_publication_date" content="2026/08">
+  <meta name="citation_conference_title"
+    content="Language Models for Underserved Communities (LM4UC) Workshop, 35th International Joint Conference on Artificial Intelligence (IJCAI 2026)">
+  <meta name="citation_publication_type" content="conference">
+  <meta name="citation_language" content="en">
+  <meta name="citation_doi" content="10.48550/arXiv.2608.09046">
+  <meta name="citation_abstract_html_url" content="https://avijitroy.com/research/tea-benchmark/">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.09046">
+  <meta name="citation_reference"
+    content="Roy, A., Roy, P., &amp; Patel, H. (2026). Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities. arXiv preprint arXiv:2608.09046.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title"
+    content="Measuring the Tokenization Premium — TEA Benchmark | LM4UC @ IJCAI 2026 Poster | Avijit Roy" />
+  <meta property="og:description"
+    content="TEA (Tokenization Equity Audit) measures how much more it costs to tokenize Bengali, Hindi, Arabic, Tamil, and Yoruba technical tutoring content versus English across GPT-4o, Qwen2.5-7B, and Mistral-7B. Interactive poster for the LM4UC workshop, IJCAI 2026." />
+  <meta property="og:url" content="https://avijitroy.com/research/tea-benchmark/" />
+  <meta property="og:image" content="https://avijitroy.com/assets/img/og-image.jpg" />
+  <meta property="og:site_name" content="Avijit Roy" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="Measuring the Tokenization Premium — TEA Benchmark | LM4UC @ IJCAI 2026 Poster | Avijit Roy" />
+  <meta name="twitter:description"
+    content="TEA (Tokenization Equity Audit) measures how much more it costs to tokenize Bengali, Hindi, Arabic, Tamil, and Yoruba technical tutoring content versus English across GPT-4o, Qwen2.5-7B, and Mistral-7B." />
+  <meta name="twitter:image" content="https://avijitroy.com/assets/img/og-image.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="../../assets/favicons/favicon.ico" sizes="any" />
+  <link rel="icon" href="../../assets/favicons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../../assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="../../assets/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#0a66c2" />
+  <meta name="theme-color" content="#0a66c2" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4VM6347X4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y4VM6347X4');
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand"><b>TEA</b> · LM4UC @ IJCAI 2026</div>
+      <nav class="navlinks" aria-label="Poster sections">
+        <a href="#problem">Problem</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#results">Results</a>
+        <a href="#impact">Impact</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="page-shell">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../">Home</a></li>
+          <li><a href="../">Research</a></li>
+          <li>TEA Benchmark</li>
+        </ol>
+      </nav>
+
+      <header class="hero">
+        <div class="logo-row" aria-label="Author institutions">
+          <div class="logo-item"><img class="logo-johnjay" src="assets/logo-johnjay.png"
+              alt="John Jay College of Criminal Justice, CUNY"></div>
+          <div class="logo-item"><img class="logo-ccny" src="assets/logo-ccny.png"
+              alt="The City College of New York, CUNY"></div>
+          <div class="logo-item"><img class="logo-utsa" src="assets/logo-utsa.svg"
+              alt="The University of Texas at San Antonio"></div>
+        </div>
+
+        <div class="eyebrow">
+          <span>Tokenization Equity Audit (TEA)</span>
+          <span class="dot"></span>
+          <a href="https://lm4uc.github.io/" target="_blank" rel="noopener noreferrer">LM4UC Workshop</a>
+          <span class="dot"></span>
+          <span>IJCAI 2026</span>
+          <span class="venue-info">Bremen, Germany · 16 August 2026 · <a
+              href="https://arxiv.org/abs/2608.09046" target="_blank" rel="noopener noreferrer">arXiv:2608.09046</a>
+            · <a href="https://github.com/HeyAvijitRoy/tea-benchmark" target="_blank"
+              rel="noopener noreferrer">github.com/HeyAvijitRoy/tea-benchmark</a></span>
+        </div>
+
+        <h1>Measuring the Tokenization Premium</h1>
+        <p class="subtitle">A Cost Audit for Underserved Language Communities <span class="subtitle-divider">|</span>
+          TEA Benchmark</p>
+
+        <div class="authors">
+          <div class="author">
+            <strong><a href="https://orcid.org/0009-0007-8036-0952" target="_blank" rel="noopener noreferrer">Avijit
+                Roy <i class="fa-brands fa-orcid" aria-hidden="true"></i></a></strong>
+            <span>John Jay College of Criminal Justice · CUNY</span>
+          </div>
+          <div class="author">
+            <strong><a href="https://orcid.org/0009-0004-1060-9116" target="_blank" rel="noopener noreferrer">Proma
+                Roy <i class="fa-brands fa-orcid" aria-hidden="true"></i></a></strong>
+            <span>The City College of New York · CUNY</span>
+          </div>
+          <div class="author">
+            <strong>Hrishitva Patel</strong>
+            <span>University of Texas at San Antonio</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="https://arxiv.org/abs/2608.09046" target="_blank" rel="noopener noreferrer">Read
+            on arXiv</a>
+          <a class="btn orange" href="https://github.com/HeyAvijitRoy/tea-benchmark" target="_blank"
+            rel="noopener noreferrer">Open Benchmark on GitHub</a>
+          <a class="btn" href="TEA_Poster.pdf" target="_blank" rel="noopener noreferrer">Download Poster (PDF)</a>
+          <button class="btn" id="copyCitation">Copy BibTeX</button>
+        </div>
+        <p class="hero-note">Peer-reviewed workshop paper · accepted for oral and poster presentation at the Language
+          Models for Underserved Communities (LM4UC) Workshop, IJCAI 2026.</p>
+      </header>
+
+      <div class="metric-strip" aria-label="Headline results">
+        <div class="metric">
+          <div class="num">1.56×</div>
+          <div class="label">Bengali · GPT-4o</div>
+          <div class="small">56% more tokens than English across the 120-item corpus.</div>
+        </div>
+        <div class="metric">
+          <div class="num">≈4.5×</div>
+          <div class="label">Bengali · open-weight tokenizers</div>
+          <div class="small">4.50× Qwen2.5-7B · 4.44× Mistral-7B-v0.1.</div>
+        </div>
+        <div class="metric">
+          <div class="num">82k</div>
+          <div class="label">English-equivalent context</div>
+          <div class="small">Inside a nominal 128k-token window for Bengali under GPT-4o.</div>
+        </div>
+        <div class="metric">
+          <div class="num">2.37×</div>
+          <div class="label">Yoruba · GPT-4o</div>
+          <div class="small">Highest GPT-4o premium in the corpus despite Latin script.</div>
+        </div>
+      </div>
+
+      <main>
+        <section id="problem">
+          <div class="section-head">
+            <div class="section-no">01 · Problem</div>
+            <h2>Equivalent meaning can enter the model with unequal representation cost.</h2>
+            <p>Multilingual evaluation usually starts with model output. The <strong>Tokenization Equity Audit
+                (TEA)</strong> moves one step upstream and audits the token sequence produced before inference.
+              Prior work has shown that cross-language tokenization disparities can affect cost, latency, and usable
+              context <a class="cite" href="#ref1">[1]</a><a class="cite" href="#ref2">[2]</a>.</p>
+          </div>
+          <div class="grid2">
+            <div class="card">
+              <h3>The layer TEA audits</h3>
+              <div class="pipeline" aria-label="Text to tokenizer to tokens to model">
+                <div class="pipe-box">Text</div>
+                <div class="arrow">→</div>
+                <div class="pipe-box hot">Tokenizer</div>
+                <div class="arrow">→</div>
+                <div class="pipe-box">Tokens</div>
+                <div class="arrow">→</div>
+                <div class="pipe-box">Model</div>
+              </div>
+              <div class="callout"><strong>No model inference is required.</strong> TEA computes token counts from
+                tokenizer vocabularies over a controlled parallel corpus. This is one measurable form of what our
+                companion analysis calls <a href="../structural-silence-poster/">structural silence</a> — an
+                infrastructure decision that disadvantages a language before a single parameter is touched <a
+                  class="cite" href="#ref7">[7]</a>.</div>
+            </div>
+            <div class="card">
+              <h3>Why this matters for underserved-language educational AI</h3>
+              <p><strong>API systems:</strong> token-based billing makes longer encodings more expensive.</p>
+              <p><strong>Context:</strong> nominal windows are measured in tokens, not semantic content.</p>
+              <p><strong>Local deployment:</strong> avoiding an API bill does not remove sequence-length overhead;
+                longer sequences still cost local compute and memory.</p>
+              <div class="callout"><strong>Tokenizer design changes what a system can carry, compute, and
+                  afford.</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <div class="section-no">Example</div>
+            <h2>One Python error message: 8 tokens in English, 22 in Tamil.</h2>
+            <p>Corpus item T1-10 — “IndexError: list index out of range” — encoded using GPT-4o
+              <code>o200k_base</code>. No model has run yet; every difference below is produced entirely by the
+              encoder vocabulary.
+            </p>
+          </div>
+          <div class="card fig">
+            <div class="fig-scroll">
+              <img src="assets/figure-tokenizer-example.webp"
+                alt="Tokenizer segmentation of 'IndexError: list index out of range' across English (8 tokens), Bengali (11), Hindi (11), Tamil (22), and Yoruba (19) under GPT-4o o200k_base"
+                width="1536" height="1024" loading="lazy" decoding="async">
+            </div>
+            <div class="figcap">Figure adapted from TEA Figure 1. English requires 8 tokens; Bengali 11; Hindi 11;
+              Tamil 22; Yoruba 19. Yoruba uses Latin script yet still fragments more than Bengali — script family
+              alone does not predict tokenizer fairness.</div>
+          </div>
+        </section>
+
+        <section id="benchmark">
+          <div class="section-head">
+            <div class="section-no">02 · Benchmark</div>
+            <h2>A custom programming corpus preserves how multilingual technical teaching actually works.</h2>
+            <p>TEA uses beginner Python because technical tutoring naturally mixes native-language explanation with
+              English error names, identifiers, and code — a poor fit for generic parallel prose.</p>
+          </div>
+          <div class="grid2">
+            <div class="card">
+              <h3>120 parallel items · six languages</h3>
+              <p>English source items were translated into Bengali, Hindi, Arabic, Tamil, and Yoruba. Python
+                identifiers and error names such as <code>TypeError</code>, <code>IndexError</code>,
+                <code>NoneType</code>, and code variables are intentionally retained in English, matching real
+                classroom code-switching.
+              </p>
+              <div class="tiers">
+                <div class="tier">
+                  <b>35</b>
+                  <strong>Tier 1</strong>
+                  <span>Short technical phrases, error names, diagnostics.</span>
+                </div>
+                <div class="tier">
+                  <b>50</b>
+                  <strong>Tier 2</strong>
+                  <span>One- to three-sentence bug explanations and fixes.</span>
+                </div>
+                <div class="tier">
+                  <b>35</b>
+                  <strong>Tier 3</strong>
+                  <span>Longer tutoring passages, concepts, and small code examples.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Tokenizers and validation scope</h3>
+              <p><strong>Tokenizers audited:</strong> GPT-4o <code>o200k_base</code>, Qwen2.5-7B, and Mistral-7B-v0.1.
+                The audit uses tokenizer vocabularies only — no model inference.</p>
+              <div class="validation">
+                <span class="badge">Bengali · human validated</span>
+                <span class="badge">Hindi · human validated</span>
+                <span class="badge exploratory">Arabic · exploratory</span>
+                <span class="badge exploratory">Tamil · exploratory</span>
+                <span class="badge exploratory">Yoruba · exploratory</span>
+              </div>
+              <p style="margin-top:16px">Bengali items were reviewed by two Bengali speakers with programming
+                experience; Hindi items by a Hindi-speaking contributor familiar with technical usage. The custom
+                corpus also enables a Bengali code-switching sensitivity check: “clean” items contain at least 75%
+                Bengali-script alphabetic characters.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="metrics">
+          <div class="section-head">
+            <div class="section-no">Metrics</div>
+            <h2>Three quantities carry the whole audit.</h2>
+            <p>Every result on this page is derived from these three definitions.</p>
+          </div>
+          <div class="card metrics-box">
+            <div class="metric-row">
+              <div class="m-name">TFR</div>
+              <div>
+                <code>tokens(language) ÷ tokens(English)</code>
+                <p>Token Fertility Ratio — token premium relative to English, computed per item under the same
+                  tokenizer.</p>
+              </div>
+            </div>
+            <div class="metric-row">
+              <div class="m-name">ECW</div>
+              <div>
+                <code>nominal window ÷ TFR</code>
+                <p>Effective Context Window — English-equivalent semantic content that fits inside a fixed nominal
+                  token budget.</p>
+              </div>
+            </div>
+            <div class="metric-row">
+              <div class="m-name">Cost</div>
+              <div>
+                <code>price × (TFR − 1) × mean English tokens × requests</code>
+                <p>Illustrative API cost premium. Dollar values move with provider pricing; the TFR ratio is the
+                  durable result.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="results">
+          <div class="section-head">
+            <div class="section-no">03 · Results</div>
+            <h2>Every tested non-English language is above English parity under every tokenizer.</h2>
+            <p>Mean Token Fertility Ratio (TFR) across all 120 items. English is fixed at 1.00× under every
+              tokenizer. Click a legend swatch to isolate a tokenizer.</p>
+          </div>
+          <div class="card">
+            <div class="controls" role="group" aria-label="Isolate a tokenizer">
+              <button class="legend-btn" data-series="gpt"><span class="legend-swatch gpt"></span>GPT-4o</button>
+              <button class="legend-btn" data-series="qwen"><span class="legend-swatch qwen"></span>Qwen2.5-7B</button>
+              <button class="legend-btn" data-series="mistral"><span
+                  class="legend-swatch mistral"></span>Mistral-7B</button>
+            </div>
+            <div class="tfr-baseline"><i class="fa-solid fa-flag"></i> <span><b>English baseline: 1.00×</b> under
+                every tokenizer — the reference line every bar below is measured against.</span></div>
+
+            <div id="tfrChart">
+              <div class="tfr-group" data-lang="Arabic">
+                <div class="tfr-group-label">Arabic</div>
+                <div class="tfr-bars">
+                  <div class="tfr-row gpt">
+                    <div class="tfr-name">GPT-4o</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:20.6%"></div>
+                    </div>
+                    <div class="tfr-val">1.44×</div>
+                  </div>
+                  <div class="tfr-row qwen">
+                    <div class="tfr-name">Qwen2.5-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:24.3%"></div>
+                    </div>
+                    <div class="tfr-val">1.70×</div>
+                  </div>
+                  <div class="tfr-row mistral">
+                    <div class="tfr-name">Mistral-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:55.1%"></div>
+                    </div>
+                    <div class="tfr-val">3.86×</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tfr-group" data-lang="Hindi">
+                <div class="tfr-group-label">Hindi</div>
+                <div class="tfr-bars">
+                  <div class="tfr-row gpt">
+                    <div class="tfr-name">GPT-4o</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:24.6%"></div>
+                    </div>
+                    <div class="tfr-val">1.72×</div>
+                  </div>
+                  <div class="tfr-row qwen">
+                    <div class="tfr-name">Qwen2.5-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:69.4%"></div>
+                    </div>
+                    <div class="tfr-val">4.86×</div>
+                  </div>
+                  <div class="tfr-row mistral">
+                    <div class="tfr-name">Mistral-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:74.3%"></div>
+                    </div>
+                    <div class="tfr-val">5.20×</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tfr-group" data-lang="Bengali">
+                <div class="tfr-group-label">Bengali</div>
+                <div class="tfr-bars">
+                  <div class="tfr-row gpt">
+                    <div class="tfr-name">GPT-4o</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:22.3%"></div>
+                    </div>
+                    <div class="tfr-val">1.56×</div>
+                  </div>
+                  <div class="tfr-row qwen">
+                    <div class="tfr-name">Qwen2.5-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:64.3%"></div>
+                    </div>
+                    <div class="tfr-val">4.50×</div>
+                  </div>
+                  <div class="tfr-row mistral">
+                    <div class="tfr-name">Mistral-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:63.4%"></div>
+                    </div>
+                    <div class="tfr-val">4.44×</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tfr-group" data-lang="Tamil">
+                <div class="tfr-group-label">Tamil</div>
+                <div class="tfr-bars">
+                  <div class="tfr-row gpt">
+                    <div class="tfr-name">GPT-4o</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:29.9%"></div>
+                    </div>
+                    <div class="tfr-val">2.09×</div>
+                  </div>
+                  <div class="tfr-row qwen">
+                    <div class="tfr-name">Qwen2.5-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:93.6%"></div>
+                    </div>
+                    <div class="tfr-val">6.55×</div>
+                  </div>
+                  <div class="tfr-row mistral">
+                    <div class="tfr-name">Mistral-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:93.9%"></div>
+                    </div>
+                    <div class="tfr-val">6.57×</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tfr-group" data-lang="Yoruba">
+                <div class="tfr-group-label">Yoruba</div>
+                <div class="tfr-bars">
+                  <div class="tfr-row gpt">
+                    <div class="tfr-name">GPT-4o</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:33.9%"></div>
+                    </div>
+                    <div class="tfr-val">2.37×</div>
+                  </div>
+                  <div class="tfr-row qwen">
+                    <div class="tfr-name">Qwen2.5-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:45.4%"></div>
+                    </div>
+                    <div class="tfr-val">3.18×</div>
+                  </div>
+                  <div class="tfr-row mistral">
+                    <div class="tfr-name">Mistral-7B</div>
+                    <div class="tfr-track">
+                      <div class="tfr-fill" style="width:47.6%"></div>
+                    </div>
+                    <div class="tfr-val">3.33×</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-note">Source: TEA Table 1. Mean TFR across the 120-item corpus, scaled to a 7.0×
+              maximum. Higher = more tokens required relative to the English version of the same content.</div>
+
+            <details class="data-table-toggle">
+              <summary>View full results table (Table 1, mean ± SD)</summary>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption>Token fertility ratio by language and tokenizer across the 120 TEA items.</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Language</th>
+                      <th scope="col">GPT-4o</th>
+                      <th scope="col">Qwen2.5-7B</th>
+                      <th scope="col">Mistral-7B</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">English</th>
+                      <td>1.00 ± 0.00</td>
+                      <td>1.00 ± 0.00</td>
+                      <td>1.00 ± 0.00</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Arabic</th>
+                      <td>1.44 ± 0.21</td>
+                      <td>1.70 ± 0.27</td>
+                      <td>3.86 ± 0.54</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hindi</th>
+                      <td>1.72 ± 0.31</td>
+                      <td>4.86 ± 0.91</td>
+                      <td>5.20 ± 0.99</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Bengali</th>
+                      <td>1.56 ± 0.41</td>
+                      <td>4.50 ± 1.46</td>
+                      <td>4.44 ± 1.45</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tamil</th>
+                      <td>2.09 ± 0.48</td>
+                      <td>6.55 ± 1.80</td>
+                      <td>6.57 ± 1.82</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Yoruba</th>
+                      <td>2.37 ± 0.49</td>
+                      <td>3.18 ± 0.63</td>
+                      <td>3.33 ± 0.67</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+
+          <div class="grid3" style="margin-top:18px">
+            <div class="card">
+              <h3>Tokenizer family matters</h3>
+              <p class="big-quote">Bengali: 1.56× → 4.50× / 4.44×</p>
+              <p>GPT-4o versus Qwen2.5-7B and Mistral-7B-v0.1. The same language carries very different sequence
+                overhead depending on tokenizer design.</p>
+            </div>
+            <div class="card">
+              <h3>Script family is not enough</h3>
+              <p class="big-quote">Yoruba 2.37× &gt; Bengali 1.56×</p>
+              <p>Under GPT-4o, Latin-script Yoruba is more expensive than Bengali — evidence for measuring
+                language-level behavior rather than assuming fairness from script alone.</p>
+            </div>
+            <div class="card">
+              <h3>Open-weight trade-off</h3>
+              <p class="big-quote">Tamil exceeds 6.5×</p>
+              <p>Qwen2.5 and Mistral remove commercial API billing, but their tokenizers carry much longer sequences
+                for several languages in this corpus.</p>
+            </div>
+          </div>
+
+          <div class="section-head" style="margin-top:56px">
+            <div class="section-no">Sensitivity</div>
+            <h2>English code-switching suppresses the Bengali premium rather than inflating it.</h2>
+            <p>Choose a corpus tier to compare all Bengali items with the “clean” Bengali subset (at least 75%
+              Bengali-script alphabetic characters). The clean subset is more expensive in every tier.</p>
+          </div>
+          <div class="card">
+            <div class="controls" id="sensControls" role="group" aria-label="Corpus tier">
+              <button class="legend-btn active" data-tier="Tier 1">Tier 1</button>
+              <button class="legend-btn" data-tier="Tier 2">Tier 2</button>
+              <button class="legend-btn" data-tier="Tier 3">Tier 3</button>
+            </div>
+            <div class="sens-bars">
+              <div class="sens-item">
+                <span>All Bengali items (n=120)</span>
+                <b id="sensAll">1.65×</b>
+                <div class="sens-desc">Includes realistic retained English programming terms.</div>
+              </div>
+              <div class="sens-item clean">
+                <span>Clean Bengali subset (n=62)</span>
+                <b id="sensClean">2.11×</b>
+                <div class="sens-desc">At least 75% Bengali-script alphabetic characters.</div>
+              </div>
+            </div>
+            <div class="callout" style="margin-top:16px"><strong>Interpretation:</strong> retained English identifiers
+              pull the measured Bengali premium down. The aggregate 1.56× GPT-4o result is therefore conservative for
+              more native-script-heavy content.</div>
+            <details class="data-table-toggle">
+              <summary>View full sensitivity table (Table 3)</summary>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption>Bengali TFR sensitivity to technical code-switching under GPT-4o.</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Subset</th>
+                      <th scope="col">Tier 1</th>
+                      <th scope="col">Tier 2</th>
+                      <th scope="col">Tier 3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">All items (n=120)</th>
+                      <td>1.65 ± 0.52</td>
+                      <td>1.55 ± 0.36</td>
+                      <td>1.50 ± 0.36</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Clean only (n=62)</th>
+                      <td>2.11 ± 0.57</td>
+                      <td>1.79 ± 0.17</td>
+                      <td>1.79 ± 0.10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section id="impact">
+          <div class="section-head">
+            <div class="section-no">04 · Impact</div>
+            <h2>A nominal 128k-token context window does not carry equal semantic capacity across languages.</h2>
+            <p>Select a language. TEA estimates effective English-equivalent content by dividing the nominal context
+              window by mean GPT-4o TFR.</p>
+          </div>
+          <div class="card">
+            <div class="context-picker" id="contextPicker" role="group" aria-label="Select a language"></div>
+            <div class="context-viz">
+              <div>
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:8px">
+                  <strong id="contextLabel">Bengali</strong>
+                  <span id="contextEq">81,967 of 128,000</span>
+                </div>
+                <div class="context-track">
+                  <div class="context-fill" id="contextFill"></div>
+                </div>
+                <p id="contextSentence" style="margin:13px 0 0;color:var(--muted)">Bengali retains about 64% of the
+                  English-equivalent capacity in a nominal 128k window.</p>
+              </div>
+              <div class="context-stats">
+                <div class="stat-mini">
+                  <b id="contextPct">64%</b>
+                  <span>effective share</span>
+                </div>
+                <div class="stat-mini">
+                  <b id="contextTokens">81,967</b>
+                  <span>English-equivalent tokens</span>
+                </div>
+                <div class="stat-mini">
+                  <b id="contextCost">+$0.07</b>
+                  <span>illustrative premium / 1k requests</span>
+                </div>
+              </div>
+            </div>
+            <p class="chart-note">Effective context is an operational estimate, not a claim that model architecture
+              changes by language. Cost uses GPT-4o input pricing of $2.50 per million tokens as of May 2026; the
+              token ratios are the durable result.</p>
+            <details class="data-table-toggle">
+              <summary>View full context table (Table 2)</summary>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <caption>Illustrative GPT-4o context and cost implications. ECW estimates assume a 128k-token
+                    nominal window; cost uses $2.50 per million input tokens (May 2026).</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Language</th>
+                      <th scope="col">Premium / 1k calls</th>
+                      <th scope="col">Effective context</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">English</th>
+                      <td>$0.00</td>
+                      <td>128,000 (100%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Arabic</th>
+                      <td>$0.06</td>
+                      <td>89,148 (70%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Hindi</th>
+                      <td>$0.09</td>
+                      <td>74,461 (58%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Bengali</th>
+                      <td>$0.07</td>
+                      <td>81,967 (64%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Tamil</th>
+                      <td>$0.14</td>
+                      <td>61,121 (48%)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Yoruba</th>
+                      <td>$0.18</td>
+                      <td>53,951 (42%)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+
+          <div class="section-head" style="margin-top:56px">
+            <div class="section-no">Resource effect</div>
+            <h2>The premium propagates when multilingual data is built.</h2>
+            <p>A 100,000-token English instructional corpus expands non-uniformly when represented as equivalent
+              multilingual content using GPT-4o TFRs.</p>
+          </div>
+          <div class="card">
+            <div class="scale-row" aria-label="Tokenized corpus scaling example">
+              <div class="scale-box"><span>English source</span><b>100k</b><small>baseline</small></div>
+              <div class="chev">›</div>
+              <div class="scale-box"><span>Bengali</span><b>156k</b><small>+56%</small></div>
+              <div class="chev">›</div>
+              <div class="scale-box"><span>Tamil</span><b>209k</b><small>+109%</small></div>
+              <div class="chev">›</div>
+              <div class="scale-box"><span>Yoruba</span><b>237k</b><small>+137%</small></div>
+            </div>
+            <p style="text-align:center;color:var(--muted);max-width:920px;margin:14px auto 0">Longer tokenized
+              representations increase storage, transmission, batching, and curation burden before downstream model
+              quality is even considered — a structural barrier to equitable resource development that operates
+              independently of model quality.</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="core">Tokenization is a measurable equity layer <span class="hl">beneath the model</span>. A
+            vocabulary file and a parallel corpus are enough to <span class="hl">expose representation
+              overhead</span> before inference.</div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <div class="section-no">05 · Scope</div>
+            <h2>Token efficiency is not answer quality.</h2>
+            <p>TEA is deliberately an infrastructure audit. It does not claim that a lower TFR guarantees a better
+              model response.</p>
+          </div>
+          <div class="limit-list">
+            <div class="limit">
+              <strong>Corpus scale</strong>
+              <p>120 items in one technical-education domain — a workshop-scale audit, not a universal tokenizer
+                ranking.</p>
+            </div>
+            <div class="limit">
+              <strong>Validation depth</strong>
+              <p>Bengali and Hindi are the human-validated primary cases; Arabic, Tamil, and Yoruba are exploratory.
+              </p>
+            </div>
+            <div class="limit">
+              <strong>Sensitivity coverage</strong>
+              <p>The code-switching analysis is currently Bengali-only.</p>
+            </div>
+            <div class="limit">
+              <strong>Pricing</strong>
+              <p>Dollar figures are illustrative and provider-dependent. TFR is the stable quantity.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="recommendations">
+          <div class="section-head">
+            <div class="section-no">06 · Recommendations</div>
+            <h2>Make the invisible denominator visible.</h2>
+            <p>Four reporting practices the paper proposes — none of which require training a new model.</p>
+          </div>
+          <div class="card">
+            <div class="rec">
+              <div class="rec-no">01</div>
+              <div>
+                <b>Report tokenizer efficiency by language.</b>
+                <p>Model cards and multilingual benchmark papers should include language-level tokenization
+                  statistics, especially for underserved languages.</p>
+              </div>
+            </div>
+            <div class="rec">
+              <div class="rec-no">02</div>
+              <div>
+                <b>Evaluate context-equivalent capacity.</b>
+                <p>Context-window claims should be paired with language-adjusted estimates whenever multilingual
+                  deployment is intended.</p>
+              </div>
+            </div>
+            <div class="rec">
+              <div class="rec-no">03</div>
+              <div>
+                <b>Treat technical domains separately.</b>
+                <p>Programming education, legal assistance, health guidance, and other terminology-heavy domains
+                  should be audited independently, since code-switching and domain vocabulary change tokenization
+                  behavior.</p>
+              </div>
+            </div>
+            <div class="rec">
+              <div class="rec-no">04</div>
+              <div>
+                <b>Account for dataset construction inequity.</b>
+                <p>Non-uniform token scaling (100k → 156k Bengali → 209k Tamil → 237k Yoruba) increases storage,
+                  transmission, and curation cost for underserved languages — a structural barrier that operates
+                  independently of model quality.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="sources">
+          <div class="section-head">
+            <div class="section-no">07 · Sources</div>
+            <h2>Paper, benchmark, and selected literature cited by TEA.</h2>
+            <p>These references are drawn from the paper's bibliography and linked to primary publication or preprint
+              pages where available.</p>
+          </div>
+
+          <div class="resources">
+            <div class="resource">
+              <h3>Read the TEA paper</h3>
+              <p>Roy, Roy &amp; Patel (2026), arXiv:2608.09046.</p>
+              <a href="https://arxiv.org/abs/2608.09046" target="_blank" rel="noopener noreferrer">arxiv.org/abs/2608.09046</a>
+            </div>
+            <div class="resource orange">
+              <h3>Reproduce the benchmark</h3>
+              <p>Corpus, token counts, scripts, figures, result tables, and run instructions.</p>
+              <a href="https://github.com/HeyAvijitRoy/tea-benchmark" target="_blank"
+                rel="noopener noreferrer">github.com/HeyAvijitRoy/tea-benchmark</a>
+            </div>
+          </div>
+
+          <div class="refs">
+            <div class="ref" id="ref1"><strong>[1] Petrov et al. (2023).</strong> "Language Model Tokenizers Introduce
+              Unfairness Between Languages." <em>NeurIPS 36</em>. <a href="https://arxiv.org/abs/2305.15425"
+                target="_blank" rel="noopener noreferrer">Primary source</a></div>
+            <div class="ref" id="ref2"><strong>[2] Ahia et al. (2023).</strong> "Do All Languages Cost the Same?
+              Tokenization in the Era of Commercial Language Models." <em>EMNLP 2023</em>. <a
+                href="https://aclanthology.org/2023.emnlp-main.614/" target="_blank" rel="noopener noreferrer">ACL
+                Anthology</a></div>
+            <div class="ref" id="ref3"><strong>[3] Rust et al. (2021).</strong> "How Good is Your Tokenizer? On the
+              Monolingual Performance of Multilingual Language Models." <em>ACL-IJCNLP 2021</em>. <a
+                href="https://aclanthology.org/2021.acl-long.243/" target="_blank" rel="noopener noreferrer">ACL
+                Anthology</a></div>
+            <div class="ref" id="ref4"><strong>[4] Thakur et al. (2025).</strong> "The Art of Breaking Words:
+              Rethinking Multilingual Tokenizer Design." <a href="https://arxiv.org/abs/2508.06533" target="_blank"
+                rel="noopener noreferrer">arXiv</a></div>
+            <div class="ref" id="ref5"><strong>[5] Raihan &amp; Zampieri (2025).</strong> "TigerLLM — A Family of
+              Bangla Large Language Models." <em>ACL 2025 Short Papers</em>. <a
+                href="https://aclanthology.org/2025.acl-short.69/" target="_blank" rel="noopener noreferrer">ACL
+                Anthology</a></div>
+            <div class="ref" id="ref6"><strong>[6] Raihan, Anastasopoulos &amp; Zampieri (2025).</strong>
+              "TigerCoder: A Novel Suite of LLMs for Code Generation in Bangla." <a
+                href="https://arxiv.org/abs/2509.09101" target="_blank" rel="noopener noreferrer">arXiv</a></div>
+            <div class="ref" id="ref7"><strong>[7] Roy &amp; Roy (2026).</strong> "Structural Silence: When AI
+              Infrastructure Fails Speakers of Underrepresented Languages." <em>SSRN Electronic Journal</em>. <a
+                href="https://doi.org/10.2139/ssrn.6522858" target="_blank" rel="noopener noreferrer">SSRN</a> · <a
+                href="../structural-silence-poster/">Interactive poster</a></div>
+            <div class="ref"><strong>Additional sources.</strong> The paper also cites Mistral-7B <a
+                href="https://arxiv.org/abs/2310.06825" target="_blank" rel="noopener noreferrer">(Jiang et al.
+                2023)</a>, Qwen2.5 <a href="https://arxiv.org/abs/2412.15115" target="_blank"
+                rel="noopener noreferrer">technical documentation</a>, and OpenAI tiktoken/pricing documentation. See
+              the full paper for the complete bibliography.</div>
+          </div>
+        </section>
+
+        <section id="citation">
+          <div class="section-head">
+            <div class="section-no">Citation</div>
+            <h2>Cite the paper</h2>
+            <p>The poster does not yet have its own DOI — please cite the arXiv paper.</p>
+          </div>
+          <pre class="bibtex" id="bibtexBlock">@article{roy2026tokenizationpremium,
+  title   = {Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities},
+  author  = {Roy, Avijit and Roy, Proma and Patel, Hrishitva},
+  year    = {2026},
+  journal = {arXiv preprint arXiv:2608.09046},
+  doi     = {10.48550/arXiv.2608.09046},
+  url     = {https://doi.org/10.48550/arXiv.2608.09046},
+  note    = {Accepted for oral presentation and poster, Language Models for Underserved Communities (LM4UC) Workshop, IJCAI 2026}
+}</pre>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px; flex-wrap: wrap;">
+            <button class="btn copy-btn" onclick="copyBibtex()">
+              <i class="fa-solid fa-copy"></i>
+              Copy BibTeX
+            </button>
+            <span id="copyStatus" class="copy-status"></span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="ack">
+          <strong style="color:var(--navy)">Acknowledgment.</strong>
+          This work was supported in part by the Advanced Cyberinfrastructure Coordination Ecosystem: Services &amp;
+          Support (ACCESS) program through Allocation CIS260616, "Dataset Development and Fine-Tuning of Language
+          Models for Low-Resource Bengali Programming Assistance." Portions of dataset processing and benchmark
+          analysis were conducted using ACCESS resources provided through Indiana University Jetstream2.
+          <br><br>
+          <span style="font-size:.85rem">Interactive poster content is grounded in the TEA paper. Exploratory-language
+            and pricing caveats are preserved from the paper. External links open the corresponding research
+            artifacts or primary publication pages.</span>
+        </div>
+      </footer>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container foot-flex">
+          <p>© <span id="currentYear"></span> Avijit Roy</p>
+          <div class="socials">
+            <a href="https://github.com/HeyAvijitRoy" target="_blank" rel="noopener" aria-label="GitHub"
+              title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/HeyAvijitRoy/" target="_blank" rel="noopener" aria-label="LinkedIn"
+              title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://orcid.org/0009-0007-8036-0952" target="_blank" rel="noopener" aria-label="ORCiD"
+              title="ORCiD"><i class="fa-brands fa-orcid"></i></a>
+            <a href="https://heyavijitroy.medium.com/" target="_blank" rel="noopener" aria-label="Medium"
+              title="Medium"><i class="fa-brands fa-medium"></i></a>
+            <a href="https://www.instagram.com/pirsquarek/" target="_blank" rel="noopener" aria-label="Instagram"
+              title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.flickr.com/photos/kabyo/" target="_blank" rel="noopener" aria-label="Flickr"
+              title="Flickr"><i class="fa-brands fa-flickr"></i></a>
+            <a href="https://www.amazon.com/author/heyavijitroy" target="_blank" rel="noopener noreferrer"
+              aria-label="Amazon Author Page" title="Amazon Author Page"><i class="fa-brands fa-amazon"></i></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Citation copied.</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
