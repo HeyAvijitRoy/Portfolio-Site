@@ -92,7 +92,7 @@ US Provisional Patent Application 63/986,762, filed February 2026. PhishGuard is
 
 ### Structural Silence
 
-Structural Silence examines linguistic inequities in AI systems, especially for Bengali and other underrepresented languages. It studies tokenization penalties, inference cost inequity, reduced context efficiency, and infrastructure-level bias in LLM systems. Presented as a poster at the 69th Annual Conference of the International Linguistic Association (ILA 2026). Interactive poster: https://avijitroy.com/research/structural-silence-poster/.
+Structural Silence examines linguistic inequities in AI systems, especially for Bengali and other underrepresented languages. It studies tokenization penalties, inference cost inequity, reduced context efficiency, and infrastructure-level bias in LLM systems. Published on arXiv on August 12, 2026, as arXiv:2608.12278 [cs.CL] (DOI: https://doi.org/10.48550/arXiv.2608.12278), and also archived as an SSRN preprint (DOI: https://doi.org/10.2139/ssrn.6522858). Both records describe the same paper. Presented as a poster at the 69th Annual Conference of the International Linguistic Association (ILA 2026). Interactive poster: https://avijitroy.com/research/structural-silence-poster/.
 
 ### Propasafe-Hybrid
 
