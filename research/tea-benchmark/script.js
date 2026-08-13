@@ -1,5 +1,57 @@
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+// MOBILE NAV DROPDOWN
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (navToggle && navLinks) {
+  const setOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  };
+  navToggle.addEventListener('click', () => setOpen(!navLinks.classList.contains('open')));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+}
+
+// FIGURE LIGHTBOX
+const figTrigger = document.getElementById('figZoomTrigger');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+if (figTrigger && lightbox && lightboxImg) {
+  const sourceImg = figTrigger.querySelector('img');
+  const openLightbox = () => {
+    lightboxImg.src = sourceImg.src;
+    lightboxImg.alt = sourceImg.alt;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  };
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    figTrigger.focus();
+  };
+  figTrigger.addEventListener('click', openLightbox);
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+  });
+}
+
 // BACK TO TOP
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
@@ -94,10 +146,10 @@ function showToast(msg) {
   window._toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
 }
 
-// COPY BIBTEX (hero button + citation section button both use this)
-function copyBibtex() {
-  const block = document.getElementById('bibtexBlock');
-  const status = document.getElementById('copyStatus');
+// COPY BIBTEX — shared by the paper and poster citation blocks
+function copyBibtexFrom(blockId, statusId, toastMsg) {
+  const block = document.getElementById(blockId);
+  const status = document.getElementById(statusId);
   if (!block) return;
   const text = block.innerText.trim();
 
@@ -120,7 +172,7 @@ function copyBibtex() {
     try {
       document.execCommand('copy');
       showStatus('Copied ✓');
-      showToast('BibTeX citation copied.');
+      showToast(toastMsg);
     } catch (err) {
       showStatus('Copy failed', false);
     }
@@ -131,9 +183,17 @@ function copyBibtex() {
   navigator.clipboard.writeText(text)
     .then(() => {
       showStatus('Copied ✓');
-      showToast('BibTeX citation copied.');
+      showToast(toastMsg);
     })
     .catch(() => showStatus('Copy failed', false));
+}
+
+function copyBibtex() {
+  copyBibtexFrom('bibtexBlock', 'copyStatus', 'Paper BibTeX copied.');
+}
+
+function copyBibtexPoster() {
+  copyBibtexFrom('bibtexPoster', 'copyStatusPoster', 'Poster BibTeX copied.');
 }
 
 document.getElementById('copyCitation').addEventListener('click', copyBibtex);

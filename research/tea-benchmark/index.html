@@ -86,7 +86,11 @@
   <div class="topbar">
     <div class="container nav">
       <div class="brand"><b>TEA</b> · LM4UC @ IJCAI 2026</div>
-      <nav class="navlinks" aria-label="Poster sections">
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks"
+        aria-label="Toggle section menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="navlinks" id="navLinks" aria-label="Poster sections">
         <a href="#problem">Problem</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#results">Results</a>
@@ -118,15 +122,19 @@
         </div>
 
         <div class="eyebrow">
-          <span>Tokenization Equity Audit (TEA)</span>
-          <span class="dot"></span>
-          <a href="https://lm4uc.github.io/" target="_blank" rel="noopener noreferrer">LM4UC Workshop</a>
-          <span class="dot"></span>
-          <span>IJCAI 2026</span>
-          <span class="venue-info">Bremen, Germany · 16 August 2026 · <a
-              href="https://arxiv.org/abs/2608.09046" target="_blank" rel="noopener noreferrer">arXiv:2608.09046</a>
-            · <a href="https://github.com/HeyAvijitRoy/tea-benchmark" target="_blank"
-              rel="noopener noreferrer">github.com/HeyAvijitRoy/tea-benchmark</a></span>
+          <span class="eyebrow-row">
+            <span>Tokenization Equity Audit (TEA)</span>
+            <span class="dot"></span>
+            <a href="https://lm4uc.github.io/" target="_blank" rel="noopener noreferrer">LM4UC Workshop</a>
+            <span class="dot"></span>
+            <span>IJCAI 2026</span>
+          </span>
+          <span class="venue-info">
+            <span class="venue-line">Bremen, Germany · 16 August 2026</span>
+            <span class="venue-line"><a href="https://arxiv.org/abs/2608.09046" target="_blank"
+                rel="noopener noreferrer">arXiv:2608.09046</a> · <a href="https://github.com/HeyAvijitRoy/tea-benchmark"
+                target="_blank" rel="noopener noreferrer">github.com/HeyAvijitRoy/tea-benchmark</a></span>
+          </span>
         </div>
 
         <h1>Measuring the Tokenization Premium</h1>
@@ -145,7 +153,8 @@
             <span>The City College of New York · CUNY</span>
           </div>
           <div class="author">
-            <strong>Hrishitva Patel</strong>
+            <strong><a href="https://orcid.org/0000-0001-7887-6641" target="_blank" rel="noopener noreferrer">Hrishitva
+                Patel <i class="fa-brands fa-orcid" aria-hidden="true"></i></a></strong>
             <span>University of Texas at San Antonio</span>
           </div>
         </div>
@@ -156,6 +165,8 @@
           <a class="btn orange" href="https://github.com/HeyAvijitRoy/tea-benchmark" target="_blank"
             rel="noopener noreferrer">Open Benchmark on GitHub</a>
           <a class="btn" href="TEA_Poster.pdf" target="_blank" rel="noopener noreferrer">Download Poster (PDF)</a>
+          <a class="btn" href="https://doi.org/10.13140/RG.2.2.25750.31049" target="_blank" rel="noopener noreferrer">Poster
+            DOI: 10.13140/RG.2.2.25750.31049</a>
           <button class="btn" id="copyCitation">Copy BibTeX</button>
         </div>
         <p class="hero-note">Peer-reviewed workshop paper · accepted for oral and poster presentation at the Language
@@ -235,11 +246,12 @@
             </p>
           </div>
           <div class="card fig">
-            <div class="fig-scroll">
+            <button type="button" class="fig-zoom-trigger" id="figZoomTrigger" aria-haspopup="dialog">
               <img src="assets/figure-tokenizer-example.webp"
                 alt="Tokenizer segmentation of 'IndexError: list index out of range' across English (8 tokens), Bengali (11), Hindi (11), Tamil (22), and Yoruba (19) under GPT-4o o200k_base"
                 width="1536" height="1024" loading="lazy" decoding="async">
-            </div>
+              <span class="fig-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Tap to zoom</span>
+            </button>
             <div class="figcap">Figure adapted from TEA Figure 1. English requires 8 tokens; Bengali 11; Hindi 11;
               Tamil 22; Yoruba 19. Yoruba uses Latin script yet still fragments more than Bengali — script family
               alone does not predict tokenizer fairness.</div>
@@ -875,9 +887,12 @@
         <section id="citation">
           <div class="section-head">
             <div class="section-no">Citation</div>
-            <h2>Cite the paper</h2>
-            <p>The poster does not yet have its own DOI — please cite the arXiv paper.</p>
+            <h2>Cite this work</h2>
+            <p>If you use this work, please cite the paper. Cite the poster separately if you are referencing the
+              LM4UC 2026 presentation itself.</p>
           </div>
+
+          <h4 style="margin:0 0 10px;color:var(--navy)">Paper Citation</h4>
           <pre class="bibtex" id="bibtexBlock">@article{roy2026tokenizationpremium,
   title   = {Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities},
   author  = {Roy, Avijit and Roy, Proma and Patel, Hrishitva},
@@ -890,9 +905,27 @@
           <div style="margin-top:12px; display:flex; align-items:center; gap:12px; flex-wrap: wrap;">
             <button class="btn copy-btn" onclick="copyBibtex()">
               <i class="fa-solid fa-copy"></i>
-              Copy BibTeX
+              Copy Paper BibTeX
             </button>
             <span id="copyStatus" class="copy-status"></span>
+          </div>
+
+          <h4 style="margin:28px 0 10px;color:var(--navy)">Poster Citation</h4>
+          <pre class="bibtex" id="bibtexPoster">@misc{roy2026tokenizationpremium_poster,
+  author  = {Roy, Avijit and Roy, Proma and Patel, Hrishitva},
+  title   = {Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities (Poster)},
+  year    = {2026},
+  month   = aug,
+  doi     = {10.13140/RG.2.2.25750.31049},
+  url     = {https://doi.org/10.13140/RG.2.2.25750.31049},
+  note    = {Poster presented at the Language Models for Underserved Communities (LM4UC) Workshop, IJCAI 2026}
+}</pre>
+          <div style="margin-top:12px; display:flex; align-items:center; gap:12px; flex-wrap: wrap;">
+            <button class="btn copy-btn" onclick="copyBibtexPoster()">
+              <i class="fa-solid fa-copy"></i>
+              Copy Poster BibTeX
+            </button>
+            <span id="copyStatusPoster" class="copy-status"></span>
           </div>
         </section>
       </main>
@@ -941,6 +974,16 @@
   </a>
 
   <div class="toast" id="toast" role="status" aria-live="polite">Citation copied.</div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-label="Enlarged tokenizer segmentation figure">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="lightbox-scroll">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -106,6 +106,22 @@ code {
   justify-content: space-between;
   gap: 20px;
   min-height: 60px;
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: #fffdf8;
+  color: var(--navy);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .brand {
@@ -229,15 +245,21 @@ code {
 
 .eyebrow {
   display: flex;
-  gap: 8px 12px;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 6px;
   color: var(--orange);
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   letter-spacing: .07em;
   text-transform: uppercase;
   font-size: .86rem;
+}
+
+.eyebrow-row {
+  display: flex;
+  gap: 8px 12px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .eyebrow a {
@@ -250,10 +272,13 @@ code {
   background: var(--orange);
   border-radius: 50%;
   opacity: .7;
+  flex: none;
 }
 
 .eyebrow .venue-info {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
   width: 100%;
   color: var(--muted-2);
   font-size: .8rem;
@@ -405,6 +430,13 @@ h1 {
   padding: 20px 22px;
   min-height: 128px;
   box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 0 8px 22px rgba(43, 33, 15, .07);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.metric:hover {
+  transform: translateY(-4px);
+  border-color: rgba(191, 80, 25, .35);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 0 18px 34px rgba(43, 33, 15, .13);
 }
 
 .metric .num {
@@ -563,16 +595,95 @@ section {
   padding: 0;
 }
 
-.fig-scroll {
-  overflow-x: auto;
+.fig-zoom-trigger {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
   background: #fff;
+  cursor: zoom-in;
 }
 
-.fig img {
+.fig-zoom-trigger img {
   display: block;
   width: 100%;
   height: auto;
-  min-width: 520px;
+}
+
+.fig-zoom-hint {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(11, 29, 58, .82);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 999px;
+  opacity: .88;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.fig-zoom-trigger:hover .fig-zoom-hint {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(11, 15, 22, .9);
+  align-items: center;
+  justify-content: center;
+  padding: 26px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-scroll {
+  max-width: 96vw;
+  max-height: 92vh;
+  overflow: auto;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .5);
+}
+
+.lightbox-scroll img {
+  display: block;
+  width: min(96vw, 1100px);
+  height: auto;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, .22);
 }
 
 .figcap {
@@ -603,7 +714,7 @@ section {
 
 .tier {
   padding: 16px;
-  background: var(--paper-2);
+  background: var(--card);
   border-radius: 14px;
   border: 1px solid var(--line);
 }
@@ -760,13 +871,20 @@ section {
 }
 
 .tfr-group {
-  padding: 14px 0;
+  padding: 14px 10px;
+  margin: 0 -10px;
   border-top: 1px solid var(--line);
+  border-radius: 12px;
+  transition: background .2s ease;
 }
 
 .tfr-group:first-of-type {
   border-top: none;
   padding-top: 0;
+}
+
+.tfr-group:hover {
+  background: rgba(191, 80, 25, .05);
 }
 
 .tfr-group-label {
@@ -1043,6 +1161,12 @@ table.data-table thead th {
   justify-content: center;
   text-align: center;
   padding: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.scale-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(43, 33, 15, .12);
 }
 
 .scale-box span {
@@ -1086,7 +1210,7 @@ table.data-table thead th {
 }
 
 .core .hl {
-  color: var(--orange);
+  color: #9c3f12;
   font-weight: 800;
 }
 
@@ -1315,6 +1439,7 @@ table.data-table thead th {
 }
 
 .back-to-top:hover {
+  color: #fff;
   transform: translateY(-4px);
 }
 
@@ -1381,27 +1506,72 @@ table.data-table thead th {
   }
 
   .hero {
-    padding-top: 22px;
+    padding-top: 20px;
   }
 
+  /* Institution logos: fixed equal-width slots so all three always share one row */
   .logo-row {
-    gap: 16px;
+    gap: 0;
     margin-bottom: 26px;
+    flex-wrap: nowrap;
   }
 
-  .logo-johnjay {
-    height: 30px;
-    max-width: 165px;
+  .logo-item {
+    height: 32px;
+    width: 33.33%;
+    padding: 0 8px;
   }
 
-  .logo-ccny {
-    height: 28px;
-    max-width: 150px;
+  .logo-item:first-child {
+    padding-left: 0;
   }
 
+  .logo-johnjay,
+  .logo-ccny,
   .logo-utsa {
-    height: 27px;
-    max-width: 150px;
+    max-width: 100%;
+  }
+
+  .logo-item img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Eyebrow: stacked, left-aligned, no dot separators, links don't break mid-word */
+  .eyebrow {
+    font-size: .74rem;
+  }
+
+  .eyebrow-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .eyebrow .dot {
+    display: none;
+  }
+
+  .venue-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: .7rem;
+  }
+
+  .venue-line a {
+    white-space: nowrap;
+  }
+
+  /* Author cards: equal full-width blocks */
+  .authors {
+    flex-direction: column;
+  }
+
+  .author {
+    width: 100%;
+    min-width: 0;
   }
 
   .metric-strip,
@@ -1442,9 +1612,34 @@ table.data-table thead th {
     width: 100%;
   }
 
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    overflow-x: visible;
+    background: var(--paper);
+    border: 1px solid var(--line-strong);
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    padding: 8px;
+    box-shadow: 0 16px 30px rgba(43, 33, 15, .14);
+  }
+
+  .navlinks.open {
+    display: flex;
+  }
+
   .navlinks a {
-    font-size: .82rem;
-    padding: 7px 9px;
+    font-size: .95rem;
+    padding: 12px 14px;
+    border-radius: 10px;
   }
 }
 
