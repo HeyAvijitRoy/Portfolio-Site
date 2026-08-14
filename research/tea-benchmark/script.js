@@ -1,4 +1,5 @@
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // MOBILE NAV DROPDOWN
 const navToggle = document.getElementById('navToggle');
@@ -17,7 +18,10 @@ if (navToggle && navLinks) {
     }
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') setOpen(false);
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      setOpen(false);
+      navToggle.focus();
+    }
   });
 }
 
@@ -48,7 +52,12 @@ if (figTrigger && lightbox && lightboxImg) {
     if (e.target === lightbox) closeLightbox();
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Tab') {
+      e.preventDefault();
+      lightboxClose.focus();
+    }
   });
 }
 
@@ -63,7 +72,7 @@ window.addEventListener('scroll', () => {
 });
 backToTop.addEventListener('click', (e) => {
   e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 });
 
 // RESULTS CHART — click a legend swatch to isolate that tokenizer
@@ -73,7 +82,12 @@ legendButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     const series = btn.dataset.series;
     activeSeries = activeSeries === series ? null : series;
-    legendButtons.forEach(b => b.classList.toggle('dimmed', activeSeries !== null && b.dataset.series !== activeSeries));
+    legendButtons.forEach(b => {
+      const selected = b.dataset.series === activeSeries;
+      b.classList.toggle('active', selected);
+      b.classList.toggle('dimmed', activeSeries !== null && !selected);
+      b.setAttribute('aria-pressed', String(selected));
+    });
     document.querySelectorAll('.tfr-row').forEach(row => {
       const isMatch = activeSeries === null || row.classList.contains(activeSeries);
       row.style.opacity = isMatch ? '1' : '.25';
@@ -90,8 +104,12 @@ const SENS = {
 const sensButtons = document.querySelectorAll('#sensControls [data-tier]');
 sensButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    sensButtons.forEach(b => b.classList.remove('active'));
+    sensButtons.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const d = SENS[btn.dataset.tier];
     document.getElementById('sensAll').textContent = d.all.toFixed(2) + '×';
     document.getElementById('sensClean').textContent = d.clean.toFixed(2) + '×';
@@ -113,10 +131,16 @@ Object.keys(CONTEXT).forEach(lang => {
   b.type = 'button';
   b.textContent = lang;
   b.dataset.lang = lang;
+  b.setAttribute('aria-controls', 'contextViz');
+  b.setAttribute('aria-pressed', String(lang === 'Bengali'));
   if (lang === 'Bengali') b.classList.add('active');
   b.addEventListener('click', () => {
-    picker.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+    picker.querySelectorAll('button').forEach(x => {
+      x.classList.remove('active');
+      x.setAttribute('aria-pressed', 'false');
+    });
     b.classList.add('active');
+    b.setAttribute('aria-pressed', 'true');
     renderContext(lang);
   });
   picker.appendChild(b);
@@ -130,6 +154,9 @@ function renderContext(lang) {
   document.getElementById('contextPct').textContent = d.pct + '%';
   document.getElementById('contextTokens').textContent = d.ecw.toLocaleString();
   document.getElementById('contextCost').textContent = d.cost === 0 ? '$0.00' : '+$' + d.cost.toFixed(2);
+  const contextTrack = document.getElementById('contextTrack');
+  contextTrack.setAttribute('aria-valuenow', String(d.pct));
+  contextTrack.setAttribute('aria-valuetext', `${lang}: ${d.pct} percent`);
   document.getElementById('contextSentence').textContent =
     lang === 'English'
       ? 'English is the 1.00× baseline for the TEA context-equivalent estimate.'
