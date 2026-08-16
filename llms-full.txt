@@ -129,7 +129,7 @@ This work has been presented as a poster at the 69th Annual Conference of the In
 
 ### Measuring the Tokenization Premium
 
-"Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper accepted for both an oral presentation and a poster presentation at the LM4UC (Language Models for Underserved Communities) Workshop at IJCAI 2026, Bremen, Germany, August 16, 2026.
+"Measuring the Tokenization Premium: A Cost Audit for Underserved Language Communities" is a peer-reviewed workshop paper presented orally and as a poster at the Language Models for Underserved Communities (LM4UC) Workshop at IJCAI 2026 in Bremen, Germany, on August 16, 2026.
 
 The paper was published on arXiv on August 10, 2026, as arXiv:2608.09046 [cs.CL], with a secondary classification of cs.CY. DOI: https://doi.org/10.48550/arXiv.2608.09046. arXiv record: https://arxiv.org/abs/2608.09046. Authors: Avijit Roy, Proma Roy, Hrishitva Patel.
 
@@ -137,7 +137,7 @@ The project introduces the Tokenization Equity Audit (TEA), a reproducible bench
 
 The work contributes to AI equity, low-resource NLP, multilingual benchmarking, and responsible AI infrastructure design.
 
-Resources: Interactive poster: https://avijitroy.com/research/tea-benchmark/. Poster DOI: https://doi.org/10.13140/RG.2.2.25750.31049. Benchmark code, corpus, and reproduction instructions: https://github.com/HeyAvijitRoy/tea-benchmark. Workshop website: https://lm4uc.github.io/.
+Final records: Paper DOI: https://doi.org/10.48550/arXiv.2608.09046. Oral presentation DOI: https://doi.org/10.13140/RG.2.2.29980.65926. Poster DOI: https://doi.org/10.13140/RG.2.2.25750.31049. Interactive poster: https://avijitroy.com/research/tea-benchmark/. Benchmark code, corpus, and reproduction instructions: https://github.com/HeyAvijitRoy/tea-benchmark. Workshop website: https://lm4uc.github.io/.
 
 ### Propasafe-Hybrid
 

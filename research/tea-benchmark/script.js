@@ -223,4 +223,8 @@ function copyBibtexPoster() {
   copyBibtexFrom('bibtexPoster', 'copyStatusPoster', 'Poster BibTeX copied.');
 }
 
+function copyBibtexPresentation() {
+  copyBibtexFrom('bibtexPresentation', 'copyStatusPresentation', 'Presentation BibTeX copied.');
+}
+
 document.getElementById('copyCitation').addEventListener('click', copyBibtex);
