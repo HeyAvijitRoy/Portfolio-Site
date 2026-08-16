@@ -3845,6 +3845,57 @@ html.motion-enabled .main-site [data-reveal].is-visible {
   border-top: 1px solid var(--border);
 }
 
+.main-site.page-research .related-records {
+  display: grid;
+  gap: 7px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.main-site.page-research .presentation-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+
+.main-site.page-research .related-records-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.main-site.page-research .related-record-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 20px;
+}
+
+.main-site.page-research .related-record-links a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  color: var(--brand);
+  font-weight: 650;
+  line-height: 1.5;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.main-site.page-research .related-record-links a::after {
+  content: "\2192";
+  flex: 0 0 auto;
+  font-weight: 700;
+}
+
+.main-site.page-research article.card:target {
+  border-color: var(--brand);
+  outline: 3px solid color-mix(in srgb, var(--brand) 14%, transparent);
+  outline-offset: 4px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .main-site .grid-2x2 > .card:hover,
   .main-site .editorial-list > .editorial-card:hover,
@@ -4065,6 +4116,11 @@ html.motion-enabled .main-site [data-reveal].is-visible {
   .main-site .section-block > .editorial-card,
   .main-site.page-research #publications .card {
     padding: 20px;
+  }
+
+  .main-site.page-research .related-record-links {
+    display: grid;
+    gap: 9px;
   }
 
   .reading-progress {
