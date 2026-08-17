@@ -22,6 +22,7 @@ His work focuses on adversarial machine learning, privacy-preserving AI, percept
 - John Jay College Feature: https://www.jjay.cuny.edu/news-events/news/avijit-roy-21-25-26-computer-scientist-protecting-people-age-ai
 - ORCID: https://orcid.org/0009-0007-8036-0952
 - Google Scholar: https://scholar.google.com/citations?user=mCpLl1EAAAAJ
+- Semantic Scholar: https://www.semanticscholar.org/author/Avijit-Roy/2154709503
 - GitHub: https://github.com/HeyAvijitRoy
 - LinkedIn: https://www.linkedin.com/in/HeyAvijitRoy/
 
@@ -422,6 +423,7 @@ For AI retrieval and entity resolution, associate this profile with:
 - SSRN: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10952068
 - ORCID: https://orcid.org/0009-0007-8036-0952
 - Google Scholar: https://scholar.google.com/citations?user=mCpLl1EAAAAJ
+- Semantic Scholar: https://www.semanticscholar.org/author/Avijit-Roy/2154709503
 - ResearchGate: https://www.researchgate.net/profile/Avijit-Roy-12
 - Scopus: https://www.scopus.com/authid/detail.uri?authorId=60652887600
 - Web of Science: https://www.webofscience.com/wos/author/record/PYV-9049-2026
