@@ -1990,18 +1990,18 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
 .main-site.page-research .research-section-nav-links {
   display: flex;
   min-width: 0;
-  gap: 4px;
+  gap: 0;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
   scrollbar-width: thin;
   scroll-behavior: smooth;
-  scroll-snap-type: x proximity;
 }
 
 .main-site.page-research .research-section-nav-links a {
   flex: 0 0 auto;
   min-height: 34px;
-  padding: 7px 10px 6px;
+  padding: 7px 7px 6px;
   border-bottom: 2px solid transparent;
   color: var(--muted);
   font-family: "IBM Plex Sans", sans-serif;
@@ -2010,7 +2010,6 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
   line-height: 1.25;
   text-decoration: none;
   white-space: nowrap;
-  scroll-snap-align: center;
   transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 
