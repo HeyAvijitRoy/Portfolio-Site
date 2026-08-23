@@ -171,23 +171,51 @@
         </p>
 
         <div class="instructor-meta">
-          <div class="meta-item"><i class="fa-solid fa-user-tie"></i> <strong>Instructor:</strong> Avijit Roy</div>
-          <div class="meta-item"><i class="fa-regular fa-clock"></i> <strong>Schedule:</strong> Mon & Wed, 08:00 AM –
-            09:15 AM</div>
-          <div class="meta-item"><i class="fa-solid fa-door-open"></i> <strong>Office:</strong> NB 6.63.29</div>
+          <div class="meta-item">
+            <span class="meta-label"><i class="fa-solid fa-user-tie" aria-hidden="true"></i>
+              <strong>Instructor:</strong></span>
+            <span class="meta-value">Avijit Roy</span>
+          </div>
+          <div class="meta-item meta-item-schedule">
+            <span class="meta-label"><i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <strong>Schedule:</strong></span>
+            <span class="meta-schedule-lines">Mon &amp; Wed, 08:00 AM – 09:15 AM</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label"><i class="fa-solid fa-door-open" aria-hidden="true"></i>
+              <strong>Office:</strong></span>
+            <span class="meta-value">NB 6.63.29</span>
+          </div>
           <a class="course-meta-logo" href="https://www.jjay.cuny.edu/" target="_blank" rel="noopener noreferrer"
             aria-label="John Jay College of Criminal Justice">
             <img src="../../../assets/img/JJC_Logo.png" alt="John Jay College of Criminal Justice Logo">
           </a>
         </div>
 
-        <div class="cta" style="margin-top: 32px;">
+        <nav class="cta course-section-nav" aria-label="Course page sections">
+          <span class="course-section-nav-label">On this page</span>
           <a class="button" href="#weekly-plan">Weekly Plan</a>
           <a class="button" href="#assessments">Assessments</a>
           <a class="button" href="#policies">Policies</a>
           <a class="button" href="#tools">Tools</a>
           <a class="button" href="#practice-resources">Practice</a>
           <a class="button" href="#contact">Contact</a>
+        </nav>
+        <div class="course-section-menu">
+          <button class="course-section-menu-toggle" type="button" aria-expanded="false"
+            aria-controls="course-section-menu-links">
+            <span class="course-section-menu-label">Jump to section</span>
+            <span class="course-section-menu-current">Weekly Plan</span>
+          </button>
+          <nav class="course-section-menu-links" id="course-section-menu-links"
+            aria-label="Course page sections on mobile" hidden>
+            <a href="#weekly-plan">Weekly Plan</a>
+            <a href="#assessments">Assessments</a>
+            <a href="#policies">Policies</a>
+            <a href="#tools">Tools</a>
+            <a href="#practice-resources">Practice</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
       </div>
 
@@ -348,7 +376,7 @@
       <section id="assessments" class="section-block">
         <h2>Assessments</h2>
 
-        <div class="card-grid">
+        <div class="card-grid assessment-grid">
           <article class="card assessment-card">
             <h3><i class="fa-solid fa-comments"></i> Participation & Quizzes</h3>
             <p class="muted">Short checks to reinforce weekly topics; start on time.</p>

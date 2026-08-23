@@ -392,6 +392,106 @@
     updateActiveSection();
   }
 
+  function initCourseSectionNav() {
+    const sectionNav = document.querySelector(".course-section-nav");
+    if (!sectionNav) return;
+
+    const mobileMenu = document.querySelector(".course-section-menu");
+    const mobileMenuToggle = mobileMenu?.querySelector(".course-section-menu-toggle");
+    const mobileMenuLinks = mobileMenu?.querySelector(".course-section-menu-links");
+    const currentLabel = mobileMenu?.querySelector(".course-section-menu-current");
+    const desktopLinks = Array.from(sectionNav.querySelectorAll('a[href^="#"]'));
+    const allLinks = Array.from(document.querySelectorAll(
+      '.course-section-nav a[href^="#"], .course-section-menu a[href^="#"]'
+    ));
+    const entries = desktopLinks
+      .map((link) => {
+        const id = link.getAttribute("href")?.slice(1);
+        return id ? { link, section: document.getElementById(id) } : null;
+      })
+      .filter((entry) => entry?.section);
+
+    if (!entries.length) return;
+
+    let activeId = "";
+    let ticking = false;
+
+    function setMobileMenuOpen(isOpen) {
+      if (!mobileMenuToggle || !mobileMenuLinks) return;
+      mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuLinks.hidden = !isOpen;
+    }
+
+    function setActive(id) {
+      if (!id || id === activeId) return;
+      activeId = id;
+
+      allLinks.forEach((link) => {
+        const linkId = link.getAttribute("href")?.slice(1);
+        if (linkId === id) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      const activeEntry = entries.find(({ section }) => section.id === id);
+      if (currentLabel && activeEntry) currentLabel.textContent = activeEntry.link.textContent.trim();
+
+      if (sectionNav.clientWidth > 0 && activeEntry) {
+        const { link } = activeEntry;
+        const targetLeft = link.offsetLeft - ((sectionNav.clientWidth - link.clientWidth) / 2);
+        sectionNav.scrollTo({ left: Math.max(targetLeft, 0), behavior: "smooth" });
+      }
+    }
+
+    function updateActiveSection() {
+      const sectionOffset = window.innerWidth > 768 ? 112 : 92;
+      let current = entries[0];
+
+      entries.forEach((entry) => {
+        if (entry.section.getBoundingClientRect().top <= sectionOffset) current = entry;
+      });
+
+      setActive(current.section.id);
+      ticking = false;
+    }
+
+    allLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const id = link.getAttribute("href")?.slice(1);
+        if (id) setActive(id);
+        if (mobileMenu?.contains(link)) setMobileMenuOpen(false);
+      });
+    });
+
+    mobileMenuToggle?.addEventListener("click", () => {
+      const isOpen = mobileMenuToggle.getAttribute("aria-expanded") === "true";
+      setMobileMenuOpen(!isOpen);
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = mobileMenuToggle?.getAttribute("aria-expanded") === "true";
+      if (isOpen && !mobileMenu?.contains(event.target)) setMobileMenuOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      const isOpen = mobileMenuToggle?.getAttribute("aria-expanded") === "true";
+      if (event.key !== "Escape" || !isOpen) return;
+      setMobileMenuOpen(false);
+      mobileMenuToggle?.focus();
+    });
+
+    window.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateActiveSection);
+    }, { passive: true });
+
+    window.addEventListener("resize", updateActiveSection, { passive: true });
+    updateActiveSection();
+  }
+
   function initBusinessCardDownload() {
     document.querySelectorAll("[data-vcard-download]").forEach((link) => {
       link.addEventListener("click", () => {
@@ -438,6 +538,7 @@
   initReadingExperience();
   initBackToTop();
   initResearchSectionNav();
+  initCourseSectionNav();
   initBusinessCardDownload();
 
 })();
