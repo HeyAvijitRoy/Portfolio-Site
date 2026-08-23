@@ -40,7 +40,7 @@
 	</url>
 	<url>
 		<loc>https://avijitroy.com/teaching/</loc>
-		<lastmod>2026-08-11</lastmod>
+		<lastmod>2026-08-22</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
@@ -51,8 +51,8 @@
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://avijitroy.com/teaching/courses/oop-fa26/</loc>
-		<lastmod>2026-08-11</lastmod>
+		<loc>https://avijitroy.com/teaching/courses/csci272-fa26/</loc>
+		<lastmod>2026-08-22</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.70</priority>
 	</url>
