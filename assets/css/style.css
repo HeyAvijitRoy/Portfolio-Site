@@ -4943,6 +4943,14 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
   color: #e2ad68;
 }
 
+.course-site .policy-full-width {
+  grid-column: 1 / -1;
+}
+
+.course-site #policies > .card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr)) !important;
+}
+
 /* Normalize the legacy Fall 2025 weekly list to the same record layout. */
 .course-site .weekly-nested {
   display: grid;

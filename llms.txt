@@ -123,6 +123,8 @@ Avijit Roy is a co-author of the Wiley Applied Research article "AI-Driven and C
 
 Avijit Roy serves as a full-time Substitute Lecturer teaching undergraduate computer science at John Jay College of Criminal Justice, CUNY. He is also an Adjunct Assistant Professor teaching graduate-level digital forensics at St. John's University. Courses include CSCI 271 (Introduction to Computing and Programming), CSCI 272 (Object-Oriented Programming in C++), CSCI 362 (Database & Data Mining), CSCI 377 (Computer Algorithms), and DFR 711 (Cyber Forensics & Malware Analysis). He also developed curriculum for CSCI 380 (Agentic AI Systems).
 
+CSCI 377 Fall 2026 syllabus: https://avijitroy.com/teaching/courses/csci377-fa26/
+
 Teaching areas include C++, object-oriented programming, introduction to computing, secure coding practices, memory management, software design, debugging, code documentation, AI-assisted software development workflows, and practical cybersecurity awareness.
 
 He publishes free, open learning resources for students, including a Git/GitHub/VS Code interactive guide, a 17-chapter Git ebook, C++ VS Code setup guides for Windows and macOS, and a Responsible AI Prompting Guide for course use. Full list: https://avijitroy.com/teaching/#open-learning-resources

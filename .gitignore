@@ -6,6 +6,7 @@
 
 // Ignore temporary files
 .tmp/
+/teaching/courses/csci377-fa26/CSCI_377_Syllabus_temp.pdf
 .DS_Store  
 scraps/*
 *.log  
