@@ -4633,6 +4633,22 @@ html[data-theme="dark"] .course-site .course-section-nav {
 }
 
 /* Compact, chronological weekly record for current course pages. */
+.course-site {
+  --schedule-assignment-color: #166534;
+  --schedule-quiz-color: #075985;
+  --schedule-exam-color: #6b216b;
+  --schedule-homework-color: #7a5700;
+  --schedule-no-class-color: #9a3044;
+}
+
+html[data-theme="dark"] .course-site {
+  --schedule-assignment-color: #86d9a4;
+  --schedule-quiz-color: #83cbed;
+  --schedule-exam-color: #d9a4de;
+  --schedule-homework-color: #e3c270;
+  --schedule-no-class-color: #ee9aa9;
+}
+
 .course-site .timeline {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -4645,8 +4661,12 @@ html[data-theme="dark"] .course-site .course-section-nav {
 
 .course-site .timeline-item {
   min-width: 0;
-  padding: 22px 0 24px;
+  margin-inline: -12px;
+  padding: 22px 12px 24px;
   border-top: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  transition: background-color 160ms ease, box-shadow 160ms ease;
 }
 
 .course-site .timeline-item::before {
@@ -4669,16 +4689,43 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
   line-height: 1.3;
 }
 
+.course-site .timeline-key {
+  color: color-mix(in srgb, var(--brand) 82%, var(--text));
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.course-site .timeline-divider {
+  margin-inline: 0.45em;
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 0.72;
+}
+
+.course-site .timeline-label {
+  color: var(--text);
+}
+
 .course-site .timeline-item p {
   margin-bottom: 10px;
   line-height: 1.55;
 }
 
 .course-site .timeline-item .badge {
+  align-self: flex-start;
   margin-top: 5px;
   margin-right: 10px;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  margin-bottom: 0;
+  padding: 3px 8px;
+  border: 1px solid;
+  border-radius: 999px;
+  background: transparent;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  text-transform: none;
 }
 
 .course-site .weekly-markers {
@@ -4696,6 +4743,20 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
   margin-top: 3px;
   padding-left: 12px;
   border-left: 2px solid #9a700d;
+}
+
+.course-site .timeline-item.schedule-no-class {
+  box-shadow: inset 3px 0 0 var(--schedule-no-class-color);
+}
+
+.course-site .timeline-item.schedule-no-class p {
+  color: var(--muted);
+}
+
+@media (hover: hover) {
+  .course-site .timeline-item:hover {
+    background: color-mix(in srgb, var(--brand) 3.5%, transparent);
+  }
 }
 
 .course-site .weekly-overview {
@@ -4728,17 +4789,20 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
 }
 
 .course-site .weekly-notice {
+  --schedule-notice-color: var(--border);
   display: flex;
   min-width: 0;
   flex-direction: column;
   gap: 4px;
   padding: 12px 15px;
-  border-left: 3px solid;
+  border-left: 3px solid var(--schedule-notice-color);
+  background: color-mix(in srgb, var(--card) 56%, transparent);
   color: var(--text);
   line-height: 1.5;
 }
 
 .course-site .weekly-notice strong {
+  color: var(--schedule-notice-color);
   font-family: "IBM Plex Sans", Arial, sans-serif;
   font-size: 0.86rem;
   letter-spacing: 0.03em;
@@ -4750,21 +4814,15 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
 }
 
 .course-site .weekly-notice.schedule-no-class {
-  border-left-color: #8c2f3d;
-  background: rgba(140, 47, 61, 0.07);
-}
-
-.course-site .weekly-notice.schedule-no-class strong {
-  color: #8c2f3d;
+  --schedule-notice-color: var(--schedule-no-class-color);
 }
 
 .course-site .weekly-notice.schedule-changed {
-  border-left-color: #7a5700;
-  background: rgba(122, 87, 0, 0.08);
+  --schedule-notice-color: var(--schedule-homework-color);
 }
 
-.course-site .weekly-notice.schedule-changed strong {
-  color: #6f4f00;
+.course-site .weekly-notice.schedule-exam {
+  --schedule-notice-color: var(--schedule-exam-color);
 }
 
 .course-site .weekly-assessment-dates {
@@ -4775,12 +4833,14 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
 }
 
 .course-site .weekly-assessment-date {
+  --schedule-date-color: var(--border);
   min-width: 0;
   padding: 14px 16px 16px;
-  border-top: 3px solid;
+  border-top: 3px solid var(--schedule-date-color);
   border-right: 1px solid var(--border);
   background: transparent;
   color: var(--text);
+  transition: background-color 160ms ease;
 }
 
 .course-site .weekly-assessment-date:last-child {
@@ -4788,6 +4848,7 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
 }
 
 .course-site .weekly-assessment-date dt {
+  color: var(--muted);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.75rem;
   font-weight: 600;
@@ -4803,102 +4864,54 @@ html[data-theme="dark"] .course-site .timeline-item.editorial-block {
   font-weight: 600;
 }
 
-.course-site .weekly-assessment-date.schedule-quiz {
-  border-top-color: #075985;
-  background: rgba(3, 105, 161, 0.05);
+.course-site .weekly-assessment-date.schedule-assignment,
+.course-site .weekly-assessment-date.schedule-project {
+  --schedule-date-color: var(--schedule-assignment-color);
 }
 
 .course-site .weekly-assessment-date.schedule-exam {
-  border-top-color: #6b216b;
-  background: rgba(107, 33, 107, 0.05);
+  --schedule-date-color: var(--schedule-exam-color);
 }
 
-.course-site .schedule-assignment,
-.course-site .schedule-project {
-  background: rgba(22, 101, 52, 0.1);
-  color: #166534;
+.course-site .weekly-assessment-date.schedule-quiz {
+  --schedule-date-color: var(--schedule-quiz-color);
 }
 
-.course-site .schedule-quiz {
-  background: rgba(3, 105, 161, 0.1);
-  color: #075985;
+@media (hover: hover) {
+  .course-site .weekly-assessment-date:hover {
+    background: color-mix(in srgb, var(--brand) 3.5%, transparent);
+  }
 }
 
-.course-site .schedule-exam {
-  background: rgba(107, 33, 107, 0.1);
-  color: #6b216b;
+.course-site .badge.schedule-assignment,
+.course-site .badge.schedule-project {
+  border-color: color-mix(in srgb, var(--schedule-assignment-color) 42%, var(--border));
+  color: var(--schedule-assignment-color);
 }
 
-.course-site .schedule-homework,
-.course-site .schedule-changed {
-  background: rgba(122, 87, 0, 0.1);
-  color: #6f4f00;
+.course-site .badge.schedule-quiz {
+  border-color: color-mix(in srgb, var(--schedule-quiz-color) 42%, var(--border));
+  color: var(--schedule-quiz-color);
 }
 
-.course-site .schedule-no-class {
-  background: rgba(140, 47, 61, 0.1);
-  color: #8c2f3d;
+.course-site .badge.schedule-exam {
+  border-color: color-mix(in srgb, var(--schedule-exam-color) 42%, var(--border));
+  color: var(--schedule-exam-color);
 }
 
-html[data-theme="dark"] .course-site .schedule-assignment,
-html[data-theme="dark"] .course-site .schedule-project {
-  background: rgba(134, 239, 172, 0.12);
-  color: #86efac;
+.course-site .badge.schedule-homework,
+.course-site .badge.schedule-changed {
+  border-color: color-mix(in srgb, var(--schedule-homework-color) 42%, var(--border));
+  color: var(--schedule-homework-color);
 }
 
-html[data-theme="dark"] .course-site .schedule-quiz {
-  background: rgba(125, 211, 252, 0.12);
-  color: #7dd3fc;
-}
-
-html[data-theme="dark"] .course-site .schedule-exam {
-  background: rgba(233, 168, 236, 0.12);
-  color: #e9a8ec;
-}
-
-html[data-theme="dark"] .course-site .schedule-homework,
-html[data-theme="dark"] .course-site .schedule-changed {
-  background: rgba(245, 200, 108, 0.12);
-  color: #f5c86c;
-}
-
-html[data-theme="dark"] .course-site .schedule-no-class {
-  background: rgba(251, 146, 160, 0.12);
-  color: #fb92a0;
-}
-
-html[data-theme="dark"] .course-site .weekly-notice {
-  color: var(--text);
-}
-
-html[data-theme="dark"] .course-site .weekly-notice span {
-  color: var(--muted);
-}
-
-html[data-theme="dark"] .course-site .weekly-notice.schedule-no-class strong {
-  color: #fb92a0;
-}
-
-html[data-theme="dark"] .course-site .weekly-notice.schedule-changed strong {
-  color: #f5c86c;
+.course-site .badge.schedule-no-class {
+  border-color: color-mix(in srgb, var(--schedule-no-class-color) 42%, var(--border));
+  color: var(--schedule-no-class-color);
 }
 
 html[data-theme="dark"] .course-site .timeline-item .weekly-homework {
-  border-left-color: #f5c86c;
-}
-
-html[data-theme="dark"] .course-site .weekly-assessment-date {
-  color: var(--text);
-}
-
-html[data-theme="dark"] .course-site .weekly-assessment-date.schedule-quiz {
-  border-top-color: #7dd3fc;
-  background: rgba(125, 211, 252, 0.06);
-}
-
-html[data-theme="dark"] .course-site .weekly-assessment-date.schedule-exam {
-  border-top-color: #e9a8ec;
-  background: rgba(233, 168, 236, 0.06);
+  border-left-color: var(--schedule-homework-color);
 }
 
 .course-site .timeline-item .cta {
@@ -5121,6 +5134,7 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
 
   .course-site .timeline-item,
   .course-site .weekly-nested > li {
+    margin-inline: 0;
     padding: 19px 0 21px;
   }
 

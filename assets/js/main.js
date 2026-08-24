@@ -492,6 +492,34 @@
     updateActiveSection();
   }
 
+  function initCourseTimelineTitles() {
+    document.querySelectorAll(".course-site .timeline-title").forEach((title) => {
+      if (title.querySelector(".timeline-key")) return;
+
+      const fullTitle = title.textContent.trim();
+      if (!fullTitle) return;
+
+      const separatorIndex = fullTitle.indexOf("|");
+      const keyText = separatorIndex >= 0 ? fullTitle.slice(0, separatorIndex).trim() : fullTitle;
+      const labelText = separatorIndex >= 0 ? fullTitle.slice(separatorIndex + 1).trim() : "";
+      const key = document.createElement("span");
+      key.className = "timeline-key";
+      key.textContent = keyText;
+      title.replaceChildren(key);
+
+      if (!labelText) return;
+
+      const divider = document.createElement("span");
+      divider.className = "timeline-divider";
+      divider.textContent = " | ";
+
+      const label = document.createElement("span");
+      label.className = "timeline-label";
+      label.textContent = labelText;
+      title.append(divider, label);
+    });
+  }
+
   function initBusinessCardDownload() {
     document.querySelectorAll("[data-vcard-download]").forEach((link) => {
       link.addEventListener("click", () => {
@@ -539,6 +567,7 @@
   initBackToTop();
   initResearchSectionNav();
   initCourseSectionNav();
+  initCourseTimelineTitles();
   initBusinessCardDownload();
 
 })();
