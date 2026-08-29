@@ -19,7 +19,7 @@
 
   <!-- Primary SEO -->
   <meta name="description"
-    content="Official Fall 2026 syllabus and course portal for CSCI 377: Computer Algorithms at John Jay College, including the weekly plan, assessments, project, policies, and learning resources." />
+    content="Official Fall 2026 syllabus for CSCI 377: Computer Algorithms at John Jay College, including the weekly plan, assessments, project, policies, and learning resources." />
   <meta name="keywords"
     content="CSCI 377, Fall 2026, John Jay College, CUNY, computer algorithms, algorithm analysis, asymptotic complexity, divide and conquer, dynamic programming, greedy algorithms, graph algorithms" />
   <meta name="author" content="Avijit Roy" />
@@ -33,7 +33,7 @@
   <meta property="og:image" content="https://avijitroy.com/assets/img/og-image.jpg" />
   <meta property="og:site_name" content="Avijit Roy" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:updated_time" content="2026-08-28" />
+  <meta property="og:updated_time" content="2026-08-29" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -67,10 +67,10 @@
         "@id": "https://avijitroy.com/teaching/courses/csci377-fa26/#webpage",
         "url": "https://avijitroy.com/teaching/courses/csci377-fa26/",
         "name": "CSCI 377: Computer Algorithms — Fall 2026 Syllabus",
-        "description": "Official Fall 2026 syllabus and course portal for Computer Algorithms (CSCI 377) at John Jay College, taught by Avijit Roy.",
+        "description": "Official Fall 2026 syllabus for Computer Algorithms (CSCI 377) at John Jay College, taught by Avijit Roy.",
         "inLanguage": "en-US",
         "datePublished": "2026-08-24",
-        "dateModified": "2026-08-28",
+        "dateModified": "2026-08-29",
         "breadcrumb": {
           "@id": "https://avijitroy.com/teaching/courses/csci377-fa26/#breadcrumb"
         },
@@ -223,6 +223,7 @@
 
         <nav class="cta course-section-nav" aria-label="Course page sections">
           <span class="course-section-nav-label">On this page</span>
+          <a class="button" href="#course-information">Course Information</a>
           <a class="button" href="#weekly-plan">Weekly Plan</a>
           <a class="button" href="#assessments">Assessments</a>
           <a class="button" href="#project">Project</a>
@@ -230,17 +231,18 @@
           <a class="button" href="#support-resources">Student Support</a>
           <a class="button" href="#tools">Tools</a>
           <a class="button" href="#github">Course Repository</a>
-          <a class="button" href="#algorithm-resources">Resources</a>
+          <a class="button" href="#algorithm-resources">Practice &amp; Learning Resources</a>
           <a class="button" href="#contact">Contact</a>
         </nav>
         <div class="course-section-menu">
           <button class="course-section-menu-toggle" type="button" aria-expanded="false"
             aria-controls="course-section-menu-links">
             <span class="course-section-menu-label">Jump to section</span>
-            <span class="course-section-menu-current">Weekly Plan</span>
+            <span class="course-section-menu-current">Course Information</span>
           </button>
           <nav class="course-section-menu-links" id="course-section-menu-links"
             aria-label="Course page sections on mobile" hidden>
+            <a href="#course-information">Course Information</a>
             <a href="#weekly-plan">Weekly Plan</a>
             <a href="#assessments">Assessments</a>
             <a href="#project">Project</a>
@@ -248,7 +250,7 @@
             <a href="#support-resources">Student Support</a>
             <a href="#tools">Tools</a>
             <a href="#github">Course Repository</a>
-            <a href="#algorithm-resources">Resources</a>
+            <a href="#algorithm-resources">Practice &amp; Learning Resources</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>
@@ -328,7 +330,7 @@
               <span><time datetime="2026-10-13">Tuesday, October 13</time> follows the Monday schedule.</span>
             </div>
             <div class="weekly-notice schedule-exam">
-              <strong>Final examination</strong>
+              <strong>Final exam</strong>
               <span><time datetime="2026-12-18T13:00">Friday, December 18, 1:00 PM–3:00 PM</time></span>
             </div>
           </div>
@@ -413,7 +415,7 @@
           <div class="timeline-item card">
             <div class="timeline-title">October 9 | Modules 1–5 Review and Analysis Workshop</div>
             <p>Guided complexity-analysis practice, sorting comparisons, recurrence review, and preparation for the
-              midterm examination.</p>
+              midterm exam.</p>
             <div class="weekly-markers">
               <span class="badge schedule-project">Project Proposal / Plan</span>
               <span class="badge schedule-homework">Midterm Review</span>
@@ -422,7 +424,7 @@
 
           <!-- Meeting 7 -->
           <div class="timeline-item card">
-            <div class="timeline-title">October 16 | Midterm Examination</div>
+            <div class="timeline-title">October 16 | Midterm Exam</div>
             <p>Midterm assessment covering Modules 1–5, followed by a brief introduction to the next unit if time
               permits.</p>
             <span class="badge schedule-exam">Midterm Exam</span>
@@ -508,7 +510,7 @@
 
           <!-- Final Exam -->
           <div class="timeline-item card">
-            <div class="timeline-title">December 18 | Final Examination</div>
+            <div class="timeline-title">December 18 | Final Exam</div>
             <p><strong>Exam time:</strong> 1:00 PM–3:00 PM, following the published Fall 2026 undergraduate final-exam
               schedule for a Friday class meeting from 10:50 AM–1:30 PM.</p>
             <span class="badge schedule-exam">Final Exam</span>
@@ -520,7 +522,7 @@
       <section id="assessments" class="section-block">
         <h2>Assessments</h2>
         <p class="muted">Your performance is evaluated through engagement, attendance, preparation, quizzes,
-          algorithm-analysis assignments, examinations, and a course project.</p>
+          algorithm-analysis assignments, exams, and a course project.</p>
 
         <div class="card-grid assessment-grid">
           <article class="card assessment-card">
@@ -541,7 +543,7 @@
             <h3><i class="fa-solid fa-book-open-reader"></i> Preparation &amp; Assignments</h3>
             <p class="muted">Independent preparation and formal problem solving (25%).</p>
             <ul>
-              <li><strong>Homeworks, readings, and knowledge checks (5%):</strong> assigned preparation, textbook
+              <li><strong>Homework, readings, and knowledge checks (5%):</strong> assigned preparation, textbook
                 exercises, short practice, and checks of conceptual understanding.</li>
               <li><strong>Assignments (20%):</strong> four problem sets combining analysis, pseudocode, proofs,
                 and selected implementations.</li>
@@ -549,8 +551,8 @@
           </article>
 
           <article class="card assessment-card">
-            <h3><i class="fa-solid fa-file-pen"></i> Quizzes &amp; Examinations</h3>
-            <p class="muted">Individual quizzes and examinations (50%).</p>
+            <h3><i class="fa-solid fa-file-pen"></i> Quizzes &amp; Exams</h3>
+            <p class="muted">Individual quizzes and exams (50%).</p>
             <ul>
               <li><strong>Quizzes (10%):</strong> announced or brief in-class checks of algorithmic reasoning.</li>
               <li><strong>Midterm exam (20%):</strong> Modules 1–5, including analysis, design choices, and algorithm
@@ -585,7 +587,7 @@
                   <td data-label="Weight">5%</td>
                 </tr>
                 <tr>
-                  <td data-label="Assessment">Homeworks, Readings &amp; Knowledge Checks</td>
+                  <td data-label="Assessment">Homework, Readings &amp; Knowledge Checks</td>
                   <td data-label="Weight">5%</td>
                 </tr>
                 <tr>
@@ -837,8 +839,8 @@
       <section id="support-resources" class="section-block">
         <h2>Student Support Resources</h2>
         <p class="muted">
-          John Jay offers health, counseling, accessibility, and emergency assistance. Seeking support early can help
-          you stay healthy and engaged in the course.
+          John Jay offers academic, health, counseling, accessibility, emergency, and basic-needs support. Seeking
+          support early can help you stay healthy and engaged in the course.
         </p>
         <article class="card">
           <ul>
@@ -857,6 +859,16 @@
               <a href="https://www.jjay.cuny.edu/student-life/wellness-center/accessibility-services" target="_blank"
                 rel="noopener noreferrer">Office of Accessibility Services</a> &mdash; registration, semester and exam
               requests, assistive technology, and academic-adjustment resources for students with disabilities.
+            </li>
+            <li>
+              <a href="https://www.jjay.cuny.edu/academics/academic-resources-services/academic-advisement-center"
+                target="_blank" rel="noopener noreferrer">Academic Advisement Center</a> &mdash; academic planning and
+              advisement.
+            </li>
+            <li>
+              <a href="https://www.jjay.cuny.edu/academics/academic-resources-services/tutoring-academic-support/drs-duane-m-lily-e-christ-math-science-resource-center"
+                target="_blank" rel="noopener noreferrer">Math &amp; Science Resource Center</a> &mdash; tutoring and
+              academic support for undergraduate students in mathematics, science, and computer science.
             </li>
           </ul>
         </article>
@@ -901,7 +913,7 @@
 
       <!-- GitHub -->
       <section id="github" class="section-block">
-        <h2>Course GitHub Repository &amp; Version Control</h2>
+        <h2>Course Materials &amp; Submissions</h2>
         <article class="card">
           <h3>CSCI 377 Course Repository</h3>
           <p>
@@ -927,7 +939,7 @@
           <p>
             GitHub will be our shared workspace and code archive. It helps you track every change,
             back up projects safely, and practice professional version control workflows.
-            You’ll also use it to document algorithm implementations and submit work
+            You'll also use it to document algorithm implementations and submit work
             when instructed. Practice and share only your learning repos (like
             <strong>CSCI-377-Fall-2026</strong>), not graded assignments, to avoid revealing
             answers to others.
@@ -1048,14 +1060,14 @@
               closures, and schedule notices.</li>
             <li><a href="https://www.jjay.cuny.edu/sites/default/files/2026-07/Fall-2026-Undergraduate-Final-Exam-Schedule.pdf"
                 target="_blank" rel="noopener noreferrer">Fall 2026 Undergraduate Final Exam Schedule</a> - published
-              examination date and time by meeting pattern.</li>
+              exam date and time by meeting pattern.</li>
           </ul>
         </article>
       </section>
 
-      <!-- Algorithm Learning Resources -->
+      <!-- Practice & Learning Resources -->
       <section id="algorithm-resources" class="section-block">
-        <h2>Algorithm Learning Resources</h2>
+        <h2>Practice &amp; Learning Resources</h2>
         <p>
           Use these resources to reinforce course concepts through alternative explanations, visualizations, worked
           examples, and additional practice. Brightspace materials and assigned textbook sections remain the primary
@@ -1133,6 +1145,8 @@
         <h2>Course Updates</h2>
         <article class="card">
           <ul class="muted">
+            <li><strong>August 29, 2026</strong> - Standardized syllabus terminology and expanded student-support
+              resources.</li>
             <li><strong>August 28, 2026</strong> - Public course repository added for supplemental notes, examples, and
               tracing practice.</li>
             <li><strong>August 24, 2026</strong> - Fall 2026 syllabus published.</li>
