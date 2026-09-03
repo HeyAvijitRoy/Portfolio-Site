@@ -4443,10 +4443,11 @@ html[data-theme="dark"] .course-site .course-section-nav {
   }
 
   .course-site .course-section-menu {
-    position: relative;
+    position: sticky;
     z-index: 40;
+    top: 64px;
     display: block;
-    margin: 24px 0 0;
+    margin: 0;
     background: transparent;
   }
 
@@ -5024,7 +5025,7 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
   }
 
   .course-site .course-hero {
-    margin-bottom: 54px;
+    margin-bottom: 0;
     padding-top: 8px;
   }
 
@@ -5082,6 +5083,10 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
     flex-basis: 100%;
     margin-top: 0;
     padding-left: 0;
+  }
+
+  .course-site .meta-item-schedule {
+    flex: 0 1 auto;
   }
 
   .course-site .course-meta-logo {
@@ -5144,6 +5149,14 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
   .course-site .weekly-nested > li {
     margin-inline: 0;
     padding: 19px 0 21px;
+  }
+
+  .course-site .timeline-item.schedule-no-class {
+    padding-left: 15px;
+  }
+
+  .course-site [id] {
+    scroll-margin-top: 128px;
   }
 
   .course-site .overview-container {

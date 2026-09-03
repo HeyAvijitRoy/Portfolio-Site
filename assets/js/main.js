@@ -446,7 +446,7 @@
     }
 
     function updateActiveSection() {
-      const sectionOffset = window.innerWidth > 768 ? 112 : 92;
+      const sectionOffset = window.innerWidth > 768 ? 112 : 128;
       let current = entries[0];
 
       entries.forEach((entry) => {
