@@ -1513,7 +1513,7 @@ html[data-theme="dark"] body.main-site {
   --text: #e7ebef;
   --muted: #aab3bd;
   --border: #35404a;
-  --card: #171c22;
+  --card: #1a2027;
   --brand: #7fc0ed;
   --brand-700: #a7d5f4;
   --chip: #1b222a;
@@ -1521,8 +1521,8 @@ html[data-theme="dark"] body.main-site {
   --nav-bg: rgba(18, 22, 27, 0.97);
   --focus-bg: rgba(127, 192, 237, 0.1);
   --btn-text: #0d151c;
-  --surface-raised: #191f26;
-  --surface-hover: #202832;
+  --surface-raised: #1d242c;
+  --surface-hover: #242d37;
   --border-strong: #4f5e6b;
   --shadow-soft: 0 1px 1px rgba(0, 0, 0, 0.16), 0 14px 34px rgba(0, 0, 0, 0.2);
   --shadow-lift: 0 3px 10px rgba(0, 0, 0, 0.24), 0 22px 48px rgba(0, 0, 0, 0.28);
