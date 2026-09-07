@@ -4336,8 +4336,16 @@ html[data-theme="dark"] .course-site .course-institution {
   height: auto;
 }
 
+.course-site .course-meta-logo-sju img {
+  width: 168px;
+}
+
 html[data-theme="dark"] .course-site .course-meta-logo img {
   content: url("../img/JJC_Logo_WHT.png");
+}
+
+html[data-theme="dark"] .course-site .course-meta-logo-sju img {
+  content: url("../img/SJU_Logo.svg");
 }
 
 .course-site .overview-container .instructor-meta {
@@ -5105,6 +5113,11 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
 
   .course-site .course-meta-logo img {
     width: 68px;
+  }
+
+  .course-site .course-meta-logo-sju img {
+    width: 152px;
+    max-width: 72vw;
   }
 
   .course-site .overview-container .instructor-meta {

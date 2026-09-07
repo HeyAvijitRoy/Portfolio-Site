@@ -129,7 +129,9 @@ CSCI 362 Fall 2026 official syllabus: https://avijitroy.com/teaching/courses/csc
 
 CSCI 377 Fall 2026 official syllabus: https://avijitroy.com/teaching/courses/csci377-fa26/. Supplemental course repository: https://github.com/HeyAvijitRoy/csci-377-computer-algorithms
 
-Teaching areas include C++, object-oriented programming, introduction to computing, secure coding practices, memory management, software design, debugging, code documentation, AI-assisted software development workflows, and practical cybersecurity awareness.
+DFR 711 Fall 2026 official syllabus: https://avijitroy.com/teaching/courses/dfr711-fa26/
+
+Teaching areas include C++, object-oriented programming, introduction to computing, secure coding practices, memory management, software design, debugging, code documentation, digital forensics, incident response, malware analysis, reverse engineering, threat hunting, AI-assisted software development workflows, and practical cybersecurity awareness.
 
 He publishes free, open learning resources for students, including a Git/GitHub/VS Code interactive guide, a 17-chapter Git ebook, C++ VS Code setup guides for Windows and macOS, and a Responsible AI Prompting Guide for course use. Full list: https://avijitroy.com/teaching/#open-learning-resources
 

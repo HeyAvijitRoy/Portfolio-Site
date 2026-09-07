@@ -258,7 +258,7 @@ Courses include:
 - CSCI 272: Object-Oriented Programming in C++ (Fall 2025, Spring 2026, Fall 2026) - Fall 2026 official syllabus: https://avijitroy.com/teaching/courses/csci272-fa26/
 - CSCI 362: Databases and Data Mining (Fall 2026) - Official syllabus: https://avijitroy.com/teaching/courses/csci362-fa26/
 - CSCI 377: Computer Algorithms (Fall 2026) - Official syllabus: https://avijitroy.com/teaching/courses/csci377-fa26/; supplemental course repository: https://github.com/HeyAvijitRoy/csci-377-computer-algorithms
-- DFR 711: Cyber Forensics & Malware Analysis, St. John's University (Adjunct Assistant Professor; Fall 2026)
+- DFR 711: Cyber Forensics & Malware Analysis, St. John's University (Adjunct Assistant Professor; Fall 2026) - Official syllabus: https://avijitroy.com/teaching/courses/dfr711-fa26/
 
 Teaching areas include:
 
@@ -268,6 +268,10 @@ Teaching areas include:
 - Memory management
 - Software design
 - Debugging and code documentation
+- Digital forensics and incident reconstruction
+- Malware analysis and reverse engineering
+- Memory, network, and mobile-device forensics
+- Threat intelligence and threat hunting
 - AI-assisted software development workflows
 - Practical cybersecurity awareness
 
