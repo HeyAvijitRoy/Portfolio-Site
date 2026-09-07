@@ -2554,8 +2554,8 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
 
 .main-site.page-teaching .teaching-institution-group {
   display: grid;
-  grid-template-columns: minmax(210px, 0.72fr) minmax(0, 1.65fr);
-  gap: clamp(36px, 5vw, 70px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
 }
 
@@ -2566,9 +2566,7 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
 }
 
 .main-site.page-teaching .teaching-institution-header {
-  position: sticky;
-  top: 92px;
-  align-self: start;
+  position: static;
   margin: 0;
 }
 
@@ -2590,7 +2588,7 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
   margin: 0;
   color: var(--brand);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.055em;
   line-height: 1.45;
@@ -2732,7 +2730,7 @@ html[data-theme="dark"] .main-site.page-teaching #courses summary:focus-visible 
   flex: 0 0 auto;
   color: var(--brand);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
