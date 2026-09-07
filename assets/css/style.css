@@ -2566,8 +2566,47 @@ html[data-theme="dark"] .main-site.page-research .research-section-menu-links {
 }
 
 .main-site.page-teaching .teaching-institution-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
   position: static;
   margin: 0;
+}
+
+.main-site.page-teaching .teaching-institution-copy {
+  min-width: 0;
+}
+
+.main-site.page-teaching .teaching-institution-logo {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+}
+
+.main-site.page-teaching .teaching-institution-logo img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.main-site.page-teaching .teaching-institution-logo-jjc img {
+  width: 76px;
+}
+
+.main-site.page-teaching .teaching-institution-logo-sju img {
+  width: 168px;
+}
+
+html[data-theme="dark"] .main-site.page-teaching .teaching-institution-logo-jjc img {
+  content: url("../img/JJC_Logo_WHT.png");
+}
+
+html[data-theme="dark"] .main-site.page-teaching .teaching-institution-logo-sju img {
+  width: 150px;
+  content: url("../img/SJU_Logo_Dark.png");
 }
 
 .main-site.page-teaching .teaching-course-list {
@@ -4343,7 +4382,8 @@ html[data-theme="dark"] .course-site .course-meta-logo img {
 }
 
 html[data-theme="dark"] .course-site .course-meta-logo-sju img {
-  content: url("../img/SJU_Logo.svg");
+  width: 150px;
+  content: url("../img/SJU_Logo_Dark.png");
 }
 
 .course-site .overview-container .instructor-meta {
@@ -5015,6 +5055,26 @@ html[data-theme="dark"] .course-site .policy-late-work h3 {
   padding-top: 13px;
   padding-bottom: 13px;
   vertical-align: top;
+}
+
+@media (max-width: 640px) {
+  .main-site.page-teaching .teaching-institution-header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .main-site.page-teaching .teaching-institution-logo {
+    min-height: 0;
+    justify-self: start;
+  }
+
+  .main-site.page-teaching .teaching-institution-logo-jjc img {
+    width: 68px;
+  }
+
+  .main-site.page-teaching .teaching-institution-logo-sju img {
+    width: 152px;
+  }
 }
 
 .course-site details.course-key-dates {
