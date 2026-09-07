@@ -234,7 +234,12 @@
       ".page-book #faq > details"
     ];
 
-    const targets = Array.from(new Set(document.querySelectorAll(revealSelectors.join(","))));
+    // Keep the first course-content heading visible on initial load. On wide
+    // viewports it can sit inside the observer's bottom margin, leaving only
+    // an invisible heading-sized gap until the user scrolls.
+    const firstCourseSectionHeading = document.querySelector(".course-site .section-block > h2");
+    const targets = Array.from(new Set(document.querySelectorAll(revealSelectors.join(","))))
+      .filter((target) => target !== firstCourseSectionHeading);
     targets.forEach((target) => {
       const siblings = Array.from(target.parentElement?.children || []);
       const siblingIndex = Math.max(siblings.indexOf(target), 0);

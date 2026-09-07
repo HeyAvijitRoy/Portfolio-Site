@@ -4288,6 +4288,10 @@ html[data-theme="dark"] .course-site .course-institution {
   gap: 5px;
 }
 
+.course-site .course-hero .instructor-meta-centered .meta-item {
+  justify-content: center;
+}
+
 .course-site .course-hero .meta-label {
   display: inline-flex;
   align-items: center;
